@@ -5,4 +5,10 @@ interface ClassicGame {
   name: string
 }
 
-export default ClassicGame;
+interface PlanCardsI {
+  name: string,
+  benefits: Array<Array<string>>,
+  value: string
+}
+
+export type { ClassicGame, PlanCardsI };
