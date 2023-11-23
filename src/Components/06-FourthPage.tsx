@@ -8,7 +8,7 @@ import Supermassive from '../Images/Supermassive.png';
 
 function FourthPage() {
   return (
-    <div>
+    <div id="plans">
       <h1>COMPARE OS PLANOS</h1>
 
       <img src={ blackHole } alt="buraco negro" />

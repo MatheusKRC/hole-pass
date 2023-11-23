@@ -33,7 +33,11 @@ function FirstPage() {
           sempre há algo novo para jogar.
         </p>
 
-        <button type="button">ASSINE AGORA</button>
+        <a href="#plans">
+          <button type="button">ASSINE AGORA</button>
+
+        </a>
+
       </div>
 
       <div>
