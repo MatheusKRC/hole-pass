@@ -1,4 +1,4 @@
-import ClassicGame from '../Interfaces/homepage';
+import { ClassicGame } from '../Interfaces/homepage';
 
 function ClassicGames({ background, desc, character, name }: ClassicGame) {
   return (
