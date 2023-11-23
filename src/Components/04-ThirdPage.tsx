@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { useState } from 'react';
-import ClassicGames from './ClassicGames';
+import ClassicGames from './05-ClassicGames';
 import Leon from '../Images/Leon.png';
 import village from '../Images/Village.jpg';
 import re4 from '../Images/Resident Evil 41.png';
