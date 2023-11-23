@@ -11,7 +11,7 @@ function NavBar() {
           alt="Logo minimalista de um buraco negro amarelo"
         />
         <h1>BLACK HOLE</h1>
-        <a href="/">Jogos</a>
+        <a href="/Jogos">Jogos</a>
         <a href="/">Planos de Assinatura</a>
         <a href="/">Serviços de Gamepass</a>
         <a href="/">Outros Projetos</a>
