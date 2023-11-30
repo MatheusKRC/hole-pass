@@ -1,0 +1,63 @@
+.games {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+
+  transition-duration: 0.5s;
+}
+
+.atropos {
+  transition-duration: 0.5s;
+}
+
+.game-box {
+  --side-color: white;
+  --side-size: 32px;
+  aspect-ratio: 466/656;
+
+  background-color: azure;
+}
+
+.text-over {
+  position: absolute;
+  color: white;
+
+  bottom: 30px;
+  left: 200px;
+}
+
+.text-over2 {
+  position: absolute;
+  color: white;
+
+  bottom: 350px;
+  left: 0px;
+}
+
+.mini-game {
+  width: 200px;
+
+  opacity: 80%;
+}
+
+.mini-text-over {
+  position: absolute;
+  color: white;
+
+  bottom: 20px;
+  left: 145px;
+}
+
+.mini-text-over2 {
+  position: absolute;
+  color: white;
+
+  bottom: 235px;
+  left: 3px;
+}
