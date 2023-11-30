@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import game1 from '../Games/1.png';
 import game2 from '../Games/2.png';
 import game3 from '../Games/3.png';
@@ -42,191 +43,215 @@ import game41 from '../Games/41.png';
 import game42 from '../Games/42.png';
 import game43 from '../Games/43.png';
 
-const games1 = [game1, game2, game3, game4, game5, game6, game7, game8];
-
-const games2 = [game9, game10, game11, game12, game13, game14, game15, game16];
-
-const games3 = [game17, game18, game19, game20, game21, game22, game23, game24];
-
-const games4 = [game25, game26, game27, game28, game29, game30, game31, game32];
-
-const games5 = [game33, game34, game35, game36, game37, game38, game39, game40];
-
-const games6 = [game41, game42, game43];
-
-const games = [game1, game2, game3, game4, game5, game6, game7,
-  game8, game9, game10, game11, game12, game13, game14, game15, game16,
-  game17, game18, game19, game20, game21, game22, game23, game24,
-  game25, game26, game27, game28, game29, game30, game31, game32,
-  game33, game34, game35, game36, game37, game38, game39, game40,
-  game41, game42, game43];
-
 const objGames = [
   {
     name: 'Spider Man',
     src: game1,
+    link: 'https://store.playstation.com/pt-br/product/UP9000-CUSA02299_00-MARVELSSMGOTY000',
   },
   {
     name: 'Spider Man Miles Morales',
     src: game2,
+    link: 'https://www.playstation.com/pt-br/games/marvels-spider-man-miles-morales/?emcid=pa-co-473107&gad_source=1&gclid=Cj0KCQiAgqGrBhDtARIsAM5s0_kvvaNi6-dUr6Ux2dx5WVnqnauFzRDdv-lrLPiLcR4q5DcHJ_n_I50aAj_MEALw_wcB',
   },
   {
     name: 'Spider Man 2',
     src: game3,
+    link: 'https://www.playstation.com/pt-br/games/marvels-spider-man-2/',
   },
   {
     name: 'Horizon Zero Dawn',
     src: game4,
+    link: 'https://store.steampowered.com/agecheck/app/1151640/',
   }, {
     name: 'Nioh',
     src: game5,
+    link: 'https://store.steampowered.com/app/485510/Nioh_Complete_Edition/',
   },
   {
     name: 'CupHead',
     src: game6,
+    link: 'https://store.steampowered.com/app/268910/Cuphead/',
   }, {
     name: 'Uncharted 4 A Thiefs End',
     src: game7,
+    link: 'https://www.playstation.com/pt-br/games/uncharted-4-a-thiefs-end/',
   },
   {
     name: 'Final Fantasy XV',
     src: game8,
+    link: 'https://www.xbox.com/pt-BR/games/store/final-fantasy-xv/C45D79QVKZTP',
   }, {
     name: 'The Witness',
     src: game9,
+    link: 'https://store.steampowered.com/app/210970/The_Witness/',
   },
   {
     name: 'Rise Of The Tomb Raider',
     src: game10,
+    link: 'https://store.steampowered.com/app/391220/Rise_of_the_Tomb_Raider/',
   }, {
     name: 'Fallout 4',
     src: game11,
+    link: 'https://store.steampowered.com/agecheck/app/377160/',
   },
   {
     name: 'The Witcher 3 Wild Hunt',
     src: game12,
+    link: 'https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/',
   }, {
     name: 'Watch Dogs',
     src: game13,
+    link: 'https://store.steampowered.com/app/243470/Watch_Dogs/',
   },
   {
     name: 'Far Cry 4',
     src: game14,
+    link: 'https://www.ubisoft.com/pt-br/game/far-cry/far-cry-4',
   }, {
     name: 'The Last Of Us',
     src: game15,
+    link: 'https://store.playstation.com/pt-br/product/UP9000-CUSA00552_00-THELASTOFUS00000',
   },
   {
     name: 'Bioshock Infinite',
     src: game16,
+    link: 'https://store.steampowered.com/agecheck/app/8870/',
   }, {
     name: 'Rayman Legends',
     src: game17,
+    link: 'https://www.ubisoft.com/pt-br/game/rayman/legends',
   },
   {
     name: 'Devil May Cry',
     src: game18,
+    link: 'https://store.playstation.com/pt-br/product/UP0102-CUSA01013_00-DMCDEFINITIVE000',
   }, {
     name: 'Red Dead Redemption 2',
     src: game19,
+    link: 'https://www.rockstargames.com/br/reddeadredemption2',
   },
   {
     name: 'God Of War',
     src: game20,
+    link: 'https://store.steampowered.com/agecheck/app/1593500/',
   },
   {
     name: 'Sekiro Shadows Die Twice',
     src: game21,
+    link: 'https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/',
   },
   {
     name: 'Death Stranding',
     src: game22,
+    link: 'https://store.epicgames.com/pt-BR/p/death-stranding',
   },
   {
     name: 'Control',
     src: game23,
+    link: 'https://store.epicgames.com/pt-BR/p/control',
   },
   {
     name: 'The Last Of Us Part 2',
     src: game24,
+    link: 'https://store.playstation.com/pt-br/product/UP9000-CUSA07820_00-THELASTOFUSPART2',
   },
   {
     name: 'CyberPunk 2077',
     src: game25,
+    link: 'https://store.steampowered.com/app/1091500/Cyberpunk_2077/',
   },
   {
     name: 'Ori And The Will Of The Wisps',
     src: game26,
+    link: 'https://store.steampowered.com/app/1057090/Ori_and_the_Will_of_the_Wisps/',
   },
 
   {
     name: 'It Takes Two',
     src: game27,
+    link: 'https://store.steampowered.com/app/1426210/It_Takes_Two/',
   },
   {
     name: 'Psychonauts 2',
     src: game28,
+    link: 'https://store.steampowered.com/app/607080/Psychonauts_2/',
   },
   {
     name: 'Inscryption',
     src: game29,
+    link: 'https://store.steampowered.com/app/1092790/Inscryption/',
   },
   {
     name: 'God Of War Ragnarok',
     src: game30,
+    link: 'https://www.playstation.com/pt-br/games/god-of-war-ragnarok/',
   },
   {
     name: 'Elden Ring',
     src: game31,
+    link: 'https://store.steampowered.com/app/1245620/ELDEN_RING/',
   },
   {
     name: 'Stray',
     src: game32,
+    link: 'https://store.steampowered.com/app/1332010/Stray/',
   },
   {
     name: 'Baldurs Gate 3',
     src: game33,
+    link: 'https://store.steampowered.com/app/1086940/Baldurs_Gate_3/',
   },
   {
     name: 'Starfield',
     src: game34,
+    link: 'https://bethesda.net/pt/game/starfield',
   },
   {
     name: 'Suicide Squad',
     src: game35,
+    link: 'https://www.suicidesquadgame.com/pt-br',
   },
   {
     name: 'Hades 2',
     src: game36,
+    link: 'https://store.steampowered.com/app/1145350/Hades_II/',
   },
   {
     name: 'Star Wars Outlaws',
     src: game37,
+    link: 'https://www.ubisoft.com/en-gb/game/star-wars/outlaws',
   },
   {
     name: 'Resident Evil 4',
     src: game38,
+    link: 'https://store.playstation.com/pt-br/product/UP0102-CUSA04885_00-BH4HD00000000001',
   },
   {
     name: 'Dark Souls',
     src: game39,
+    link: 'https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/',
   },
   {
-    name: 'Castlevania',
+    name: 'Castlevania: Symphony of the Night',
     src: game40,
+    link: 'https://www.xbox.com/pt-BR/games/store/castlevania-symphony-of-the-night/bstm3283756m',
   },
   {
     name: 'Dead Space',
     src: game41,
+    link: 'https://store.steampowered.com/app/17470/Dead_Space_2008/',
   },
   {
     name: 'The Elder Scrolls V',
     src: game42,
+    link: 'https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/',
   },
   {
     name: 'God Of War',
     src: game43,
+    link: 'https://www.google.com/search?q=god+of+war+2005&sca_esv=586734894&tbm=shop&sxsrf=AM9HkKn3dPDw8wDOs4IYVhhlbXOgVXCZJQ:1701381356297&source=lnms&sa=X&ved=2ahUKEwj35vm62-yCAxW0kZUCHb7RDhwQ_AUoA3oECAMQBQ&biw=1920&bih=1003&dpr=1',
   },
 ];
 
-export { objGames, games, games1, games2, games3, games4, games5, games6 };
+export { objGames };
