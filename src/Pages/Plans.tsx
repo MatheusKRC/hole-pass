@@ -4,6 +4,7 @@ import intermediario from '../Assets/Interm.png';
 import supermassivo from '../Assets/Superm.png';
 import Footer from '../Components/08-Footer';
 import NavBar from '../Components/01-Navbar';
+import PlansComponent from '../Components/11-PlansComponent';
 
 function Plans() {
   return (
@@ -27,6 +28,7 @@ function Plans() {
         <img width="300px" src={ supermassivo } alt="Logo do Hole pass" />
       </div>
 
+      <PlansComponent />
       <Footer />
     </div>
   );
