@@ -11,6 +11,8 @@ import nightCity from '../Images/NightCity.jpg';
 import kratos from '../Images/Kratos.png';
 import ragnarok from '../Images/Ragnarok.png';
 import lago from '../Images/Lago.jpg';
+import GamesComponent from '../Components/10-GamesComponent';
+import { games } from '../Utils/importGames';
 
 function Games() {
   const [Game, setGame] = useState({
@@ -68,6 +70,8 @@ function Games() {
         <h1>TODOS OS JOGOS DISPONIVEIS</h1>
 
         <input type="text" />
+
+        <GamesComponent games={ games } />
       </div>
       <Footer />
     </div>
