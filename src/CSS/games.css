@@ -8,12 +8,12 @@
   align-items: center;
   margin-left: 100px;
   margin-right: 100px;
+
+  transition-duration: 0.5s;
 }
 
 .atropos {
-  margin-bottom: 50px;
-
-  margin-left: 50px;
+  transition-duration: 0.5s;
 }
 
 .game-box {

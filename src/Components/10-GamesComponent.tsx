@@ -1,57 +1,131 @@
 // eslint-disable-next-line import/no-unresolved
 import Atropos from 'atropos/react';
-// import { useState } from 'react';
+import { useState } from 'react';
 import logo2 from '../Games/Logo.png';
 import name from '../Games/Name.png';
 
 function GamesComponent({ games }:any) {
-  // const [indexGame, setIndexGame] = useState(4);
+  const [indexGame, setIndexGame] = useState(4);
+  const [initialIndex, setInitialIndex] = useState(0);
 
-  // const handleClick = () => {
-  //   if (indexGame <= games.length) {
-  //     setIndexGame(indexGame + 4);
-  //   } else {
-  //     setIndexGame(4);
-  //   }
-  // };
+  const handleClick = () => {
+    if (indexGame <= games.length) {
+      setInitialIndex(indexGame);
+      setIndexGame(indexGame + 4);
+    } else {
+      setInitialIndex(0);
+      setIndexGame(4);
+    }
+  };
   return (
     <div className="games">
 
-      {games.map((media :any) => (
+      <Atropos
+        className="atropos"
+        activeOffset={ 1 }
+        shadowScale={ 1.05 }
+        highlight={ false }
+        onEnter={ () => console.log('Enter') }
+        onLeave={ () => console.log('Leave') }
+      >
+        <img
+          className="mini-game"
+          src={ games[games.length - 1] }
+          alt="games"
+        />
+        <img
+          width="40px"
+          className="mini-text-over"
+          data-atropos-offset="10"
+          src={ logo2 }
+          alt="logo"
+        />
+        <img
+          width="140px"
+          className="mini-text-over2"
+          data-atropos-offset="5"
+          src={ name }
+          alt="black hole name"
+        />
 
-        <Atropos
-          key={ media }
-          className="atropos"
-          activeOffset={ 1 }
-          shadowScale={ 1.05 }
-          highlight={ false }
-          onEnter={ () => console.log('Enter') }
-          onLeave={ () => console.log('Leave') }
-        >
+      </Atropos>
 
-          <img
-            width="300px"
-            key={ media }
-            src={ media }
-            alt={ media }
-          />
-          <img
-            width="80px"
-            className="text-over"
-            data-atropos-offset="10"
-            src={ logo2 }
-            alt="logo"
-          />
-          <img
-            width="240px"
-            className="text-over2"
-            data-atropos-offset="5"
-            src={ name }
-            alt="black hole name"
-          />
+      {games.map((media :any, index: any) => {
+        if (index < indexGame && index >= initialIndex) {
+          return (
+            <Atropos
+              key={ media }
+              className="atropos"
+              activeOffset={ 1 }
+              shadowScale={ 1.05 }
+              highlight={ false }
+              onEnter={ () => console.log('Enter') }
+              onLeave={ () => console.log('Leave') }
+            >
 
-        </Atropos>
-      ))}
+              <img
+                width="300px"
+                key={ media }
+                src={ media }
+                alt={ media }
+              />
+              <img
+                width="80px"
+                className="text-over"
+                data-atropos-offset="10"
+                src={ logo2 }
+                alt="logo"
+              />
+              <img
+                width="240px"
+                className="text-over2"
+                data-atropos-offset="5"
+                src={ name }
+                alt="black hole name"
+              />
+
+            </Atropos>
+          );
+        }
+        return false;
+      })}
+
+      <Atropos
+        className="atropos"
+        activeOffset={ 1 }
+        shadowScale={ 1.05 }
+        highlight={ false }
+        onEnter={ () => console.log('Enter') }
+        onLeave={ () => console.log('Leave') }
+      >
+        <img
+          className="mini-game"
+          src={ games[indexGame + 1] }
+          alt="games"
+        />
+        <img
+          width="40px"
+          className="mini-text-over"
+          data-atropos-offset="10"
+          src={ logo2 }
+          alt="logo"
+        />
+        <img
+          width="140px"
+          className="mini-text-over2"
+          data-atropos-offset="5"
+          src={ name }
+          alt="black hole name"
+        />
+
+      </Atropos>
+
+      <button
+        onClick={ handleClick }
+      >
+        teste
+
+      </button>
 
     </div>
   );

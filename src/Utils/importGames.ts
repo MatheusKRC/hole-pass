@@ -61,4 +61,172 @@ const games = [game1, game2, game3, game4, game5, game6, game7,
   game33, game34, game35, game36, game37, game38, game39, game40,
   game41, game42, game43];
 
-export { games, games1, games2, games3, games4, games5, games6 };
+const objGames = [
+  {
+    name: 'Spider Man',
+    src: game1,
+  },
+  {
+    name: 'Spider Man Miles Morales',
+    src: game2,
+  },
+  {
+    name: 'Spider Man 2',
+    src: game3,
+  },
+  {
+    name: 'Horizon Zero Dawn',
+    src: game4,
+  }, {
+    name: 'Nioh',
+    src: game5,
+  },
+  {
+    name: 'CupHead',
+    src: game6,
+  }, {
+    name: 'Uncharted 4 A Thiefs End',
+    src: game7,
+  },
+  {
+    name: 'Final Fantasy XV',
+    src: game8,
+  }, {
+    name: 'The Witness',
+    src: game9,
+  },
+  {
+    name: 'Rise Of The Tomb Raider',
+    src: game10,
+  }, {
+    name: 'Fallout 4',
+    src: game11,
+  },
+  {
+    name: 'The Witcher 3 Wild Hunt',
+    src: game12,
+  }, {
+    name: 'Watch Dogs',
+    src: game13,
+  },
+  {
+    name: 'Far Cry 4',
+    src: game14,
+  }, {
+    name: 'The Last Of Us',
+    src: game15,
+  },
+  {
+    name: 'Bioshock Infinite',
+    src: game16,
+  }, {
+    name: 'Rayman Legends',
+    src: game17,
+  },
+  {
+    name: 'Devil May Cry',
+    src: game18,
+  }, {
+    name: 'Red Dead Redemption 2',
+    src: game19,
+  },
+  {
+    name: 'God Of War',
+    src: game20,
+  },
+  {
+    name: 'Sekiro Shadows Die Twice',
+    src: game21,
+  },
+  {
+    name: 'Death Stranding',
+    src: game22,
+  },
+  {
+    name: 'Control',
+    src: game23,
+  },
+  {
+    name: 'The Last Of Us Part 2',
+    src: game24,
+  },
+  {
+    name: 'CyberPunk 2077',
+    src: game25,
+  },
+  {
+    name: 'Ori And The Will Of The Wisps',
+    src: game26,
+  },
+
+  {
+    name: 'It Takes Two',
+    src: game27,
+  },
+  {
+    name: 'Psychonauts 2',
+    src: game28,
+  },
+  {
+    name: 'Inscryption',
+    src: game29,
+  },
+  {
+    name: 'God Of War Ragnarok',
+    src: game30,
+  },
+  {
+    name: 'Elden Ring',
+    src: game31,
+  },
+  {
+    name: 'Stray',
+    src: game32,
+  },
+  {
+    name: 'Baldurs Gate 3',
+    src: game33,
+  },
+  {
+    name: 'Starfield',
+    src: game34,
+  },
+  {
+    name: 'Suicide Squad',
+    src: game35,
+  },
+  {
+    name: 'Hades 2',
+    src: game36,
+  },
+  {
+    name: 'Star Wars Outlaws',
+    src: game37,
+  },
+  {
+    name: 'Resident Evil 4',
+    src: game38,
+  },
+  {
+    name: 'Dark Souls',
+    src: game39,
+  },
+  {
+    name: 'Castlevania',
+    src: game40,
+  },
+  {
+    name: 'Dead Space',
+    src: game41,
+  },
+  {
+    name: 'The Elder Scrolls V',
+    src: game42,
+  },
+  {
+    name: 'God Of War',
+    src: game43,
+  },
+];
+
+export { objGames, games, games1, games2, games3, games4, games5, games6 };
