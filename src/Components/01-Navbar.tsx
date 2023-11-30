@@ -12,7 +12,7 @@ function NavBar() {
         />
         <h1>BLACK HOLE</h1>
         <a href="/Jogos">Jogos</a>
-        <a href="/">Planos de Assinatura</a>
+        <a href="/Plans">Planos de Assinatura</a>
         <a href="/">Serviços de Gamepass</a>
         <a href="/">Outros Projetos</a>
 
