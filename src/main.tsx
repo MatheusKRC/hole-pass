@@ -7,6 +7,7 @@ import Home from './Pages/Home.tsx';
 import './CSS/index.css';
 import './CSS/games.css';
 import Games from './Pages/Games.tsx';
+import Plans from './Pages/Plans.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" Component={ Home } />
         <Route path="/Jogos" Component={ Games } />
+        <Route path="/Plans" Component={ Plans } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
