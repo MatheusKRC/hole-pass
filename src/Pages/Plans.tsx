@@ -5,6 +5,7 @@ import supermassivo from '../Assets/Superm.png';
 import Footer from '../Components/08-Footer';
 import NavBar from '../Components/01-Navbar';
 import PlansComponent from '../Components/11-PlansComponent';
+import { objGames } from '../Utils/importGames';
 
 function Plans() {
   return (
@@ -28,7 +29,7 @@ function Plans() {
         <img width="300px" src={ supermassivo } alt="Logo do Hole pass" />
       </div>
 
-      <PlansComponent />
+      <PlansComponent games={ objGames } />
       <Footer />
     </div>
   );

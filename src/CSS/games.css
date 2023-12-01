@@ -61,3 +61,12 @@
   bottom: 235px;
   left: 3px;
 }
+
+.inner {
+  display: flex;
+}
+
+.carrousel {
+  cursor: grab;
+  overflow: hidden;
+}
