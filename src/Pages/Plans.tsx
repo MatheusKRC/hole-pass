@@ -6,8 +6,17 @@ import Footer from '../Components/08-Footer';
 import NavBar from '../Components/01-Navbar';
 import PlansComponent from '../Components/11-PlansComponent';
 import { objGames } from '../Utils/importGames';
+import Uncharted from '../Images/Uncharted.jpg';
+import Nathan from '../Images/Nathan.png';
+import Red from '../Images/Red.jfif';
+import Control from '../Images/Control.png';
+import Space from '../Images/Space.jfif';
+import Starfield from '../Images/Starfield.png';
 
 function Plans() {
+  const estelarPlan = objGames.filter(({ plan }) => plan === 'estelar');
+  const intermediarioPlan = objGames.filter(({ plan }) => plan === 'intermediario');
+  const supermassivoPlan = objGames.filter(({ plan }) => plan === 'supermassivo');
   return (
     <div>
       <NavBar />
@@ -29,7 +38,22 @@ function Plans() {
         <img width="300px" src={ supermassivo } alt="Logo do Hole pass" />
       </div>
 
-      <PlansComponent games={ objGames } />
+      <PlansComponent
+        games={ estelarPlan }
+        background={ Uncharted }
+        character={ Nathan }
+      />
+      <PlansComponent
+        games={ intermediarioPlan }
+        background={ Red }
+        character={ Control }
+      />
+      <PlansComponent
+        games={ supermassivoPlan }
+        background={ Space }
+        character={ Starfield }
+      />
+
       <Footer />
     </div>
   );
