@@ -8,6 +8,7 @@ import './CSS/index.css';
 import './CSS/games.css';
 import Games from './Pages/Games.tsx';
 import Plans from './Pages/Plans.tsx';
+import LoginRegister from './Pages/LoginRegister.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/" Component={ Home } />
         <Route path="/Jogos" Component={ Games } />
         <Route path="/Plans" Component={ Plans } />
+        <Route path="/Login" Component={ LoginRegister } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
