@@ -4,19 +4,46 @@ import logo from '../Assets/Logo.png';
 
 function LoginRegister() {
   const [login, setLogin] = useState('LOGIN');
-  const [inputs, setInputs] = useState(['Email', 'Password']);
+  const [inputs, setInputs] = useState([
+    { pholder: 'Email', id: 'email' }, { pholder: 'Password', id: 'password' }]);
   const [exist, setExist] = useState('Ainda não tenho conta');
+  const [user, setUser] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    cpf: '',
+  });
 
   const handleClick = () => {
     if (login === 'LOGIN') {
       setLogin('REGISTER');
-      setInputs(['First Name', 'Last Name', 'Email', 'Password', 'CPF']);
+      setInputs([
+        { pholder: 'First Name', id: 'firstName' },
+        { pholder: 'Last Name', id: 'lastName' },
+        { pholder: 'Email', id: 'email' },
+        { pholder: 'Password', id: 'password' },
+        { pholder: 'CPF', id: 'cpf' }]);
       setExist('Já possuo uma conta');
     } else {
       setLogin('LOGIN');
-      setInputs(['Email', 'Password']);
+      setInputs([
+        { pholder: 'Email', id: 'email' },
+        { pholder: 'Password', id: 'password' }]);
       setExist('Ainda não tenho conta');
     }
+  };
+
+  const handleChange = ({ target }: any) => {
+    const { id, value } = target;
+    setUser({
+      ...user,
+      [id]: value,
+    });
+  };
+
+  const handleRegister = () => {
+
   };
 
   return (
@@ -39,11 +66,17 @@ function LoginRegister() {
         <img src={ logo } alt="logo black hole" />
         <h1>{login}</h1>
 
-        {inputs.map((name) => (
-          <input key={ name } type="text" placeholder={ name } />
+        {inputs.map(({ pholder, id }) => (
+          <input
+            key={ pholder }
+            onChange={ handleChange }
+            type="text"
+            id={ id }
+            placeholder={ pholder }
+          />
         ))}
 
-        <button>{login}</button>
+        <button onClick={ handleRegister }>{login}</button>
         <button onClick={ handleClick }>{exist}</button>
       </div>
     </div>
