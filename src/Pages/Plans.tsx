@@ -12,6 +12,9 @@ import Red from '../Images/Red.jfif';
 import Control from '../Images/Control.png';
 import Space from '../Images/Space.jfif';
 import Starfield from '../Images/Starfield.png';
+import plan2 from '../Assets/plan2.png';
+import plan1 from '../Assets/plan1.png';
+import plan3 from '../Assets/plan3.png';
 
 function Plans() {
   const estelarPlan = objGames.filter(({ plan }) => plan === 'estelar');
@@ -42,16 +45,19 @@ function Plans() {
         games={ estelarPlan }
         background={ Uncharted }
         character={ Nathan }
+        plan={ plan1 }
       />
       <PlansComponent
         games={ intermediarioPlan }
         background={ Red }
         character={ Control }
+        plan={ plan3 }
       />
       <PlansComponent
         games={ supermassivoPlan }
         background={ Space }
         character={ Starfield }
+        plan={ plan2 }
       />
 
       <Footer />
