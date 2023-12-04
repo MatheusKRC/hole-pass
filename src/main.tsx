@@ -9,6 +9,7 @@ import './CSS/games.css';
 import Games from './Pages/Games.tsx';
 import Plans from './Pages/Plans.tsx';
 import LoginRegister from './Pages/LoginRegister.tsx';
+import User from './Pages/User.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/Jogos" Component={ Games } />
         <Route path="/Plans" Component={ Plans } />
         <Route path="/Login" Component={ LoginRegister } />
+        <Route path="/User" Component={ User } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
