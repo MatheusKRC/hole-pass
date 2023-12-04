@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import logoPass from '../Assets/Logo2.png';
 import logo from '../Assets/Logo.png';
 
@@ -14,6 +15,8 @@ function LoginRegister() {
     password: '',
     cpf: '',
   });
+
+  const navigate = useNavigate();
 
   const handleClick = () => {
     if (login === 'LOGIN') {
@@ -43,8 +46,20 @@ function LoginRegister() {
   };
 
   const handleRegister = () => {
-
+    if (user) {
+      localStorage.setItem('blackHoleUser', JSON.stringify(user));
+      navigate('/');
+    } else { return false; }
   };
+
+  useEffect(() => {
+    const loginVerify = localStorage.getItem('blackHoleUser');
+    if (loginVerify) {
+      navigate('/');
+    } else {
+      console.log('ainda não possui conta');
+    }
+  }, [navigate]);
 
   return (
     <div>
