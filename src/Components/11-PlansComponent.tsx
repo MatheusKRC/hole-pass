@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import logo2 from '../Games/Logo.png';
 import name from '../Games/Name.png';
 
-function PlansComponent({ games, plan, background, character }:any) {
+function PlansComponent({ games, plan, background, character, button }:any) {
   const carousel = useRef(null);
   const [width, setWidth] = useState(0);
 
@@ -23,10 +23,9 @@ function PlansComponent({ games, plan, background, character }:any) {
       <img src={ background } alt={ background } />
       <img src={ character } alt={ character } />
 
-      <Link to="/#plans">
-        <button>Adquira Já</button>
-
-      </Link>
+      {
+      button === 'true' ? <Link to="/#plans"><button>Adquira Já</button></Link> : null
+}
 
       <motion.div
         ref={ carousel }
