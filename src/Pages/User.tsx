@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import logo from '../Assets/Logo.png';
 import NavBar from '../Components/01-Navbar';
 import PlansComponent from '../Components/11-PlansComponent';
@@ -8,23 +9,71 @@ import { objGames } from '../Utils/importGames';
 
 function User() {
   const supermassivoPlan = objGames.filter(({ plan }) => plan === 'supermassivo');
+  const localUser:any = localStorage.getItem('blackHoleUser');
+  const user = JSON.parse(localUser);
 
+  const [userIcon, setUserIcon] = useState(logo);
+  const [inputs, setInput] = useState(true);
+  const [mainUser, setUser] = useState({
+    firstName: user.firstName,
+    lastName: user.lastName,
+    email: user.email,
+    password: user.password,
+    cpf: user.cpf,
+    username: user.username,
+    desc: user.desc,
+  });
+
+  const handleChange = ({ target }: any) => {
+    const { id, value } = target;
+    setUser({
+      ...user,
+      [id]: value,
+    });
+  };
+
+  const handleClick = () => {
+    if (inputs === true) {
+      setInput(false);
+    } else {
+      setInput(true);
+      localStorage.setItem('blackHoleUser', JSON.stringify(mainUser));
+    }
+  };
   return (
     <div>
       <NavBar />
       <div>
-        <img src={ logo } alt="Imagem de Perfil" />
+        {}
+        <img src={ userIcon } alt="Imagem de Perfil" />
 
         <p>Username</p>
-        <h2>Nome</h2>
+        <input
+          id="username"
+          onChange={ handleChange }
+          type="text"
+          value={ mainUser.username }
+          disabled={ inputs }
+        />
 
         <p>Nome Completo</p>
-        <h3>Matheus Santos Leão</h3>
+        <input
+          id="name"
+          onChange={ handleChange }
+          type="text"
+          value={ `${mainUser.firstName} ${mainUser.lastName}` }
+          disabled={ inputs }
+        />
 
-        <p>desc</p>
         <p>descrição</p>
+        <textarea
+          id="desc"
+          onChange={ handleChange }
+          value={ mainUser.desc }
+          disabled={ inputs }
+        />
 
-        <button>Editar Perfil</button>
+        <button onClick={ handleClick }>Editar Perfil</button>
 
       </div>
 
@@ -38,6 +87,8 @@ function User() {
           plan={ plan2 }
           button="false"
         />
+
+        <button>MUDE SEU PLANO</button>
       </div>
       <div />
     </div>
