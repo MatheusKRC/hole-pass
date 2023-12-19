@@ -5,7 +5,6 @@ import PlansComponent from '../Components/11-PlansComponent';
 import Space from '../Images/Space.jfif';
 import Starfield from '../Images/Starfield.png';
 import plan2 from '../Assets/plan2.png';
-import { objGames } from '../Utils/importGames';
 import holeBack from '../Images/HoleBack.png';
 import holePass from '../Games/holePass.png';
 import blackHole from '../Assets/YBlackHole.png';
