@@ -1,8 +1,24 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import logo from '../Assets/Logo.png';
 import perfil from '../Assets/Perfil.png';
+import perfilLogin from '../Assets/Perfil2.png';
 
 function NavBar() {
+  const [login, setLogin] = useState(perfil);
+  const [link, setLink] = useState('/Login');
+
+  useEffect(() => {
+    const loginUser = localStorage.getItem('blackHoleUser');
+    if (loginUser) {
+      setLogin(perfilLogin);
+      setLink('/User');
+    } else {
+      setLogin(perfil);
+      setLink('/Login');
+    }
+  }, []);
+
   return (
     <div>
       <nav>
@@ -25,9 +41,9 @@ function NavBar() {
           <button type="button">INSCREVA-SE AGORA</button>
         </a>
 
-        <Link to="/Login">
+        <Link to={ link }>
           {' '}
-          <img src={ perfil } alt="Icone de um perfil de usuário" />
+          <img src={ login } alt="Icone de um perfil de usuário" />
         </Link>
 
       </nav>

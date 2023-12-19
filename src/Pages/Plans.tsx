@@ -46,18 +46,21 @@ function Plans() {
         background={ Uncharted }
         character={ Nathan }
         plan={ plan1 }
+        button="true"
       />
       <PlansComponent
         games={ intermediarioPlan }
         background={ Red }
         character={ Control }
         plan={ plan3 }
+        button="true"
       />
       <PlansComponent
         games={ supermassivoPlan }
         background={ Space }
         character={ Starfield }
         plan={ plan2 }
+        button="true"
       />
 
       <Footer />
