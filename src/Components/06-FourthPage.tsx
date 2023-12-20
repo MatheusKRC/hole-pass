@@ -14,9 +14,24 @@ function FourthPage() {
       <img src={ blackHole } alt="buraco negro" />
 
       <div>
-        <PlanCards name={ Estelar } benefits={ estelar } value="R$39,99" />
-        <PlanCards name={ Intermediario } benefits={ intermediário } value="R$59,99" />
-        <PlanCards name={ Supermassivo } benefits={ supermassivo } value="R$79,99" />
+        <PlanCards
+          name="estelar"
+          img={ Estelar }
+          benefits={ estelar }
+          value="R$39,99"
+        />
+        <PlanCards
+          name="intermediario"
+          img={ Intermediario }
+          benefits={ intermediário }
+          value="R$59,99"
+        />
+        <PlanCards
+          name="supermassivo"
+          img={ Supermassivo }
+          benefits={ supermassivo }
+          value="R$79,99"
+        />
       </div>
 
       <img src={ Supermassive } alt="Buraco negro amarelo enorme" />
