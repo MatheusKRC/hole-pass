@@ -10,7 +10,7 @@ function PlanCards({ name, benefits, value }: PlanCardsI) {
       navigate('/Login');
     } else {
       const user = JSON.parse(localUser);
-      const addPlan = { ...user, plan: name, valuePlan: value, benefits };
+      const addPlan = { ...user, plan: name, planValue: value, benefits };
       localStorage.setItem('blackHoleUser', JSON.stringify(addPlan));
       navigate('/Payment');
     }
