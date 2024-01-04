@@ -12,21 +12,46 @@ import blackHole from '../Assets/BlackHole.png';
 
 function FirstPage() {
   return (
-    <div>
+    <div className="homePage">
       {' '}
-      <div>
+      <div className="mainContent">
         {' '}
-        <img width="280" src={ spiderMan } alt="Spider man Remastered ps4" />
-        <img width="280" src={ spiderManMiles } alt="Spider man Miles morales" />
-        <img width="280" src={ spiderMan2 } alt="Spider man 2" />
-        <img width="280" src={ dmc } alt="Devil May Cry definitive edition" />
-        <img width="280" height="280" src={ ori } alt="Ori For The Will And The Wisps" />
-        <img width="280" src={ itTakesTwo } alt="It Takes Two" />
+        <img
+          className="homeGamesBox"
+          src={ spiderMan }
+          alt="Spider man Remastered ps4"
+        />
+        <img
+          className="homeGamesBox"
+          src={ spiderManMiles }
+          alt="Spider man Miles morales"
+        />
+        <img
+          className="homeGamesBox"
+          src={ spiderMan2 }
+          alt="Spider man 2"
+        />
+        <img
+          className="homeGamesBox"
+          src={ dmc }
+          alt="Devil May Cry definitive edition"
+        />
+        <img
+          className="homeGamesBox"
+          height="280"
+          src={ ori }
+          alt="Ori For The Will And The Wisps"
+        />
+        <img
+          className="homeGamesBox"
+          src={ itTakesTwo }
+          alt="It Takes Two"
+        />
 
-        <img width="200px" src={ logo2 } alt="Logo do Hole pass" />
-        <h1>HOLE PASS</h1>
+        <img className="passLogo" src={ logo2 } alt="Logo do Hole pass" />
+        <h1 className="title">HOLE PASS</h1>
 
-        <p>
+        <p className="passDesc">
           Seja o primeiro a jogar novos jogos no primeiro dia.
           Além disso, jogue centenas de jogos de alta qualidade no
           console, PC e nuvem. Com jogos adicionados o tempo inteiro,
@@ -34,19 +59,19 @@ function FirstPage() {
         </p>
 
         <a href="#plans">
-          <button type="button">ASSINE AGORA</button>
+          <button className="assignNow" type="button">ASSINE AGORA</button>
 
         </a>
 
       </div>
 
-      <div>
-        <img width="350px" src={ horizon } alt="Horizon zero dawn" />
-        <img width="350px" src={ GodOfWar } alt="God Of War Ragnarok" />
-        <img width="350px" src={ baldursGate } alt="Baldurs Gate 3" />
+      <div className="homeGames">
+        <img className="homeGame" src={ horizon } alt="Horizon zero dawn" />
+        <img className="homeGame" src={ GodOfWar } alt="God Of War Ragnarok" />
+        <img className="homeGame" src={ baldursGate } alt="Baldurs Gate 3" />
       </div>
 
-      <img src={ blackHole } alt="Buraco negro amarelo" />
+      <img className="blackHole" src={ blackHole } alt="Buraco negro amarelo" />
     </div>
   );
 }
