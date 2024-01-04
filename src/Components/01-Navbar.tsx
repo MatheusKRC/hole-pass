@@ -28,7 +28,7 @@ function NavBar() {
           src={ logo }
           alt="Logo minimalista de um buraco negro amarelo"
         />
-        <h1 className="title">black hole</h1>
+        <h1 className="title">Black Hole</h1>
       </Link>
 
       <a className="navLink" href="/Jogos">Jogos</a>
@@ -36,7 +36,7 @@ function NavBar() {
       <a className="navLink" href="/">Serviços de Gamepass</a>
       <a className="navLink" href="/">Outros Projetos</a>
 
-      <a href="#plans">
+      <a className="backButton" href="#plans">
         {' '}
         <button className="assignButton" type="button">INSCREVA-SE AGORA</button>
       </a>
