@@ -6,6 +6,7 @@ interface ClassicGame {
 }
 
 interface PlanCardsI {
+  img: string,
   name: string,
   benefits: Array<Array<string>>,
   value: string

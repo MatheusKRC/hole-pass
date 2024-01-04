@@ -16,7 +16,7 @@ function User() {
     { src: holePass },
     { src: holePass }, { src: holePass }, { src: holePass }, { src: holePass }];
 
-  const [userIcon, setUserIcon] = useState(logo);
+  const [userIcon] = useState(logo);
   const [inputs, setInput] = useState(true);
   const [mainUser, setUser] = useState({
     firstName: user.firstName,
