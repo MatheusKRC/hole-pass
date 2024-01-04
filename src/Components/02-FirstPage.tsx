@@ -8,7 +8,6 @@ import horizon from '../Images/Horizon.png';
 import ori from '../Images/Ori.jpg';
 import itTakesTwo from '../Images/ItTakesTwo.png';
 import dmc from '../Images/DMC.png';
-import blackHole from '../Assets/BlackHole.png';
 
 function FirstPage() {
   return (
