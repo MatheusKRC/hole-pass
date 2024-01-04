@@ -1,26 +1,76 @@
 .homePage {
+  display: flex;
 }
 
-.mainContent {
+.content {
+  position: relative;
+
+  margin-top: -700px;
+  margin-left: 50px;
+  opacity: 100%;
 }
 
 .homeGamesBox {
+  width: 279px;
+  height: 340px;
+
+  border-radius: 20px;
+
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.homeGamesBoxs {
+  margin-top: 50px;
+  width: 900px;
+  opacity: 50%;
+}
+
+.homeTitle {
+  color: var(--primary-color);
+
+  font-family: space-age;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+
+  margin-left: -35px;
+
+  text-shadow: 0px 2px 10px var(--primary-color);
+
+  transition: 0.5s;
+
+  width: 10px;
 }
 
 .passLogo {
+  width: 243px;
+  height: 221px;
 }
 
 .passDesc {
-}
+  color: white;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
 
-.assignNow {
+  width: 700px;
+
+  transition: 1s;
 }
 
 .homeGames {
+  display: flex;
+
+  margin-top: -100px;
+  margin-left: -22px;
 }
 
 .homeGame {
-}
+  width: 350px;
+  height: 1122px;
 
-.blackHole {
+  object-fit: cover;
+  box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.5);
 }

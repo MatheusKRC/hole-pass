@@ -16,52 +16,57 @@ function FirstPage() {
       {' '}
       <div className="mainContent">
         {' '}
-        <img
-          className="homeGamesBox"
-          src={ spiderMan }
-          alt="Spider man Remastered ps4"
-        />
-        <img
-          className="homeGamesBox"
-          src={ spiderManMiles }
-          alt="Spider man Miles morales"
-        />
-        <img
-          className="homeGamesBox"
-          src={ spiderMan2 }
-          alt="Spider man 2"
-        />
-        <img
-          className="homeGamesBox"
-          src={ dmc }
-          alt="Devil May Cry definitive edition"
-        />
-        <img
-          className="homeGamesBox"
-          height="280"
-          src={ ori }
-          alt="Ori For The Will And The Wisps"
-        />
-        <img
-          className="homeGamesBox"
-          src={ itTakesTwo }
-          alt="It Takes Two"
-        />
 
-        <img className="passLogo" src={ logo2 } alt="Logo do Hole pass" />
-        <h1 className="title">HOLE PASS</h1>
+        <div className="homeGamesBoxs">
+          <img
+            className="homeGamesBox"
+            src={ spiderMan }
+            alt="Spider man Remastered ps4"
+          />
+          <img
+            className="homeGamesBox"
+            src={ spiderManMiles }
+            alt="Spider man Miles morales"
+          />
+          <img
+            className="homeGamesBox"
+            src={ spiderMan2 }
+            alt="Spider man 2"
+          />
+          <img
+            className="homeGamesBox"
+            src={ dmc }
+            alt="Devil May Cry definitive edition"
+          />
+          <img
+            className="homeGamesBox"
+            height="280"
+            src={ ori }
+            alt="Ori For The Will And The Wisps"
+          />
+          <img
+            className="homeGamesBox"
+            src={ itTakesTwo }
+            alt="It Takes Two"
+          />
 
-        <p className="passDesc">
-          Seja o primeiro a jogar novos jogos no primeiro dia.
-          Além disso, jogue centenas de jogos de alta qualidade no
-          console, PC e nuvem. Com jogos adicionados o tempo inteiro,
-          sempre há algo novo para jogar.
-        </p>
+        </div>
 
-        <a href="#plans">
-          <button className="assignNow" type="button">ASSINE AGORA</button>
+        <div className="content">
 
-        </a>
+          <div className="home">
+            <img className="passLogo" src={ logo2 } alt="Logo do Hole pass" />
+            <h1 className="homeTitle">Hole Pass</h1>
+          </div>
+
+          <p className="passDesc">
+            Seja o primeiro a jogar novos jogos no primeiro dia.
+            Além disso, jogue centenas de jogos de alta qualidade no
+            console, PC e nuvem. Com jogos adicionados o tempo inteiro,
+            sempre há algo novo para jogar.
+          </p>
+
+        </div>
 
       </div>
 
@@ -71,7 +76,6 @@ function FirstPage() {
         <img className="homeGame" src={ baldursGate } alt="Baldurs Gate 3" />
       </div>
 
-      <img className="blackHole" src={ blackHole } alt="Buraco negro amarelo" />
     </div>
   );
 }
