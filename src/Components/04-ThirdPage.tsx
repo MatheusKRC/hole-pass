@@ -3,17 +3,20 @@ import { useState } from 'react';
 import ClassicGames from './05-ClassicGames';
 import Leon from '../Images/Leon.png';
 import village from '../Images/Village.png';
-import re4 from '../Images/Resident Evil 41.png';
-import Alucard from '../Images/Alucar.png';
+import re4 from '../Images/residentName.png';
+import Alucard from '../Images/Alucard.png';
 import castle from '../Images/Castle.png';
-import castleName from '../Images/CASTLEVANIA SYMPHONY OF THE NIGHT (TRIBUTE FILM).png';
-import knight from '../Images/DarkSouls.png';
+import castleName from '../Images/CastlevaniaName.png';
+import knight from '../Images/DarkSoul.png';
 import dark from '../Images/Dark.png';
 import ds from '../Images/DS.png';
 
 function ThirdPage() {
   const [Game, setGame] = useState({
     id: '0',
+    re4: 're4',
+    ds: '',
+    castle: '',
     background: village,
     desc: 'A história segue o agente especial Leon S. Kennedy, que é enviado em uma missão para resgatar a filha do presidente dos Estados Unidos, Ashley Graham, que foi sequestrada por um culto religioso em uma parte rural da Espanha.',
     character: Leon,
@@ -25,6 +28,9 @@ function ThirdPage() {
     if (id === '0') {
       setGame({
         id: '0',
+        re4: 're4',
+        ds: '',
+        castle: '',
         background: village,
         desc: 'A história segue o agente especial Leon S. Kennedy, que é enviado em uma missão para resgatar a filha do presidente dos Estados Unidos, Ashley Graham, que foi sequestrada por um culto religioso em uma parte rural da Espanha.',
         character: Leon,
@@ -34,6 +40,9 @@ function ThirdPage() {
     if (id === '1') {
       setGame({
         id: '1',
+        re4: '',
+        ds: '',
+        castle: 'castle',
         background: castle,
         desc: 'Symphony of the Night apresenta jogabilidade de rolagem lateral. O objetivo é explorar o castelo de Dracula para derrotar uma entidade que está controlando Richter Belmont, que se auto-proclamou lorde do castelo e herói dos eventos que aconteceram em Rondo of Blood.',
         character: Alucard,
@@ -43,6 +52,9 @@ function ThirdPage() {
     if (id === '2') {
       setGame({
         id: '2',
+        re4: '',
+        ds: 'ds',
+        castle: '',
         background: dark,
         desc: 'Dark Souls se passa primariamente no reino fictício de Lordran, onde os jogadores assumem o papel de um personagem denominado "Chosen Undead" que, segundo lendas, seria responsável pela quebra de uma maldição que torna incapazes de morrer aqueles que são afligidos por uma misteriosa marca negra.',
         character: knight,
@@ -63,31 +75,36 @@ function ThirdPage() {
         className={ `game${Game.id}` }
       />
 
-      <button
-        className="buttonGame"
-        onClick={ handleClick }
-        id="0"
-      >
-        Resindent Evil 4
+      <div className="links">
+        {' '}
+        <button
+          className={ `buttonGame${Game.re4}` }
+          onClick={ handleClick }
+          id="0"
+        >
+          Resindent Evil 4
 
-      </button>
-      <button
-        className="buttonGame"
-        onClick={ handleClick }
-        id="1"
-      >
-        Castlevania
-        Symphony Of The Night
+        </button>
+        <button
+          className={ `buttonGame${Game.castle}` }
+          onClick={ handleClick }
+          id="1"
+        >
+          Castlevania
+          Symphony Of The Night
 
-      </button>
-      <button
-        className="buttonGame"
-        onClick={ handleClick }
-        id="2"
-      >
-        Dark Souls
+        </button>
+        <button
+          className={ `buttonGame${Game.ds}` }
+          onClick={ handleClick }
+          id="2"
+        >
+          Dark Souls
 
-      </button>
+        </button>
+
+      </div>
+
     </div>
   );
 }

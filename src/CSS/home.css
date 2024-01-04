@@ -160,9 +160,6 @@
 
 /* ThirdPage */
 
-.thirdPage {
-}
-
 .titlePage3 {
   color: var(--primary-color);
   font-family: koulen;
@@ -178,9 +175,6 @@
 
   margin-top: -20px;
   margin-left: 200px;
-}
-
-.classicGames {
 }
 
 .classicGameBack {
@@ -230,7 +224,7 @@
   width: 868px;
   height: 444px;
 
-  margin-top: -300px;
+  margin-top: -350px;
 
   transition: 1s;
 }
@@ -239,7 +233,7 @@
   width: 868px;
   height: 444px;
 
-  margin-top: -300px;
+  margin-top: -350px;
   margin-right: -200px;
 
   transition: 1s;
@@ -249,11 +243,110 @@
   width: 868px;
   height: 444px;
 
-  margin-top: -300px;
+  margin-top: -350px;
   margin-right: -100px;
 
   transition: 1s;
 }
 
 .buttonGame {
+  background: none;
+  border: 0px;
+
+  color: white;
+
+  text-align: center;
+  text-shadow: 0px 0px 30px #fff;
+  font-family: Anonymous Pro;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+
+  width: 300px;
+
+  transition: 1s;
+}
+
+.buttonGame:hover {
+  cursor: pointer;
+
+  text-shadow: 0px 0px 10px #fff;
+
+  transition: 0.5s;
+}
+
+.buttonGame:active {
+  color: var(--primary-color);
+  text-shadow: 0px 0px 30px var(--primary-color);
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: -20px;
+}
+
+.buttonGamere4 {
+  background: none;
+  border: 0px;
+
+  color: var(--primary-color);
+  text-shadow: 0px 0px 30px var(--primary-color);
+
+  text-align: center;
+  font-family: Anonymous Pro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+
+  width: 300px;
+
+  transition: 1s;
+}
+
+.buttonGamecastle {
+  background: none;
+  border: 0px;
+
+  color: var(--primary-color);
+  text-shadow: 0px 0px 30px var(--primary-color);
+
+  text-align: center;
+  font-family: Anonymous Pro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+
+  width: 400px;
+
+  transition: 1s;
+}
+
+.buttonGameds {
+  background: none;
+  border: 0px;
+
+  color: var(--primary-color);
+  text-shadow: 0px 0px 30px var(--primary-color);
+
+  text-align: center;
+  font-family: Anonymous Pro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+
+  width: 300px;
+
+  transition: 1s;
+}
+
+.buttonGameds:hover,
+.buttonGamecastle:hover,
+.buttonGamere4:hover {
+  cursor: pointer;
+
+  text-shadow: 0px 0px 10px var(--primary-color);
+
+  transition: 0.5s;
 }
