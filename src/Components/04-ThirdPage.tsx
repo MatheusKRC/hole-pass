@@ -2,13 +2,13 @@
 import { useState } from 'react';
 import ClassicGames from './05-ClassicGames';
 import Leon from '../Images/Leon.png';
-import village from '../Images/Village.jpg';
+import village from '../Images/Village.png';
 import re4 from '../Images/Resident Evil 41.png';
 import Alucard from '../Images/Alucar.png';
-import castle from '../Images/Castle.jpg';
+import castle from '../Images/Castle.png';
 import castleName from '../Images/CASTLEVANIA SYMPHONY OF THE NIGHT (TRIBUTE FILM).png';
 import knight from '../Images/DarkSouls.png';
-import dark from '../Images/Dark.jpg';
+import dark from '../Images/Dark.png';
 import ds from '../Images/DS.png';
 
 function ThirdPage() {
@@ -52,17 +52,19 @@ function ThirdPage() {
   };
 
   return (
-    <div>
-      <h1>OU RELEMBRE O PASSADO</h1>
+    <div className="thirdPage">
+      <h1 className="titlePage3">OU RELEMBRE O PASSADO</h1>
 
       <ClassicGames
         background={ Game.background }
         desc={ Game.desc }
         name={ Game.name }
         character={ Game.character }
+        className={ `game${Game.id}` }
       />
 
       <button
+        className="buttonGame"
         onClick={ handleClick }
         id="0"
       >
@@ -70,6 +72,7 @@ function ThirdPage() {
 
       </button>
       <button
+        className="buttonGame"
         onClick={ handleClick }
         id="1"
       >
@@ -78,6 +81,7 @@ function ThirdPage() {
 
       </button>
       <button
+        className="buttonGame"
         onClick={ handleClick }
         id="2"
       >

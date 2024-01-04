@@ -157,3 +157,103 @@
 
   margin-right: 100px;
 }
+
+/* ThirdPage */
+
+.thirdPage {
+}
+
+.titlePage3 {
+  color: var(--primary-color);
+  font-family: koulen;
+
+  text-align: center;
+  font-size: 90px;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px var(--primary-color);
+
+  width: 900px;
+
+  position: relative;
+
+  margin-top: -20px;
+  margin-left: 200px;
+}
+
+.classicGames {
+}
+
+.classicGameBack {
+  width: 1919px;
+  height: 836px;
+
+  margin-top: -200px;
+}
+
+.classicGameContent {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+
+  margin-top: -900px;
+}
+
+.classicDesc {
+  text-shadow: 0px 4px 30px #fff;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95.063%; /* 28.519px */
+
+  position: relative;
+
+  width: 600px;
+}
+
+.classicGameImages {
+  display: flex;
+
+  flex-direction: column;
+  align-items: end;
+}
+
+.classicCharacter {
+  width: 654px;
+  height: 801px;
+
+  margin-top: 40px;
+}
+
+.game0 {
+  width: 868px;
+  height: 444px;
+
+  margin-top: -300px;
+
+  transition: 1s;
+}
+
+.game1 {
+  width: 868px;
+  height: 444px;
+
+  margin-top: -300px;
+  margin-right: -200px;
+
+  transition: 1s;
+}
+
+.game2 {
+  width: 868px;
+  height: 444px;
+
+  margin-top: -300px;
+  margin-right: -100px;
+
+  transition: 1s;
+}
+
+.buttonGame {
+}

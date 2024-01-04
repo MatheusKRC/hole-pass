@@ -2,7 +2,8 @@ interface ClassicGame {
   background: string,
   desc: string,
   character: string,
-  name: string
+  name: string,
+  className: string
 }
 
 interface PlanCardsI {
