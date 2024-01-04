@@ -2,4 +2,15 @@ body {
   margin: 0;
   border: 0;
   overflow-x: hidden;
+
+  background-color: black;
+  color: white;
+}
+
+link {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }

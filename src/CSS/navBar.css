@@ -1,0 +1,50 @@
+@font-face {
+  font-family: space-age;
+  src: url(../fonts/spaceage.ttf);
+}
+
+@font-face {
+  font-family: koulen;
+  src: url(../fonts/Koulen-Regular.ttf);
+}
+
+.navBar {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.holeLogo {
+  width: 200px;
+}
+
+.title {
+  color: #ffde59;
+
+  font-family: space-age;
+  font-size: 32px;
+}
+
+.navLink {
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.assignButton {
+}
+
+.userIcon {
+}
