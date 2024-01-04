@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #ffde59;
+}
+
 /* FirstPage */
 
 .homePage {
@@ -45,11 +49,6 @@
   width: 10px;
 }
 
-.passLogo {
-  width: 243px;
-  height: 221px;
-}
-
 .passDesc {
   color: white;
   font-size: 32px;
@@ -94,22 +93,67 @@
 /* SecondPage */
 
 .secondPage {
+  box-shadow: 0px 40px 30px 0px #000 inset;
+  background-image: url(../Images/starWars.png);
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: -200px;
+
+  width: 1920px;
+  height: 1080px;
 }
 
 .titlePage {
+  color: var(--primary-color);
+  font-family: koulen;
+
+  text-align: center;
+  font-size: 90px;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px var(--primary-color);
+
+  width: 900px;
+  line-height: 90%;
+
+  margin-top: 10px;
 }
 
 .portal {
-}
+  width: 800px;
 
-.futureGame {
+  margin-top: -100px;
 }
 
 .benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .benefitsIcon {
+  width: 200px;
+  margin-right: 100px;
+}
+
+.benefitsIconB {
+  width: 400px;
+  margin-right: 100px;
+
+  margin-bottom: -40px;
 }
 
 .benefitsDesc {
+  color: var(--primary-color);
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: 700;
+
+  text-align: center;
+  width: 500px;
+
+  margin-right: 100px;
 }
