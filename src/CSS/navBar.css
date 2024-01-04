@@ -46,7 +46,9 @@
 
   margin-left: -35px;
 
-  text-shadow: 0px 5px 13px var(--primary-color);
+  text-shadow: 0px 2px 10px var(--primary-color);
+
+  transition: 0.5s;
 }
 
 .navLink {
@@ -55,6 +57,8 @@
   font-style: normal;
   font-weight: 700;
   font-family: "Courier New", Courier, monospace;
+
+  transition: 1s;
 }
 
 .backButton {
@@ -82,4 +86,30 @@
   margin-right: 30px;
 
   width: 120px;
+}
+
+.title:hover {
+  text-shadow: 0px 5px 13px var(--primary-color);
+
+  transition: 0.5s;
+}
+
+.navLink:hover {
+  text-shadow: 0px 5px 13px white;
+
+  transition: 0.5s;
+}
+
+.assignButton:hover {
+  cursor: pointer;
+}
+
+.assignButton:active {
+  transform: translate(-5px, 5px);
+
+  transition: 0.5s;
+}
+
+.backButton:active {
+  background-color: black;
 }
