@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home.tsx';
 import './CSS/index.css';
 import './CSS/games.css';
+import './CSS/navBar.css';
 import Games from './Pages/Games.tsx';
 import Plans from './Pages/Plans.tsx';
 import LoginRegister from './Pages/LoginRegister.tsx';

@@ -20,35 +20,34 @@ function NavBar() {
   }, []);
 
   return (
-    <div>
-      <nav>
-        <Link to="/">
-          <img
-            width="150px"
-            src={ logo }
-            alt="Logo minimalista de um buraco negro amarelo"
-          />
-          <h1>BLACK HOLE</h1>
-        </Link>
 
-        <a href="/Jogos">Jogos</a>
-        <a href="/Plans">Planos de Assinatura</a>
-        <a href="/">Serviços de Gamepass</a>
-        <a href="/">Outros Projetos</a>
+    <nav className="navBar">
+      <Link className="home" to="/">
+        <img
+          className="holeLogo"
+          src={ logo }
+          alt="Logo minimalista de um buraco negro amarelo"
+        />
+        <h1 className="title">Black Hole</h1>
+      </Link>
 
-        <a href="#plans">
-          {' '}
-          <button type="button">INSCREVA-SE AGORA</button>
-        </a>
+      <a className="navLink" href="/Jogos">Jogos</a>
+      <a className="navLink" href="/Plans">Planos de Assinatura</a>
+      <a className="navLink" href="/">Serviços de Gamepass</a>
+      <a className="navLink" href="/">Outros Projetos</a>
 
-        <Link to={ link }>
-          {' '}
-          <img src={ login } alt="Icone de um perfil de usuário" />
-        </Link>
+      <a className="backButton" href="#plans">
+        {' '}
+        <button className="assignButton" type="button">INSCREVA-SE AGORA</button>
+      </a>
 
-      </nav>
+      <Link to={ link }>
+        {' '}
+        <img className="userIcon" src={ login } alt="Icone de um perfil de usuário" />
+      </Link>
 
-    </div>
+    </nav>
+
   );
 }
 
