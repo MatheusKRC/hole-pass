@@ -17,14 +17,14 @@ function PlanCards({ name, img, benefits, value }: PlanCardsI) {
   };
 
   return (
-    <div>
-      <img src={ img } alt="Nome do beneficio" />
+    <div className="planCard">
+      <img className="benefitName" src={ img } alt="Nome do beneficio" />
 
       {benefits.map((line, index) => (
-        <li key={ index }>{line}</li>
+        <li className="benefitsList" key={ index }>{line}</li>
       ))}
 
-      <button onClick={ handleClick }>{value}</button>
+      <button className="buyButton" onClick={ handleClick }>{value}</button>
     </div>
   );
 }

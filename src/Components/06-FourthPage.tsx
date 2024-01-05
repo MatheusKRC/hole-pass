@@ -8,10 +8,10 @@ import Supermassive from '../Images/Supermassive.png';
 
 function FourthPage() {
   return (
-    <div id="plans">
-      <h1>COMPARE OS PLANOS</h1>
+    <div className="comparePlans" id="plans">
+      <h1 className="plansTitle">COMPARE OS PLANOS</h1>
 
-      <img src={ blackHole } alt="buraco negro" />
+      <img className="plansBlackHole" src={ blackHole } alt="buraco negro" />
 
       <div>
         <PlanCards
@@ -34,7 +34,11 @@ function FourthPage() {
         />
       </div>
 
-      <img src={ Supermassive } alt="Buraco negro amarelo enorme" />
+      <img
+        className="bigBlackHole"
+        src={ Supermassive }
+        alt="Buraco negro amarelo enorme"
+      />
 
       <div />
     </div>
