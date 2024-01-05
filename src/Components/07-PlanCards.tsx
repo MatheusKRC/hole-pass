@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { PlanCardsI } from '../Interfaces/homepage';
 
-function PlanCards({ name, img, benefits, value }: PlanCardsI) {
+function PlanCards({ name, img, benefits, value, id }: PlanCardsI) {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -24,7 +24,7 @@ function PlanCards({ name, img, benefits, value }: PlanCardsI) {
         <li className="benefitsList" key={ index }>{line}</li>
       ))}
 
-      <button className="buyButton" onClick={ handleClick }>{value}</button>
+      <button id={ id } className="buyButton" onClick={ handleClick }>{value}</button>
     </div>
   );
 }

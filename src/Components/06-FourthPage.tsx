@@ -13,23 +13,26 @@ function FourthPage() {
 
       <img className="plansBlackHole" src={ blackHole } alt="buraco negro" />
 
-      <div>
+      <div className="planCards">
         <PlanCards
           name="estelar"
           img={ Estelar }
           benefits={ estelar }
+          id="estelar"
           value="R$39,99"
         />
         <PlanCards
           name="intermediario"
           img={ Intermediario }
           benefits={ intermediário }
+          id="intermediario"
           value="R$59,99"
         />
         <PlanCards
           name="supermassivo"
           img={ Supermassivo }
           benefits={ supermassivo }
+          id=""
           value="R$79,99"
         />
       </div>
