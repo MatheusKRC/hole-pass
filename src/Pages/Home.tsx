@@ -4,12 +4,18 @@ import NavBar from '../Components/01-Navbar';
 import SecondPage from '../Components/03-SecondPage';
 import ThirdPage from '../Components/04-ThirdPage';
 import Footer from '../Components/08-Footer';
+import blackHole from '../Assets/BlackHole.png';
 
 function Home() {
   return (
     <div>
       <NavBar />
       <FirstPage />
+      <div className="homeBlackHole">
+        {' '}
+        <img className="blackHole" src={ blackHole } alt="buraco negro" />
+      </div>
+
       <SecondPage />
       <ThirdPage />
       <FourthPage />
