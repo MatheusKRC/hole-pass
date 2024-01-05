@@ -1,5 +1,5 @@
 import logo from '../Assets/Logo.png';
-import logo2 from '../Assets/Logo2.png';
+import logo2 from '../Assets/Logo2Glow.png';
 import github from '../Assets/GitHub.png';
 import linkedin from '../Assets/Linkedin.png';
 import ps from '../Assets/ps.png';
@@ -10,13 +10,17 @@ function Footer() {
     <footer className="footer">
 
       <div className="footerDivDesc">
-        <img
-          className="holeLogo"
-          width="150px"
-          src={ logo }
-          alt="Logo minimalista de um buraco negro amarelo"
-        />
-        <h1 className="title">BLACK HOLE</h1>
+        <div className="test">
+          {' '}
+          <img
+            className="holeLogo"
+            width="150px"
+            src={ logo }
+            alt="Logo minimalista de um buraco negro amarelo"
+          />
+          <h1 className="title">BLACK HOLE</h1>
+
+        </div>
 
         <p className="footerDesc">
           Este site serve apenas como uma ideia de um produto,
@@ -39,12 +43,20 @@ function Footer() {
 
       <div className="socialMedias">
         <p className="socialTitle">Redes Sociais</p>
-        <img className="socialIcon" src={ github } alt="logo do github" />
-        <img className="socialIcon" src={ linkedin } alt="logo do Linkedin" />
+        <div>
+          <img className="socialIcon" src={ github } alt="logo do github" />
+          <img className="socialIcon" src={ linkedin } alt="logo do Linkedin" />
+
+        </div>
 
         <p className="socialTitle">Serviços de GamePass</p>
-        <img className="socialIcon" src={ ps } alt="logo do Playstation" />
-        <img className="socialIcon" src={ xbox } alt="logo do xbox" />
+        <div>
+          {' '}
+          <img className="socialIcon" src={ ps } alt="logo do Playstation" />
+          <img className="socialIcon" src={ xbox } alt="logo do xbox" />
+
+        </div>
+
       </div>
 
     </footer>
