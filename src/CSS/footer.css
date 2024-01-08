@@ -52,7 +52,8 @@
 
   text-align: center;
   text-shadow: 0px 0px 30px #ffde59;
-  font-size: 25px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: 95.063%; /* 30.42px */
