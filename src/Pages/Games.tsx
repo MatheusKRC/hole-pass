@@ -70,23 +70,23 @@ function Games() {
   return (
     <div>
       <NavBar />
-      <div>
-        <h1>NOVIDADES</h1>
+      <div className="gamesPage">
+        <h1 className="gamesPageTitle">NOVIDADES</h1>
 
         <NewGames
           background={ Game.background }
           name={ Game.name }
           character={ Game.character }
         />
-        <button onClick={ handleClick } id="0">.</button>
-        <button onClick={ handleClick } id="1">.</button>
-        <button onClick={ handleClick } id="2">.</button>
+        <button className="slideButton" onClick={ handleClick } id="0">.</button>
+        <button className="slideButton" onClick={ handleClick } id="1">.</button>
+        <button className="slideButton" onClick={ handleClick } id="2">.</button>
       </div>
 
-      <div>
-        <h1>TODOS OS JOGOS DISPONIVEIS</h1>
+      <div className="allGames">
+        <h1 className="plansTitle">TODOS OS JOGOS DISPONIVEIS</h1>
 
-        <input type="text" onChange={ handleChange } />
+        <input className="search" type="text" onChange={ handleChange } />
 
         <GamesComponent games={ gamesView } />
       </div>
