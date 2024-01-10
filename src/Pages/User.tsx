@@ -48,63 +48,68 @@ function User() {
   return (
     <div>
       <NavBar />
-      <div>
-        {}
-        <img src={ userIcon } alt="Imagem de Perfil" />
+      <div className="userPage">
+        <div className="user">
+          {}
+          <img className="userImage" src={ userIcon } alt="Imagem de Perfil" />
 
-        <p>Username</p>
-        <input
-          id="username"
-          onChange={ handleChange }
-          type="text"
-          value={ mainUser.username }
-          disabled={ inputs }
-        />
-
-        <p>Nome Completo</p>
-        <input
-          id="name"
-          onChange={ handleChange }
-          type="text"
-          value={ `${mainUser.firstName} ${mainUser.lastName}` }
-          disabled={ inputs }
-        />
-
-        <p>descrição</p>
-        <textarea
-          id="desc"
-          onChange={ handleChange }
-          value={ mainUser.desc }
-          disabled={ inputs }
-        />
-
-        <button onClick={ handleClick }>Editar Perfil</button>
-
-      </div>
-
-      <div>
-        <h1>PLANO DE ASSINATURA ATUAL</h1>
-
-        {mainUser.plan ? (
-          <PlansComponent
-            games={ holeGames }
-            background={ Space }
-            character={ Starfield }
-            plan={ plan2 }
-            button="false"
+          <p className="userInfo">Username</p>
+          <input
+            className="inputUser"
+            id="username"
+            onChange={ handleChange }
+            type="text"
+            value={ mainUser.username }
+            disabled={ inputs }
           />
-        ) : (
-          <PlansComponent
-            games={ holeGames }
-            background={ holeBack }
-            character=""
-            plan={ blackHole }
-            button="false"
-          />)}
 
-        <button>MUDE SEU PLANO</button>
+          <p className="userInfo">Nome Completo</p>
+          <input
+            className="inputUser"
+            id="name"
+            onChange={ handleChange }
+            type="text"
+            value={ `${mainUser.firstName} ${mainUser.lastName}` }
+            disabled={ inputs }
+          />
+
+          <p className="userInfo">descrição</p>
+          <textarea
+            className="areaUser"
+            id="desc"
+            onChange={ handleChange }
+            value={ mainUser.desc }
+            disabled={ inputs }
+          />
+
+          <button className="userButton" onClick={ handleClick }>Editar Perfil</button>
+
+        </div>
+
+        <div className="assignPlan">
+          <h1 className="userTitle">PLANO DE ASSINATURA ATUAL</h1>
+
+          {mainUser.plan ? (
+            <PlansComponent
+              games={ holeGames }
+              background={ Space }
+              character={ Starfield }
+              plan={ plan2 }
+              button="false"
+            />
+          ) : (
+            <PlansComponent
+              games={ holeGames }
+              background={ holeBack }
+              character=""
+              plan={ blackHole }
+              button="false"
+            />)}
+
+          <button className="changePlan">MUDE SEU PLANO</button>
+        </div>
       </div>
-      <div />
+
     </div>
   );
 }
