@@ -6,30 +6,24 @@ import Footer from '../Components/08-Footer';
 import NavBar from '../Components/01-Navbar';
 import PlansComponent from '../Components/11-PlansComponent';
 import { objGames } from '../Utils/importGames';
-import Uncharted from '../Images/Uncharted.jpg';
-import Nathan from '../Images/Nathan.png';
-import Red from '../Images/Red.jfif';
-import Control from '../Images/Control.png';
-import Space from '../Images/Space.jfif';
-import Starfield from '../Images/Starfield.png';
-import plan2 from '../Assets/plan2.png';
-import plan1 from '../Assets/plan1.png';
-import plan3 from '../Assets/plan3.png';
+import plan2 from '../Images/Supermassivo.png';
+import plan1 from '../Images/Estelar.png';
+import plan3 from '../Images/Intermediario.png';
 
 function Plans() {
   const estelarPlan = objGames.filter(({ plan }) => plan === 'estelar');
   const intermediarioPlan = objGames.filter(({ plan }) => plan === 'intermediario');
   const supermassivoPlan = objGames.filter(({ plan }) => plan === 'supermassivo');
   return (
-    <div>
+    <div className="plansPage">
       <NavBar />
-      <div>
-        <h1>ENTRE NO HORIZONTE DE EVENTOS</h1>
+      <div className="plansMain">
+        <h1 className="allGamesTitle">ENTRE NO HORIZONTE DE EVENTOS</h1>
 
-        <img width="200px" src={ logo2 } alt="Logo do Hole pass" />
-        <h1>HOLE PASS</h1>
+        <img className="passLogo" width="200px" src={ logo2 } alt="Logo do Hole pass" />
+        <h1 className="title">Hole Pass</h1>
 
-        <p>
+        <p className="passDesc">
           Aqui estão as bibliotecas de jogos presentes em cada plano
           de assinatura, estelar, intermediário e supermassivo, cada
           plano tem sua respectiva biblioteca, mas isso não significa
@@ -43,22 +37,16 @@ function Plans() {
 
       <PlansComponent
         games={ estelarPlan }
-        background={ Uncharted }
-        character={ Nathan }
         plan={ plan1 }
         button="true"
       />
       <PlansComponent
         games={ intermediarioPlan }
-        background={ Red }
-        character={ Control }
         plan={ plan3 }
         button="true"
       />
       <PlansComponent
         games={ supermassivoPlan }
-        background={ Space }
-        character={ Starfield }
         plan={ plan2 }
         button="true"
       />
