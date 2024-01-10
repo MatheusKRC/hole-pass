@@ -245,11 +245,6 @@
   display: flex;
 }
 
-.carrousel {
-  cursor: grab;
-  overflow: hidden;
-}
-
 .atropos-inner {
   transition: 1s;
 }

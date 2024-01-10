@@ -22,8 +22,8 @@ function PlansComponent({ games, plan, button }:any) {
       {
       button === 'true'
         ? (
-          <Link to="/#plans">
-            <button className="planButton">Adquira Já</button>
+          <Link className="planLink" to="/#plans">
+            <button className="buyButton">Adquira Ja</button>
 
           </Link>) : (null)
 }
