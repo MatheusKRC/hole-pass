@@ -1,3 +1,198 @@
+:root {
+  --primary-color: #ffde59;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 1920px;
+  height: 836px;
+
+  margin-top: -600px;
+
+  /* overflow: hidden; */
+}
+
+.slides {
+  width: 400%;
+  height: 978px;
+
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 33.33%;
+  transition: 0.5s;
+  /* position: relative; */
+}
+
+.manualNav {
+  position: relative;
+  width: 1920px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manualBtn {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manualBtn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.manualBtn:hover {
+  background-color: var(--primary-color);
+}
+
+#radio0:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio1:checked ~ .first {
+  margin-left: -33.33%;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -66.66%;
+}
+
+#radio0:checked ~ .navAuto .autoBtn0 {
+  background-color: var(--primary-color);
+  filter: drop-shadow(0px 0px 10px var(--primary-color));
+}
+
+#radio1:checked ~ .navAuto .autoBtn1 {
+  background-color: var(--primary-color);
+  filter: drop-shadow(0px 0px 10px var(--primary-color));
+}
+
+#radio2:checked ~ .navAuto .autoBtn2 {
+  background-color: var(--primary-color);
+  filter: drop-shadow(0px 0px 10px var(--primary-color));
+}
+
+.navAuto div {
+  filter: drop-shadow(0px 0px 10px #fff);
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navAuto {
+  position: absolute;
+  width: 1905px;
+  margin-top: 796px;
+  display: flex;
+  justify-content: center;
+}
+
+.navAuto div:not(:last-child) {
+  margin-right: 20px;
+}
+
+.gamesPage {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.gamesPageTitle {
+  color: #f7f7f7;
+
+  text-align: center;
+  text-shadow: 0px 0px 30px #f3f3f3;
+  font-family: koulen;
+  font-size: 110px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95.063%;
+
+  position: relative;
+
+  margin-left: -1300px;
+}
+
+.sliderGame {
+  margin-top: -400px;
+  position: relative;
+
+  margin-left: 700px;
+}
+
+.sliderCharacter {
+  margin-top: -30px;
+
+  margin-bottom: -30px;
+}
+
+.yellow {
+  background: var(--primary-color);
+  filter: drop-shadow(0px 0px 30px var(--primary-color));
+  color: var(--primary-color);
+
+  transition: 1s;
+}
+
+.allGames {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: url(../Images/starBackground.png);
+  transition: 1s;
+}
+
+.allGamesTitle {
+  margin-top: 100px;
+  color: var(--primary-color);
+  font-family: koulen;
+
+  position: relative;
+
+  text-align: center;
+  font-size: 90px;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px var(--primary-color);
+  line-height: 95.063%; /* 91.26px */
+
+  width: 900px;
+}
+
+.search {
+  margin-bottom: 40px;
+
+  padding: 10px;
+  width: 500px;
+  border: 0px;
+
+  background: #fff;
+
+  box-shadow: 0px 0px 30px 0px #fff;
+
+  position: relative;
+
+  color: black;
+
+  text-shadow: 0px 4px 30px black;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: 400;
+}
+
 .games {
   display: flex;
 
@@ -10,20 +205,18 @@
   margin-right: 100px;
 
   transition-duration: 0.5s;
+
+  margin-bottom: 50px;
+}
+
+.gamesBox {
+  transition: 1s;
 }
 
 .atropos {
   transition-duration: 0.5s;
 
   margin-left: 27px;
-}
-
-.game-box {
-  --side-color: white;
-  --side-size: 32px;
-  aspect-ratio: 466/656;
-
-  background-color: azure;
 }
 
 .text-over {
@@ -48,22 +241,6 @@
   opacity: 80%;
 }
 
-.mini-text-over {
-  position: absolute;
-  color: white;
-
-  bottom: 20px;
-  left: 145px;
-}
-
-.mini-text-over2 {
-  position: absolute;
-  color: white;
-
-  bottom: 235px;
-  left: 3px;
-}
-
 .inner {
   display: flex;
 }
@@ -71,4 +248,14 @@
 .carrousel {
   cursor: grab;
   overflow: hidden;
+}
+
+.atropos-inner {
+  transition: 1s;
+}
+
+.atropos-inner:hover {
+  transform: translate(0px, -10px);
+
+  transition: 0.5s;
 }
