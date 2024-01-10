@@ -1,56 +1,18 @@
+/* eslint-disable react/jsx-max-depth */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useEffect, useState } from 'react';
 import NavBar from '../Components/01-Navbar';
 import Footer from '../Components/08-Footer';
 import NewGames from '../Components/09-NewGames';
-import spiderMan from '../Images/spiderMan.png';
-import spiderName from '../Images/Spidername.png';
-import timesSquare from '../Images/timesSquare.jpg';
-import V from '../Images/V.png';
-import cyberpunk from '../Images/CyberPunk.png';
-import nightCity from '../Images/NightCity.jpg';
-import kratos from '../Images/Kratos.png';
-import ragnarok from '../Images/Ragnarok.png';
-import lago from '../Images/Lago.jpg';
 import GamesComponent from '../Components/10-GamesComponent';
 import { objGames } from '../Utils/importGames';
+import Cyberpunk from '../Images/cyberpunk.png';
+import Ragnarok from '../Images/ragnarok.png';
+import spiderman from '../Images/spiderman.png';
 
 function Games() {
-  const [Game, setGame] = useState({
-    id: '0',
-    background: timesSquare,
-    character: spiderMan,
-    name: spiderName,
-  });
   const [gamesView, setGamesView] = useState(objGames);
   const [filter, setFilter] = useState('');
-
-  const handleClick = ({ target }: any) => {
-    const { id } = target;
-    if (id === '0') {
-      setGame({
-        id: '0',
-        background: timesSquare,
-        character: spiderMan,
-        name: spiderName,
-      });
-    }
-    if (id === '1') {
-      setGame({
-        id: '1',
-        background: nightCity,
-        character: V,
-        name: cyberpunk,
-      });
-    }
-    if (id === '2') {
-      setGame({
-        id: '2',
-        background: lago,
-        character: kratos,
-        name: ragnarok,
-      });
-    }
-  };
 
   const handleChange = ({ target }: any) => {
     const { value } = target;
@@ -59,13 +21,37 @@ function Games() {
 
   useEffect(() => {
     if (filter.length > 0) {
-      const newGames = objGames.filter(({ name }:any) => (name.includes(filter)));
-      console.log(newGames);
+      const lowerFilter = filter.toLowerCase();
+      const newGames = objGames.filter(({ name }:any) => {
+        const nameLower = name.toLowerCase();
+        return nameLower.includes(lowerFilter);
+      });
       setGamesView(newGames);
     } else {
       setGamesView(objGames);
     }
   }, [filter]);
+
+  let count = 0;
+  document.getElementById('radio0')?.setAttribute('checked', 'true');
+
+  setInterval(() => {
+    nextSlide();
+  }, 2000);
+
+  const nextSlide = () => {
+    count += 1;
+
+    if (count > 3) {
+      count = 0;
+    }
+
+    document.getElementById(`radio${count - 1}`)?.removeAttribute('checked');
+    document.getElementById(`radio${count}`)?.setAttribute('checked', 'true');
+    document.getElementById(`radio${count + 1}`)?.removeAttribute('checked');
+  };
+
+  // Referencia do slider: https://www.youtube.com/watch?v=BpzyuuPIEaQ
 
   return (
     <div>
@@ -73,18 +59,62 @@ function Games() {
       <div className="gamesPage">
         <h1 className="gamesPageTitle">NOVIDADES</h1>
 
-        <NewGames
-          background={ Game.background }
-          name={ Game.name }
-          character={ Game.character }
-        />
-        <button className="slideButton" onClick={ handleClick } id="0">.</button>
-        <button className="slideButton" onClick={ handleClick } id="1">.</button>
-        <button className="slideButton" onClick={ handleClick } id="2">.</button>
+        <div className="slider">
+
+          <div className="slides">
+            <input
+              name="radio"
+              type="radio"
+              className="slideButton"
+              id="radio0"
+            />
+            <input
+              name="radio"
+              type="radio"
+              className="slideButton"
+              id="radio1"
+            />
+            <input
+              name="radio"
+              type="radio"
+              className="slideButton"
+              id="radio2"
+            />
+
+            <NewGames
+              classname="first"
+              game={ spiderman }
+            />
+
+            <NewGames
+              classname=""
+              game={ Cyberpunk }
+            />
+
+            <NewGames
+              classname=""
+              game={ Ragnarok }
+            />
+
+            <div className="navAuto">
+              <div className="autoBtn0" />
+              <div className="autoBtn1" />
+              <div className="autoBtn2" />
+            </div>
+
+          </div>
+        </div>
+
+        <div className="manualNav">
+          <label htmlFor="radio0" className="manualBtn" />
+          <label htmlFor="radio1" className="manualBtn" />
+          <label htmlFor="radio2" className="manualBtn" />
+        </div>
+
       </div>
 
       <div className="allGames">
-        <h1 className="plansTitle">TODOS OS JOGOS DISPONIVEIS</h1>
+        <h1 className="allGamesTitle">TODOS OS JOGOS DISPONIVEIS</h1>
 
         <input className="search" type="text" onChange={ handleChange } />
 

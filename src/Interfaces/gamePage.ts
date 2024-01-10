@@ -1,7 +1,6 @@
 interface NewGamesI {
-  background: string,
-  character: string,
-  name: string
+  game: string,
+  classname: string
 }
 
 export default NewGamesI;

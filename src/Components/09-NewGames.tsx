@@ -1,13 +1,14 @@
 import NewGamesI from '../Interfaces/gamePage';
 
-function NewGames({ background, name, character }: NewGamesI) {
+function NewGames({ game, classname }: NewGamesI) {
   return (
-    <div className="slider">
-      <img className="sliderBackground" src={ background } alt="cenário" />
+    <div className={ `slide ${classname}` }>
+      <img
+        className="sliderBackground"
+        src={ game }
+        alt="cenário"
+      />
 
-      <img className="sliderGame" width="500px" src={ name } alt="nome do jogo" />
-
-      <img className="sliderCharacter" width="500px" src={ character } alt="personagem" />
     </div>
   );
 }
