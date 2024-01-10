@@ -1,0 +1,60 @@
+.plansMain {
+  display: flex;
+  background-image: url("../Images/plansBackground.png");
+  flex-direction: column;
+
+  flex-wrap: wrap;
+
+  margin-top: -60px;
+}
+
+.divTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.plansContent {
+  margin-left: 100px;
+
+  margin-top: -100px;
+}
+
+.PLANS {
+  margin-top: -100px;
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.plansHoles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-right: 100px;
+}
+
+.planHole {
+  filter: grayscale(100%);
+  transition: 1s;
+}
+
+.planHole:hover {
+  filter: grayscale(0%);
+  transition: 0.5s;
+}
+
+.planLink {
+  margin-top: -1050px;
+
+  margin-right: 900px;
+}
+
+.carrousel {
+  cursor: grab;
+  overflow: hidden;
+
+  margin-top: -350px;
+}
