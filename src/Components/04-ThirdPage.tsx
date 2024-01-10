@@ -10,6 +10,7 @@ import castleName from '../Images/CastlevaniaName.png';
 import knight from '../Images/DarkSoul.png';
 import dark from '../Images/Dark.png';
 import ds from '../Images/DS.png';
+import spider from '../Images/timesSquare.png';
 
 function ThirdPage() {
   const [Game, setGame] = useState({

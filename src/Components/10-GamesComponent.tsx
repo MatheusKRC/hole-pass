@@ -11,7 +11,6 @@ function GamesComponent({ games }:any) {
       {games.map(({ src, link }:any, index: any) => (
         <Link to={ link } key={ index }>
           <Atropos
-            className={ `atropos1 ${index}` }
             activeOffset={ 1 }
             shadowScale={ 1.05 }
             highlight={ false }
