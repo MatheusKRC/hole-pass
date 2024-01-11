@@ -8,33 +8,43 @@ import Supermassive from '../Images/Supermassive.png';
 
 function FourthPage() {
   return (
-    <div id="plans">
-      <h1>COMPARE OS PLANOS</h1>
+    <div className="comparePlans" id="plans">
+      <h1 className="plansTitle">COMPARE OS PLANOS</h1>
 
-      <img src={ blackHole } alt="buraco negro" />
+      <img className="plansBlackHole" src={ blackHole } alt="buraco negro" />
 
-      <div>
+      <div className="planCards">
         <PlanCards
+          planCard=""
           name="estelar"
           img={ Estelar }
           benefits={ estelar }
+          id="estelar"
           value="R$39,99"
         />
         <PlanCards
+          planCard=""
           name="intermediario"
           img={ Intermediario }
           benefits={ intermediário }
+          id="intermediario"
           value="R$59,99"
         />
         <PlanCards
+          planCard=""
           name="supermassivo"
           img={ Supermassivo }
           benefits={ supermassivo }
+          id=""
           value="R$79,99"
         />
       </div>
 
-      <img src={ Supermassive } alt="Buraco negro amarelo enorme" />
+      <img
+        className="bigBlackHole"
+        src={ Supermassive }
+        alt="Buraco negro amarelo enorme"
+      />
 
       <div />
     </div>

@@ -62,12 +62,12 @@ function LoginRegister() {
   }, [navigate]);
 
   return (
-    <div>
-      <div>
-        <img src={ logoPass } alt="logo hole pass" />
-        <h1>HOLE PASS</h1>
+    <div className="loginRegisterPage">
+      <div className="loginContent">
+        <img className="loginLogo" src={ logoPass } alt="logo hole pass" />
+        <h1 className="loginTitle">Hole Pass</h1>
 
-        <p>
+        <p className="loginDesc">
           Um plano de assinatura que disponibiliza uma
           biblioteca de jogos baseados em suas épocas
           de lançamento, tendo jogos clássicos incluídos
@@ -77,22 +77,28 @@ function LoginRegister() {
 
         </p>
       </div>
-      <div>
-        <img src={ logo } alt="logo black hole" />
-        <h1>{login}</h1>
+      <div className="loginForm">
+        <img className="loginHoleLogo" src={ logo } alt="logo black hole" />
+        <h1 className="loginRegTitle">{login}</h1>
 
         {inputs.map(({ pholder, id }) => (
-          <input
-            key={ pholder }
-            onChange={ handleChange }
-            type="text"
-            id={ id }
-            placeholder={ pholder }
-          />
+          <div key={ id }>
+            <label htmlFor={ id } className="pholder">{pholder}</label>
+            <br />
+            <input
+              name={ id }
+              className="loginInput"
+              key={ pholder }
+              onChange={ handleChange }
+              type="text"
+              id={ id }
+            />
+          </div>
+
         ))}
 
-        <button onClick={ handleRegister }>{login}</button>
-        <button onClick={ handleClick }>{exist}</button>
+        <button className="buyButton" onClick={ handleRegister }>{login}</button>
+        <button className="already" onClick={ handleClick }>{exist}</button>
       </div>
     </div>
   );

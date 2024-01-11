@@ -1,0 +1,100 @@
+.footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: -20px;
+}
+
+.test {
+  display: flex;
+  align-items: center;
+}
+
+.footerDivDesc {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLogo {
+  width: 250px;
+}
+
+.footerDesc {
+  width: 480px;
+
+  text-shadow: 0px 4px 30px #fff;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: 700;
+
+  margin-top: -20px;
+  margin-left: 20px;
+}
+
+.footerDivLogo {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: -160px;
+}
+
+.footerLogo {
+  margin-bottom: -40px;
+}
+
+.BIE {
+  color: #ffde59;
+
+  text-align: center;
+  text-shadow: 0px 0px 30px #ffde59;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95.063%; /* 30.42px */
+
+  width: 200px;
+}
+
+.socialMedias {
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 100px;
+  margin-top: 30px;
+
+  align-items: center;
+}
+
+.socialTitle {
+  text-shadow: 0px 4px 30px #fff;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: 400;
+
+  text-align: center;
+}
+
+.socialIcon {
+  width: 50px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+  transition: 1s;
+}
+
+.socialIcon:hover {
+  cursor: pointer;
+  filter: opacity(70%);
+
+  transform: translate(2px, 2px);
+
+  transition: 1s;
+}

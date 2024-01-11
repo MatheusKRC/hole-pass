@@ -5,26 +5,12 @@ import logo2 from '../Games/Logo.png';
 import name from '../Games/Name.png';
 
 function GamesComponent({ games }:any) {
-  // const [indexGame, setIndexGame] = useState(4);
-  // const [initialIndex, setInitialIndex] = useState(0);
-
-  // const handleClick = () => {
-  //   if (indexGame <= games.length) {
-  //     setInitialIndex(indexGame);
-  //     setIndexGame(indexGame + 4);
-  //   } else {
-  //     setInitialIndex(0);
-  //     setIndexGame(4);
-  //   }
-  // };
-
   return (
     <div className="games">
 
       {games.map(({ src, link }:any, index: any) => (
         <Link to={ link } key={ index }>
           <Atropos
-            className={ `atropos1 ${index}` }
             activeOffset={ 1 }
             shadowScale={ 1.05 }
             highlight={ false }

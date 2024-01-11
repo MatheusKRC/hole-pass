@@ -1,0 +1,191 @@
+.userPage {
+  display: flex;
+  height: 1150px;
+  background-image: url(../Images/starBackground.png);
+
+  margin-left: 40px;
+}
+
+.user {
+  width: 885px;
+  height: 841px;
+  border: 6px solid #ffde59;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  background: #000;
+
+  box-shadow: 0px 0px 30px 0px #ffde59;
+
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.userImage {
+  border: 1px solid #ffde59;
+
+  border-radius: 300px;
+
+  width: 420px;
+}
+
+.userInfo {
+  color: #fff;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.inputUsername {
+  background: none;
+  border: none;
+
+  color: #ffde59;
+
+  text-shadow: 0px 0px 30px #ffde59;
+  font-family: koulen;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95.063%; /* 38.025px */
+  text-align: center;
+
+  margin-top: -30px;
+}
+
+.infos {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  align-content: center;
+
+  /* margin-left: 140px; */
+}
+
+.inputUser {
+  background: none;
+  border: none;
+
+  color: #ffde59;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95.063%; /* 38.025px */
+  text-align: center;
+}
+
+.areaUser {
+  background: none;
+  border: none;
+
+  color: #ffde59;
+
+  text-shadow: 0px 0px 30px #ffde59;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95.063%; /* 38.025px */
+
+  text-align: center;
+}
+
+.userButton {
+  margin-top: 20px;
+
+  color: var(--primary-color);
+
+  background-color: black;
+  border: 0px;
+  padding: 10px;
+
+  padding-left: 30px;
+  padding-right: 30px;
+
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+
+  border-left: 8px solid #ffde59;
+  border-bottom: 8px solid #ffde59;
+  transition: 0.5s;
+}
+
+.userButton:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px #ffde59;
+
+  transition: 0.5s;
+}
+
+.userButton:active {
+  border-left: 0px solid;
+  border-bottom: 0px solid;
+
+  transition: 0.5s;
+}
+
+.edit {
+  border: 2px solid white;
+}
+
+.userTitle {
+  color: var(--primary-color);
+  font-family: koulen;
+
+  text-align: center;
+  font-size: 90px;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px var(--primary-color);
+  line-height: 95.063%; /* 91.26px */
+
+  width: 1300px;
+}
+
+.miniGameBox {
+  width: 200px;
+}
+
+.mini-text-over {
+  width: 50px;
+  position: absolute;
+  color: white;
+
+  bottom: 20px;
+  left: 130px;
+}
+
+.mini-text-over2 {
+  width: 160px;
+  position: absolute;
+  color: white;
+
+  bottom: 235px;
+  left: 0px;
+}
+
+.assignPlan {
+  width: 1400px;
+  margin-left: 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plansBackground {
+  margin-bottom: 120px;
+}

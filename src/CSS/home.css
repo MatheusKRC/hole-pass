@@ -1,0 +1,474 @@
+:root {
+  --primary-color: #ffde59;
+}
+
+/* FirstPage */
+
+.homePage {
+  display: flex;
+}
+
+.content {
+  position: relative;
+
+  margin-top: -700px;
+  margin-left: 50px;
+  opacity: 100%;
+}
+
+.homeGamesBox {
+  width: 279px;
+  height: 340px;
+
+  border-radius: 20px;
+
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.homeGamesBoxs {
+  margin-top: 50px;
+  width: 900px;
+  opacity: 50%;
+}
+
+.homeTitle {
+  color: var(--primary-color);
+
+  font-family: space-age;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+
+  margin-left: -35px;
+
+  text-shadow: 0px 2px 10px var(--primary-color);
+
+  transition: 0.5s;
+
+  width: 10px;
+}
+
+.passDesc {
+  color: white;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+
+  width: 700px;
+
+  transition: 1s;
+}
+
+.homeGames {
+  display: flex;
+
+  margin-top: -100px;
+  margin-left: -22px;
+}
+
+.homeGame {
+  width: 350px;
+  height: 1122px;
+
+  object-fit: cover;
+  box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.5);
+}
+
+.homeBlackHole {
+  display: flex;
+  justify-content: center;
+}
+
+.blackHole {
+  width: 1127.927px;
+  position: relative;
+
+  transform: rotate(0.479deg);
+
+  margin-top: -300px;
+}
+
+/* SecondPage */
+
+.secondPage {
+  box-shadow: 0px 40px 30px 0px #000 inset;
+  background-image: url(../Images/starWars.png);
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: -200px;
+
+  width: 1920px;
+  height: 1080px;
+}
+
+.titlePage {
+  color: var(--primary-color);
+  font-family: koulen;
+
+  text-align: center;
+  font-size: 90px;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px var(--primary-color);
+
+  width: 900px;
+  line-height: 90%;
+
+  margin-top: 10px;
+}
+
+.portal {
+  width: 800px;
+
+  margin-top: -100px;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefitsIcon {
+  width: 200px;
+  margin-right: 100px;
+}
+
+.benefitsIconB {
+  width: 400px;
+  margin-right: 100px;
+
+  margin-bottom: -40px;
+}
+
+.benefitsDesc {
+  color: var(--primary-color);
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: 700;
+
+  text-align: center;
+  width: 500px;
+
+  margin-right: 100px;
+}
+
+/* ThirdPage */
+
+.titlePage3 {
+  color: var(--primary-color);
+  font-family: koulen;
+
+  text-align: center;
+  font-size: 90px;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px var(--primary-color);
+
+  width: 900px;
+
+  position: relative;
+
+  margin-top: -20px;
+  margin-left: 200px;
+}
+
+.classicGameBack {
+  width: 1919px;
+  height: 836px;
+
+  margin-top: -200px;
+}
+
+.classicGameContent {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+
+  margin-top: -900px;
+}
+
+.classicDesc {
+  text-shadow: 0px 4px 30px #fff;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95.063%; /* 28.519px */
+
+  position: relative;
+
+  width: 600px;
+}
+
+.classicGameImages {
+  display: flex;
+
+  flex-direction: column;
+  align-items: end;
+}
+
+.classicCharacter {
+  width: 654px;
+  height: 801px;
+
+  margin-top: 40px;
+}
+
+.game0 {
+  width: 868px;
+  height: 444px;
+
+  margin-top: -350px;
+
+  transition: 1s;
+}
+
+.game1 {
+  width: 868px;
+  height: 444px;
+
+  margin-top: -350px;
+  margin-right: -200px;
+
+  transition: 1s;
+}
+
+.game2 {
+  width: 868px;
+  height: 444px;
+
+  margin-top: -350px;
+  margin-right: -100px;
+
+  transition: 1s;
+}
+
+.buttonGame {
+  background: none;
+  border: 0px;
+
+  color: white;
+
+  text-align: center;
+  text-shadow: 0px 0px 30px #fff;
+  font-family: Anonymous Pro;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+
+  width: 300px;
+
+  transition: 1s;
+  position: relative;
+}
+
+.buttonGame:hover {
+  cursor: pointer;
+
+  text-shadow: 0px 0px 10px #fff;
+
+  transition: 0.5s;
+}
+
+.buttonGame:active {
+  color: var(--primary-color);
+  text-shadow: 0px 0px 30px var(--primary-color);
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: -20px;
+}
+
+.buttonGamere4 {
+  background: none;
+  border: 0px;
+
+  color: var(--primary-color);
+  text-shadow: 0px 0px 30px var(--primary-color);
+
+  text-align: center;
+  font-family: Anonymous Pro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+
+  width: 300px;
+
+  transition: 1s;
+}
+
+.buttonGamecastle {
+  background: none;
+  border: 0px;
+
+  color: var(--primary-color);
+  text-shadow: 0px 0px 30px var(--primary-color);
+
+  text-align: center;
+  font-family: Anonymous Pro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+
+  width: 400px;
+
+  transition: 1s;
+  position: relative;
+}
+
+.buttonGameds {
+  background: none;
+  border: 0px;
+
+  color: var(--primary-color);
+  text-shadow: 0px 0px 30px var(--primary-color);
+
+  text-align: center;
+  font-family: Anonymous Pro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+
+  width: 300px;
+
+  transition: 1s;
+}
+
+.buttonGameds:hover,
+.buttonGamecastle:hover,
+.buttonGamere4:hover {
+  cursor: pointer;
+
+  text-shadow: 0px 0px 10px var(--primary-color);
+
+  transition: 0.5s;
+}
+
+/* FourthPage */
+
+.comparePlans {
+  background-image: url(../Images/starBackground.png);
+  display: flex;
+
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.plansTitle {
+  color: var(--primary-color);
+  font-family: koulen;
+
+  position: relative;
+
+  text-align: center;
+  font-size: 90px;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px var(--primary-color);
+
+  width: 900px;
+}
+
+.plansBlackHole {
+  margin-top: -500px;
+}
+
+.planCards {
+  display: flex;
+
+  margin-top: -170px;
+}
+
+.planCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  width: 461px;
+  height: 740px;
+
+  background-color: black;
+  border: 6px solid #ffde59;
+  box-shadow: 0px 0px 30px 0px #ffde59;
+
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.benefitName {
+  margin-top: -110px;
+}
+
+.benefitsList {
+  text-shadow: 0px 4px 30px #fff;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 300%;
+
+  position: relative;
+
+  width: 600px;
+
+  margin-left: 200px;
+}
+
+.buyButton {
+  width: 304px;
+  height: 71px;
+  border: 6px solid #ffde59;
+
+  background: #000;
+
+  box-shadow: 0px 0px 30px 0px #fff;
+
+  color: #fff;
+
+  text-align: center;
+  text-shadow: 0px 0px 30px #fff;
+  font-family: Koulen;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95.063%; /* 38.025px */
+
+  margin-top: 30px;
+
+  transition: 1s;
+}
+
+#estelar,
+#intermediario {
+  margin-top: 150px;
+}
+
+.buyButton:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 40px 0px var(--primary-color);
+
+  transition: 0.5s;
+}
+
+.buyButton:active {
+  box-shadow: 0px 0px 0px 0px var(--primary-color);
+
+  transition: 0.5s;
+}
+
+.bigBlackHole {
+  margin-top: -340px;
+
+  width: 1400px;
+  height: 800px;
+}

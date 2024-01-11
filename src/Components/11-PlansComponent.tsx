@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import logo2 from '../Games/Logo.png';
 import name from '../Games/Name.png';
 
-function PlansComponent({ games, plan, background, character, button }:any) {
+function PlansComponent({ games, plan, button, boxSize, nameSize, logoSize }:any) {
   const carousel = useRef(null);
   const [width, setWidth] = useState(0);
 
@@ -17,13 +17,15 @@ function PlansComponent({ games, plan, background, character, button }:any) {
   return (
     <div className="games">
 
-      <img src={ plan } alt={ plan } />
-
-      <img src={ background } alt={ background } />
-      <img src={ character } alt={ character } />
+      <img className="plansBackground" src={ plan } alt={ plan } />
 
       {
-      button === 'true' ? <Link to="/#plans"><button>Adquira Já</button></Link> : null
+      button === 'true'
+        ? (
+          <Link className="planLink" to="/#plans">
+            <button className="buyButton">Adquira Ja</button>
+
+          </Link>) : (null)
 }
 
       <motion.div
@@ -52,21 +54,19 @@ function PlansComponent({ games, plan, background, character, button }:any) {
               >
 
                 <img
-                  width="300px"
+                  className={ boxSize }
                   key={ src }
                   src={ src }
                   alt={ src }
                 />
                 <img
-                  width="80px"
-                  className="text-over"
+                  className={ nameSize }
                   data-atropos-offset="10"
                   src={ logo2 }
                   alt="logo"
                 />
                 <img
-                  width="240px"
-                  className="text-over2"
+                  className={ logoSize }
                   data-atropos-offset="5"
                   src={ name }
                   alt="black hole name"
