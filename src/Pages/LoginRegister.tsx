@@ -64,10 +64,10 @@ function LoginRegister() {
   return (
     <div className="loginRegisterPage">
       <div className="loginContent">
-        <img className="passLogo" src={ logoPass } alt="logo hole pass" />
-        <h1 className="homeTitle" id="loginPass">Hole Pass</h1>
+        <img className="loginLogo" src={ logoPass } alt="logo hole pass" />
+        <h1 className="loginTitle">Hole Pass</h1>
 
-        <p className="passDesc" id="loginDesc">
+        <p className="loginDesc">
           Um plano de assinatura que disponibiliza uma
           biblioteca de jogos baseados em suas épocas
           de lançamento, tendo jogos clássicos incluídos
@@ -78,18 +78,23 @@ function LoginRegister() {
         </p>
       </div>
       <div className="loginForm">
-        <img className="holeLogo" src={ logo } alt="logo black hole" />
-        <h1 className="loginTitle">{login}</h1>
+        <img className="loginHoleLogo" src={ logo } alt="logo black hole" />
+        <h1 className="loginRegTitle">{login}</h1>
 
         {inputs.map(({ pholder, id }) => (
-          <input
-            className="loginInput"
-            key={ pholder }
-            onChange={ handleChange }
-            type="text"
-            id={ id }
-            placeholder={ pholder }
-          />
+          <div key={ id }>
+            <label htmlFor={ id } className="pholder">{pholder}</label>
+            <br />
+            <input
+              name={ id }
+              className="loginInput"
+              key={ pholder }
+              onChange={ handleChange }
+              type="text"
+              id={ id }
+            />
+          </div>
+
         ))}
 
         <button className="buyButton" onClick={ handleRegister }>{login}</button>
