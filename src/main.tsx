@@ -10,6 +10,7 @@ import './CSS/navBar.css';
 import './CSS/home.css';
 import './CSS/footer.css';
 import './CSS/plans.css';
+import './CSS/user.css';
 import Games from './Pages/Games.tsx';
 import Plans from './Pages/Plans.tsx';
 import LoginRegister from './Pages/LoginRegister.tsx';
