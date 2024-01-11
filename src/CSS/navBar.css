@@ -87,6 +87,13 @@
   width: 120px;
 }
 
+.defaultUser {
+  margin-left: -20px;
+  margin-right: 30px;
+
+  width: 70px;
+}
+
 .title:hover {
   text-shadow: 0px 5px 13px var(--primary-color);
 
