@@ -96,30 +96,56 @@ function PaymentComponent({ planGames }:any) {
     } return console.log('Aguardando Pagamento');
   }, [status]);
 
-  setInterval(verifyStatus, 3000 * 10);
+  setInterval(verifyStatus, 30000);
 
   return (
-    <div>
-      <h1>FORMA DE PAGAMENTO</h1>
+    <div className="paymentComponent">
+      <h1 className="paymentTitle">FORMA DE PAGAMENTO</h1>
 
-      <button onClick={ handleClick } value="pix">Pix</button>
-      <button onClick={ handleClick } value="cartão">Cartão</button>
+      <button
+        className="paymentMethod"
+        onClick={ handleClick }
+        value="pix"
+      >
+        Pix
+
+      </button>
+      <button
+        className="paymentMethod"
+        onClick={ handleClick }
+        value="cartão"
+      >
+        Cartão
+
+      </button>
 
       {type === 'pix' ? (
-        <div>
-          <img width="200px" alt="qrCode" src={ `data:image/jpeg;base64,${qrCode}` } />
-          <input type="text" onChange={ handleChange } value={ copy } />
+        <div className="pixDiv">
+          <img
+            className="pix"
+            width="200px"
+            alt="qrCode"
+            src={ `data:image/jpeg;base64,${qrCode}` }
+          />
+          <input
+            className="pixInput"
+            type="text"
+            onChange={ handleChange }
+            value={ copy }
+          />
         </div>
 
       ) : (
-        <div>
+        <div className="cardDiv">
           <input
+            className="cardInput"
             onChange={ handleChange }
             id="name"
             placeholder="Nome do Titular"
             type="text"
           />
           <input
+            className="cardInput"
             onChange={ handleChange }
             id="number"
             value=""
@@ -127,21 +153,49 @@ function PaymentComponent({ planGames }:any) {
             type="text"
           />
           Data de Expiração
-          <input onChange={ handleChange } id="mm" placeholder="MM" type="text" />
-          <input onChange={ handleChange } id="aa" placeholder="AA" type="text" />
-          <input onChange={ handleChange } id="cvv" placeholder="CVV" type="text" />
+          <input
+            className="cardDate"
+            onChange={ handleChange }
+            id="mm"
+            placeholder="MM"
+            type="text"
+          />
+          <input
+            className="cardDate"
+            onChange={ handleChange }
+            id="aa"
+            placeholder="AA"
+            type="text"
+          />
+          <input
+            className="cardCVV"
+            onChange={ handleChange }
+            id="cvv"
+            placeholder="CVV"
+            type="text"
+          />
 
-          <button>Confirmar</button>
+          <button
+            className="buyButton"
+          >
+            Confirmar
+
+          </button>
         </div>
       )}
 
-      <h1>ALGUNS JOGOS DESSE PLANO</h1>
+      <h1
+        className="paymentTitle"
+      >
+        ALGUNS JOGOS DESSE PLANO
+
+      </h1>
       {planGames.map(({ src }:any, index:any) => {
         if (index < 4) {
           return <img width="100px" key={ src } alt={ src } src={ src } />;
         } return false;
       })}
-      <a href="/Plans">Veja Mais</a>
+      <a className="seeMore" href="/Plans">Veja Mais</a>
     </div>
   );
 }
