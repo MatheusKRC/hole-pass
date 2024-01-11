@@ -13,6 +13,7 @@ function Payment() {
       </div>
       <div>
         <PlanCards
+          id=""
           name={ user.planName }
           img={ user.plan }
           value={ user.planValue }

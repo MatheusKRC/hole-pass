@@ -219,7 +219,12 @@
   margin-left: 27px;
 }
 
+.gameBox {
+  width: 300px;
+}
+
 .text-over {
+  width: 80px;
   position: absolute;
   color: white;
 
@@ -228,6 +233,7 @@
 }
 
 .text-over2 {
+  width: 240px;
   position: absolute;
   color: white;
 

@@ -77,16 +77,25 @@ function Plans() {
         games={ estelarPlan }
         plan={ plan1 }
         button="true"
+        boxSize="gameBox"
+        nameSize="text-over"
+        logoSize="text-over2"
       />
       <PlansComponent
         games={ intermediarioPlan }
         plan={ plan3 }
         button="true"
+        boxSize="gameBox"
+        nameSize="text-over"
+        logoSize="text-over2"
       />
       <PlansComponent
         games={ supermassivoPlan }
         plan={ plan2 }
         button="true"
+        boxSize="gameBox"
+        nameSize="text-over"
+        logoSize="text-over2"
       />
 
       <Footer />
