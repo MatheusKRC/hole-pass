@@ -1,10 +1,13 @@
+/* eslint-disable no-alert */
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logoPass from '../Assets/Logo2.png';
 import logo from '../Assets/Logo.png';
+import { validarCPF, validateEmail } from '../Utils/validate';
 
 function LoginRegister() {
   const [login, setLogin] = useState('LOGIN');
+  // const [button, setButton] = useState(true);
   const [inputs, setInputs] = useState([
     { pholder: 'Email', id: 'email' }, { pholder: 'Password', id: 'password' }]);
   const [exist, setExist] = useState('Ainda não tenho conta');
@@ -45,8 +48,15 @@ function LoginRegister() {
     });
   };
 
+  const handleLogin = () => {
+    if (validateLogin()) {
+      localStorage.setItem('blackHoleUser', JSON.stringify(user));
+      navigate('/');
+    } else { return false; }
+  };
+
   const handleRegister = () => {
-    if (user) {
+    if (validateRegister()) {
       localStorage.setItem('blackHoleUser', JSON.stringify(user));
       navigate('/');
     } else { return false; }
@@ -60,6 +70,40 @@ function LoginRegister() {
       console.log('ainda não possui conta');
     }
   }, [navigate]);
+
+  const validateLogin = () => {
+    const { email, password } = user;
+    if (!email || !validateEmail(email)) {
+      window.alert('preencha o campo E-Mail corretamente');
+      return false;
+    }
+    if (!password || password.length < 8) {
+      window.alert('preencha o campo password com no minimo 8 caracteres');
+      return false;
+    }
+    return true;
+  };
+
+  const validateRegister = () => {
+    const { firstName, lastName, cpf } = user;
+
+    if (!firstName) {
+      window.alert('preencha o campo firstName');
+      return false;
+    }
+    if (!lastName) {
+      window.alert('preencha o campo lastName');
+      return false;
+    }
+    if (!validateLogin()) {
+      return false;
+    }
+    if (!cpf || !validarCPF(cpf)) {
+      window.alert('preencha o campo cpf corretamente');
+      return false;
+    }
+    return true;
+  };
 
   return (
     <div className="loginRegisterPage">
@@ -90,14 +134,20 @@ function LoginRegister() {
               className="loginInput"
               key={ pholder }
               onChange={ handleChange }
-              type="text"
+              type={ pholder }
               id={ id }
             />
           </div>
 
         ))}
 
-        <button className="buyButton" onClick={ handleRegister }>{login}</button>
+        <button
+          className="buyButton"
+          onClick={ login === 'LOGIN' ? handleLogin : handleRegister }
+        >
+          {login}
+
+        </button>
         <button className="already" onClick={ handleClick }>{exist}</button>
       </div>
     </div>
