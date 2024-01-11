@@ -80,10 +80,12 @@ function Plans() {
         boxSize="gameBox"
         nameSize="text-over"
         logoSize="text-over2"
+        planSize=""
       />
       <PlansComponent
         games={ intermediarioPlan }
         plan={ plan3 }
+        planSize=""
         button="true"
         boxSize="gameBox"
         nameSize="text-over"
@@ -96,6 +98,7 @@ function Plans() {
         boxSize="gameBox"
         nameSize="text-over"
         logoSize="text-over2"
+        planSize=""
       />
 
       <Footer />

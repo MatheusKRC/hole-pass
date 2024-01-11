@@ -33,7 +33,7 @@ function PlansComponent({
         ref={ carousel }
         whileTap={ { cursor: 'grabbing' } }
         className="carrousel"
-        id="miniPlan"
+        id={ planSize }
       >
         <motion.div
           className="inner"
