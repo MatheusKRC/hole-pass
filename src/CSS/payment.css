@@ -1,0 +1,180 @@
+.paymentPage {
+  height: 1000px;
+  background-image: url(../Images/starBackground.png);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment {
+  width: 1173px;
+  height: 850px;
+  display: flex;
+
+  border: 6px solid #ffde59;
+
+  background: #000;
+
+  box-shadow: 0px 0px 30px 0px #ffde59;
+
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.paymentComponent {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.paymentTitle {
+  color: #ffde59;
+
+  text-align: center;
+  text-shadow: 0px 0px 30px #ffde59;
+  font-family: Koulen;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95.063%; /* 45.63px */
+}
+
+.paymentMethod {
+  color: white;
+
+  background: 0px;
+  border: 0px;
+
+  text-align: center;
+  text-shadow: 0px 0px 30px white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95.063%; /* 30.42px */
+
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  transition: 1s;
+}
+
+.paymentMethod:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+  text-shadow: 0px 0px 30px var(--primary-color);
+
+  transition: 0.5s;
+}
+
+.paymentMethod:active {
+  text-shadow: 0px 0px 0px var(--primary-color);
+}
+
+.pixDiv {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.pix {
+  width: 300px;
+
+  margin-bottom: 20px;
+}
+
+.pixInput {
+  background: 0px;
+
+  width: 500px;
+  border: 0px;
+
+  color: white;
+  text-shadow: 0px 0px 30px white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.cardDiv {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.cardInput {
+  width: 603px;
+  height: 42px;
+
+  margin-bottom: 20px;
+
+  border: 0px;
+}
+
+.cardDate {
+  width: 43px;
+  height: 32px;
+
+  margin-left: 10px;
+}
+
+.cardCVV {
+  width: 150px;
+  height: 32px;
+  margin-left: 320px;
+}
+
+.seeMore {
+  background: none;
+
+  border: 0px;
+
+  color: var(--primary-color);
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95.063%; /* 22.815px */
+
+  margin-top: 10px;
+}
+
+.seeMore:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 30px #ffde59;
+}
+
+.expiration {
+  background: none;
+
+  border: 0px;
+
+  color: white;
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95.063%; /* 22.815px */
+}
+
+.paymentCard {
+  transition: 1s;
+}
+
+#paymentPlanCard {
+  margin-right: -300px;
+  margin-left: 200px;
+
+  transition: 1s;
+}

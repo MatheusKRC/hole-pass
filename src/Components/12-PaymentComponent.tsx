@@ -62,8 +62,6 @@ function PaymentComponent({ planGames }:any) {
   };
 
   const verifyStatus = () => {
-    console.log('test');
-
     if (pixId) {
       api.get(`v1/payments/${pixId}`).then((response) => {
         const paymentStatus = response.data.status;
@@ -93,7 +91,7 @@ function PaymentComponent({ planGames }:any) {
   useEffect(() => {
     if (status === 'approved') {
       return navigate('/Final');
-    } return console.log('Aguardando Pagamento');
+    }
   }, [status]);
 
   setInterval(verifyStatus, 30000);
@@ -102,22 +100,25 @@ function PaymentComponent({ planGames }:any) {
     <div className="paymentComponent">
       <h1 className="paymentTitle">FORMA DE PAGAMENTO</h1>
 
-      <button
-        className="paymentMethod"
-        onClick={ handleClick }
-        value="pix"
-      >
-        Pix
+      <div>
+        <button
+          className="paymentMethod"
+          onClick={ handleClick }
+          value="pix"
+        >
+          Pix
 
-      </button>
-      <button
-        className="paymentMethod"
-        onClick={ handleClick }
-        value="cartão"
-      >
-        Cartão
+        </button>
+        <button
+          className="paymentMethod"
+          onClick={ handleClick }
+          value="cartão"
+        >
+          Cartão
 
-      </button>
+        </button>
+
+      </div>
 
       {type === 'pix' ? (
         <div className="pixDiv">
@@ -152,28 +153,34 @@ function PaymentComponent({ planGames }:any) {
             placeholder="Número do Cartão"
             type="text"
           />
-          Data de Expiração
-          <input
-            className="cardDate"
-            onChange={ handleChange }
-            id="mm"
-            placeholder="MM"
-            type="text"
-          />
-          <input
-            className="cardDate"
-            onChange={ handleChange }
-            id="aa"
-            placeholder="AA"
-            type="text"
-          />
-          <input
-            className="cardCVV"
-            onChange={ handleChange }
-            id="cvv"
-            placeholder="CVV"
-            type="text"
-          />
+          <div>
+            <label className="expiration" htmlFor="mmaa">Data de Expiração</label>
+            <br />
+            <input
+              className="cardDate"
+              onChange={ handleChange }
+              id="mm"
+              placeholder="MM"
+              type="text"
+              name="mmaa"
+            />
+            <input
+              className="cardDate"
+              onChange={ handleChange }
+              id="aa"
+              name="mmaa"
+              placeholder="AA"
+              type="text"
+            />
+            <input
+              className="cardCVV"
+              onChange={ handleChange }
+              id="cvv"
+              placeholder="CVV"
+              type="text"
+            />
+
+          </div>
 
           <button
             className="buyButton"
@@ -190,11 +197,15 @@ function PaymentComponent({ planGames }:any) {
         ALGUNS JOGOS DESSE PLANO
 
       </h1>
-      {planGames.map(({ src }:any, index:any) => {
-        if (index < 4) {
-          return <img width="100px" key={ src } alt={ src } src={ src } />;
-        } return false;
-      })}
+      <div>
+        {planGames.map(({ src }:any, index:any) => {
+          if (index < 4) {
+            return <img width="100px" key={ src } alt={ src } src={ src } />;
+          } return false;
+        })}
+
+      </div>
+
       <a className="seeMore" href="/Plans">Veja Mais</a>
     </div>
   );
