@@ -7,7 +7,7 @@ function PlanCards({ name, img, benefits, value, id }: PlanCardsI) {
   const handleClick = () => {
     const localUser:any = localStorage.getItem('blackHoleUser');
     if (!localUser) {
-      navigate('/Register');
+      navigate('/Login');
     } else {
       const user = JSON.parse(localUser);
       const addPlan = { ...user, planName: name, plan: img, planValue: value, benefits };

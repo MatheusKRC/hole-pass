@@ -6,15 +6,18 @@ import perfilLogin from '../Assets/Perfil2.png';
 
 function NavBar() {
   const [login, setLogin] = useState(perfil);
+  const [userClass, setUserClass] = useState('defaultUser');
   const [link, setLink] = useState('/Login');
 
   useEffect(() => {
     const loginUser = localStorage.getItem('blackHoleUser');
     if (loginUser) {
       setLogin(perfilLogin);
+      setUserClass('userIcon');
       setLink('/User');
     } else {
       setLogin(perfil);
+      setUserClass('defaultUser');
       setLink('/Login');
     }
   }, []);
@@ -43,7 +46,7 @@ function NavBar() {
 
       <Link to={ link }>
         {' '}
-        <img className="userIcon" src={ login } alt="Icone de um perfil de usuário" />
+        <img className={ userClass } src={ login } alt="Icone de um perfil de usuário" />
       </Link>
 
     </nav>
