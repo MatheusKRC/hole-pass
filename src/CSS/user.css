@@ -6,6 +6,13 @@
   margin-left: 40px;
 }
 
+#miniPlan {
+  width: 1152px;
+  height: 558px;
+
+  margin-right: 0px;
+}
+
 .user {
   width: 885px;
   height: 841px;

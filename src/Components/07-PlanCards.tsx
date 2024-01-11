@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { PlanCardsI } from '../Interfaces/homepage';
 
-function PlanCards({ name, img, benefits, value, id, planCard }: PlanCardsI) {
+function PlanCards({ name, img, benefits, value, id, planCard, planImage }: PlanCardsI) {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -10,7 +10,8 @@ function PlanCards({ name, img, benefits, value, id, planCard }: PlanCardsI) {
       navigate('/Login');
     } else {
       const user = JSON.parse(localUser);
-      const addPlan = { ...user, planName: name, plan: img, planValue: value, benefits };
+      const addPlan = {
+        ...user, planImage, planName: name, plan: img, planValue: value, benefits };
       localStorage.setItem('blackHoleUser', JSON.stringify(addPlan));
       navigate('/Payment');
     }

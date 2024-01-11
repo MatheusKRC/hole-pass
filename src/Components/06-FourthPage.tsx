@@ -5,6 +5,9 @@ import Estelar from '../Assets/Estelar.png';
 import Intermediario from '../Assets/Intermediario.png';
 import Supermassivo from '../Assets/Supermassivo.png';
 import Supermassive from '../Assets/BlackHole.png';
+import estelarPlan from '../Images/Estelar.png';
+import intermPlan from '../Images/Intermediario.png';
+import superPlan from '../Images/Supermassivo.png';
 
 function FourthPage() {
   return (
@@ -17,6 +20,7 @@ function FourthPage() {
         <PlanCards
           planCard=""
           name="estelar"
+          planImage={ estelarPlan }
           img={ Estelar }
           benefits={ estelar }
           id="estelar"
@@ -25,6 +29,7 @@ function FourthPage() {
         <PlanCards
           planCard=""
           name="intermediario"
+          planImage={ intermPlan }
           img={ Intermediario }
           benefits={ intermediário }
           id="intermediario"
@@ -33,6 +38,7 @@ function FourthPage() {
         <PlanCards
           planCard=""
           name="supermassivo"
+          planImage={ superPlan }
           img={ Supermassivo }
           benefits={ supermassivo }
           id=""

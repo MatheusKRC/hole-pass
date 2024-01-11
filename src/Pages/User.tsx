@@ -8,6 +8,7 @@ import Starfield from '../Images/Starfield.png';
 import holeBack from '../Images/HoleBack.png';
 import holePass from '../Games/holePass.png';
 import emptyPlan from '../Images/emptyPlan.png';
+import { objGames } from '../Utils/importGames';
 
 function User() {
   const localUser:any = localStorage.getItem('blackHoleUser');
@@ -29,7 +30,10 @@ function User() {
     username: user.username,
     desc: user.desc,
     plan: user.plan,
+    planImage: user.planImage,
   });
+
+  const actualPlan = objGames.filter(({ plan }) => plan === user.planName);
 
   const handleChange = ({ target }: any) => {
     const { id, value } = target;
@@ -96,11 +100,12 @@ function User() {
 
           {mainUser.plan ? (
             <PlansComponent
-              games={ holeGames }
+              games={ actualPlan }
               background={ Space }
               character={ Starfield }
-              plan={ emptyPlan }
+              plan={ mainUser.planImage }
               button="false"
+              planSize="miniPlan"
               boxSize="miniGameBox"
               nameSize="mini-text-over"
               logoSize="mini-text-over2"
@@ -112,6 +117,7 @@ function User() {
               character=""
               plan={ emptyPlan }
               button="false"
+              planSize=""
               boxSize="miniGameBox"
               nameSize="mini-text-over"
               logoSize="mini-text-over2"

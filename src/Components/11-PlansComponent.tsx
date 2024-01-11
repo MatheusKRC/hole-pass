@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 import logo2 from '../Games/Logo.png';
 import name from '../Games/Name.png';
 
-function PlansComponent({ games, plan, button, boxSize, nameSize, logoSize }:any) {
+function PlansComponent({
+  games, plan, button, boxSize, nameSize, logoSize, planSize }:any) {
   const carousel = useRef(null);
   const [width, setWidth] = useState(0);
 
@@ -17,7 +18,7 @@ function PlansComponent({ games, plan, button, boxSize, nameSize, logoSize }:any
   return (
     <div className="games">
 
-      <img className="plansBackground" src={ plan } alt={ plan } />
+      <img id={ planSize } className="plansBackground" src={ plan } alt={ plan } />
 
       {
       button === 'true'
@@ -32,6 +33,7 @@ function PlansComponent({ games, plan, button, boxSize, nameSize, logoSize }:any
         ref={ carousel }
         whileTap={ { cursor: 'grabbing' } }
         className="carrousel"
+        id="miniPlan"
       >
         <motion.div
           className="inner"
@@ -41,7 +43,7 @@ function PlansComponent({ games, plan, button, boxSize, nameSize, logoSize }:any
           animate={ { x: 0 } }
           transition={ { duration: 1 } }
         >
-          {games.map(({ src }:any, index: any) => (
+          {games.map(({ src, link }:any, index: any) => (
 
             <motion.div key={ index } className="atropos">
               <Atropos
@@ -59,18 +61,22 @@ function PlansComponent({ games, plan, button, boxSize, nameSize, logoSize }:any
                   src={ src }
                   alt={ src }
                 />
+
                 <img
                   className={ nameSize }
                   data-atropos-offset="10"
                   src={ logo2 }
                   alt="logo"
                 />
-                <img
-                  className={ logoSize }
-                  data-atropos-offset="5"
-                  src={ name }
-                  alt="black hole name"
-                />
+                <Link to={ link }>
+                  <img
+                    className={ logoSize }
+                    data-atropos-offset="5"
+                    src={ name }
+                    alt="black hole name"
+                  />
+
+                </Link>
 
               </Atropos>
             </motion.div>
