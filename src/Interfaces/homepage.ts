@@ -11,7 +11,8 @@ interface PlanCardsI {
   name: string,
   benefits: Array<Array<string>>,
   value: string,
-  id: string
+  id: string,
+  planCard: string
 }
 
 export type { ClassicGame, PlanCardsI };

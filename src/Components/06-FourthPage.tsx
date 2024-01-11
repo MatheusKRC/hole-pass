@@ -15,6 +15,7 @@ function FourthPage() {
 
       <div className="planCards">
         <PlanCards
+          planCard=""
           name="estelar"
           img={ Estelar }
           benefits={ estelar }
@@ -22,6 +23,7 @@ function FourthPage() {
           value="R$39,99"
         />
         <PlanCards
+          planCard=""
           name="intermediario"
           img={ Intermediario }
           benefits={ intermediário }
@@ -29,6 +31,7 @@ function FourthPage() {
           value="R$59,99"
         />
         <PlanCards
+          planCard=""
           name="supermassivo"
           img={ Supermassivo }
           benefits={ supermassivo }

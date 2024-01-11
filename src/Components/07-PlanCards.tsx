@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { PlanCardsI } from '../Interfaces/homepage';
 
-function PlanCards({ name, img, benefits, value, id }: PlanCardsI) {
+function PlanCards({ name, img, benefits, value, id, planCard }: PlanCardsI) {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -17,7 +17,7 @@ function PlanCards({ name, img, benefits, value, id }: PlanCardsI) {
   };
 
   return (
-    <div className="planCard">
+    <div className="planCard" id={ planCard }>
       <img className="benefitName" src={ img } alt="Nome do beneficio" />
 
       {benefits.map((line, index) => (
