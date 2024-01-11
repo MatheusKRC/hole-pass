@@ -2,15 +2,14 @@
 import { useState } from 'react';
 import ClassicGames from './05-ClassicGames';
 import Leon from '../Images/Leon.png';
-import village from '../Images/Village.png';
+import village from '../Images/village.png';
 import re4 from '../Images/residentName.png';
 import Alucard from '../Images/Alucard.png';
 import castle from '../Images/Castle.png';
 import castleName from '../Images/CastlevaniaName.png';
 import knight from '../Images/DarkSoul.png';
-import dark from '../Images/Dark.png';
+import dark from '../Images/dark.png';
 import ds from '../Images/DS.png';
-import spider from '../Images/timesSquare.png';
 
 function ThirdPage() {
   const [Game, setGame] = useState({
