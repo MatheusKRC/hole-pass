@@ -4,7 +4,7 @@ import PlanCards from './07-PlanCards';
 import Estelar from '../Assets/Estelar.png';
 import Intermediario from '../Assets/Intermediario.png';
 import Supermassivo from '../Assets/Supermassivo.png';
-import Supermassive from '../Images/Supermassive.png';
+import Supermassive from '../Assets/BlackHole.png';
 
 function FourthPage() {
   return (
