@@ -11,12 +11,17 @@ import superPlan from '../Images/Supermassivo.png';
 
 function FourthPage() {
   return (
-    <div className="comparePlans" id="plans">
-      <h1 className="plansTitle">COMPARE OS PLANOS</h1>
+    <div data-testid="compare-plans" className="comparePlans" id="plans">
+      <h1 data-testid="plans-title" className="plansTitle">COMPARE OS PLANOS</h1>
 
-      <img className="plansBlackHole" src={ blackHole } alt="buraco negro" />
+      <img
+        data-testid="plans-black-hole"
+        className="plansBlackHole"
+        src={ blackHole }
+        alt="buraco negro"
+      />
 
-      <div className="planCards">
+      <div data-testid="plan-cards" className="planCards">
         <PlanCards
           planCard=""
           name="estelar"
@@ -47,6 +52,7 @@ function FourthPage() {
       </div>
 
       <img
+        data-testid="big-black-hole"
         className="bigBlackHole"
         src={ Supermassive }
         alt="Buraco negro amarelo enorme"

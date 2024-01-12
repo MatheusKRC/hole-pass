@@ -64,8 +64,8 @@ function ThirdPage() {
   };
 
   return (
-    <div className="thirdPage">
-      <h1 className="titlePage3">OU RELEMBRE O PASSADO</h1>
+    <div className="thirdPage" data-testid="third-page">
+      <h1 className="titlePage3" data-testid="classics-title">OU RELEMBRE O PASSADO</h1>
 
       <ClassicGames
         background={ Game.background }
@@ -75,9 +75,10 @@ function ThirdPage() {
         className={ `game${Game.id}` }
       />
 
-      <div className="links">
+      <div data-testid="classics-links" className="links">
         {' '}
         <button
+          data-testid="classics-button"
           className={ `buttonGame${Game.re4}` }
           onClick={ handleClick }
           id="0"
@@ -86,6 +87,7 @@ function ThirdPage() {
 
         </button>
         <button
+          data-testid="classics-button"
           className={ `buttonGame${Game.castle}` }
           onClick={ handleClick }
           id="1"
@@ -95,6 +97,7 @@ function ThirdPage() {
 
         </button>
         <button
+          data-testid="classics-button"
           className={ `buttonGame${Game.ds}` }
           onClick={ handleClick }
           id="2"

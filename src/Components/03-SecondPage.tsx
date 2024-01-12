@@ -5,20 +5,49 @@ import future from '../Assets/Future.png';
 
 function SecondPage() {
   return (
-    <div className="secondPage">
-      <div className="future">
-        <h1 className="titlePage">PRESENCIE EVENTOS FUTUROS ANTECIPADAMENTE</h1>
+    <div className="secondPage" data-testid="second-page">
+      <div className="future" data-testid="future">
+        <h1
+          data-testid="future-title"
+          className="titlePage"
+        >
+          PRESENCIE EVENTOS FUTUROS ANTECIPADAMENTE
 
-        <img className="portal" src={ future } alt="Portal para the elder scrolls VI" />
+        </h1>
+
+        <img
+          data-testid="portal"
+          className="portal"
+          src={ future }
+          alt="Portal para the elder scrolls VI"
+        />
 
       </div>
 
-      <section className="benefits">
-        <img className="benefitsIcon" src={ cloud } alt="Icone de uma nuvem amarela" />
-        <p className="benefitsDesc">Armazenamento em nuvem </p>
-
-        <img className="benefitsIcon" src={ calendar } alt="Icone de um calendário" />
+      <section data-testid="benefits" className="benefits">
+        <img
+          data-testid="benefits-icon"
+          className="benefitsIcon"
+          src={ cloud }
+          alt="Icone de uma nuvem amarela"
+        />
         <p
+          data-testid="benefits-desc"
+          className="benefitsDesc"
+        >
+          Armazenamento em nuvem
+          {' '}
+
+        </p>
+
+        <img
+          data-testid="benefits-icon"
+          className="benefitsIcon"
+          src={ calendar }
+          alt="Icone de um calendário"
+        />
+        <p
+          data-testid="benefits-desc"
           className="benefitsDesc"
         >
           Biblioteca de jogos baseadas em suas épocas de lançamento
@@ -26,11 +55,15 @@ function SecondPage() {
         </p>
 
         <img
+          data-testid="benefits-icon"
           className="benefitsIconB"
           src={ logo }
           alt="Icone de um buraco negro"
         />
-        <p className="benefitsDesc">
+        <p
+          data-testid="benefits-desc"
+          className="benefitsDesc"
+        >
           Novos jogos adicionados regularmente, desde antigos lançamentos,
           atuais e acesso antecipado aos futuros
 

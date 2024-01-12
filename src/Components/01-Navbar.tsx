@@ -32,13 +32,13 @@ function NavBar() {
           src={ logo }
           alt="Logo minimalista de um buraco negro amarelo"
         />
-        <h1 data-testid="hole-logo" className="title">Black Hole</h1>
+        <h1 data-testid="hole-title" className="title">Black Hole</h1>
       </Link>
 
       <a data-testid="nav-link" className="navLink" href="/Jogos">Jogos</a>
       <a data-testid="nav-link" className="navLink" href="/Plans">Planos de Assinatura</a>
-      <a data-testid="nav-link" className="navLink" href="/">Serviços de Gamepass</a>
-      <a data-testid="nav-link" className="navLink" href="/">Outros Projetos</a>
+      <a data-testid="nav-link" className="navLink" href="https://www.xbox.com/pt-BR/xbox-game-pass">Serviços de Gamepass</a>
+      <a data-testid="nav-link" className="navLink" href="https://matheus-santos-leao.netlify.app/">Outros Projetos</a>
 
       <a data-testid="back-button" className="backButton" href="#plans">
         {' '}
@@ -52,7 +52,7 @@ function NavBar() {
         </button>
       </a>
 
-      <Link to={ link }>
+      <Link data-testid="user-link" to={ link }>
         {' '}
         <img
           data-testid="user-icon"
