@@ -7,22 +7,23 @@ import xbox from '../Assets/Xbox_Logo 1.png';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" data-testid="footer">
 
-      <div className="footerDivDesc">
+      <div data-testid="footer-div" className="footerDivDesc">
         <div className="test">
           {' '}
           <img
+            data-testid="footer-hole-logo"
             className="holeLogo"
             width="150px"
             src={ logo }
             alt="Logo minimalista de um buraco negro amarelo"
           />
-          <h1 className="title">BLACK HOLE</h1>
+          <h1 data-testid="footer-title" className="title">BLACK HOLE</h1>
 
         </div>
 
-        <p className="footerDesc">
+        <p data-testid="footer-desc" className="footerDesc">
           Este site serve apenas como uma ideia de um produto,
           sendo implementada para divulgar conhecimento de
           desenvolvimento web com checkout de pagamento, ou seja,
@@ -31,9 +32,18 @@ function Footer() {
 
       </div>
 
-      <div className="footerDivLogo">
-        <img className="footerLogo" width="200px" src={ logo2 } alt="Logo do Hole pass" />
-        <p className="BIE">
+      <div data-testid="footer-div-logo" className="footerDivLogo">
+        <img
+          data-testid="footer-logo"
+          className="footerLogo"
+          width="200px"
+          src={ logo2 }
+          alt="Logo do Hole pass"
+        />
+        <p
+          data-testid="bie"
+          className="BIE"
+        >
           Black Hole
           Interactive
           Entertainment
@@ -41,19 +51,45 @@ function Footer() {
         </p>
       </div>
 
-      <div className="socialMedias">
-        <p className="socialTitle">Redes Sociais</p>
+      <div data-testid="social-medias" className="socialMedias">
+        <p
+          data-testid="social-title"
+          className="socialTitle"
+        >
+          Redes Sociais
+
+        </p>
         <div>
-          <img className="socialIcon" src={ github } alt="logo do github" />
-          <img className="socialIcon" src={ linkedin } alt="logo do Linkedin" />
+          <img
+            data-testid="social-icon"
+            className="socialIcon"
+            src={ github }
+            alt="logo do github"
+          />
+          <img
+            data-testid="social-icon"
+            className="socialIcon"
+            src={ linkedin }
+            alt="logo do Linkedin"
+          />
 
         </div>
 
-        <p className="socialTitle">Serviços de GamePass</p>
+        <p data-testid="social-title" className="socialTitle">Serviços de GamePass</p>
         <div>
           {' '}
-          <img className="socialIcon" src={ ps } alt="logo do Playstation" />
-          <img className="socialIcon" src={ xbox } alt="logo do xbox" />
+          <img
+            data-testid="social-icon"
+            className="socialIcon"
+            src={ ps }
+            alt="logo do Playstation"
+          />
+          <img
+            data-testid="social-icon"
+            className="socialIcon"
+            src={ xbox }
+            alt="logo do xbox"
+          />
 
         </div>
 
