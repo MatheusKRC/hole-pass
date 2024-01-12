@@ -24,7 +24,7 @@ function NavBar() {
 
   return (
 
-    <nav className="navBar">
+    <nav className="navBar" data-testid='nav-bar'>
       <Link className="home" to="/">
         <img
           className="holeLogo"

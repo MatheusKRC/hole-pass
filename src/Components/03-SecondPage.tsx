@@ -3,6 +3,7 @@ import calendar from '../Assets/calendar-minus.png';
 import logo from '../Assets/hole pass 4.png';
 import future from '../Assets/Future.png';
 
+
 function SecondPage() {
   return (
     <div className="secondPage">
