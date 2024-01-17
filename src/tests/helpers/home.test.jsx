@@ -4,6 +4,7 @@ import { clear } from 'console';
 import Home from '../../Pages/Home';
 
 describe('Testes da página inicial', () => {
+  const planButon = 'buy-button';
   beforeEach(() => {
     render(<Home />, { wrapper: BrowserRouter });
   });
@@ -109,7 +110,7 @@ describe('Testes da página inicial', () => {
     const planCard = screen.getAllByTestId('plan-card');
     const benefitName = screen.getAllByTestId('benefit-name');
     const benefitsList = screen.getAllByTestId('benefits-list');
-    const buyButton = screen.getAllByTestId('buy-button');
+    const buyButton = screen.getAllByTestId(planButon);
     const bigBlackHole = screen.getByTestId('big-black-hole');
 
     expect(comparePlans).toBeInTheDocument();
@@ -121,5 +122,22 @@ describe('Testes da página inicial', () => {
     expect(benefitsList.length).toBe(17);
     expect(buyButton.length).toBe(3);
     expect(bigBlackHole).toBeInTheDocument();
+  });
+
+  test('Verificando se quando não existe localStorage o botão do plano de assinatura leva para a tela de login', () => {
+    const buyButton = screen.getAllByTestId(planButon);
+
+    fireEvent.click(buyButton[0]);
+    expect(window.location.pathname).toBe('/Login');
+  });
+
+  test('Verificando se quando existe localStorage o botão do plano de assinatura leva para a tela de pagamento', () => {
+    const mockId = 'blackHoleUser';
+    const mockJson = { firstName: 'Matheus', lastName: 'Santos Leão', email: 'usuário@gmail.com', password: 'usuario123', cpf: '00000000000' };
+    localStorage.setItem(mockId, JSON.stringify(mockJson));
+    const buyButton = screen.getAllByTestId(planButon);
+
+    fireEvent.click(buyButton[0]);
+    expect(window.location.pathname).toBe('/Payment');
   });
 });
