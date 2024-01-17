@@ -133,7 +133,7 @@ describe('Testes da página de Login e Registro', () => {
     const cpfAlert = screen.getByText('preencha o campo cpf corretamente');
     expect(cpfAlert).toBeInTheDocument();
 
-    fireEvent.change(loginInput[4], { target: { value: '123456' } });
+    fireEvent.change(loginInput[4], { target: { value: '12345678912' } });
     fireEvent.click(loginButton);
     expect(cpfAlert).toBeInTheDocument();
 

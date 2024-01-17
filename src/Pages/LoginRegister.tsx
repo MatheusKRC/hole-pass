@@ -102,6 +102,7 @@ function LoginRegister() {
       return false;
     }
     setAlert('');
+    return true;
   };
 
   return (

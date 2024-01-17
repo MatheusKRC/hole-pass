@@ -1,6 +1,5 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import { clear } from 'console';
 import NavBar from '../../Components/01-Navbar';
 
 describe('Testes do Componente da barra de navegação', () => {
