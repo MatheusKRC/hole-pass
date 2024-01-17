@@ -6,11 +6,12 @@ import name from '../Games/Name.png';
 
 function GamesComponent({ games }:any) {
   return (
-    <div className="games">
+    <div data-testid="games-component" className="games">
 
       {games.map(({ src, link }:any, index: any) => (
-        <Link to={ link } key={ index }>
+        <Link data-testid="link-to-game" to={ link } key={ index }>
           <Atropos
+            data-testid="atropos-game"
             activeOffset={ 1 }
             shadowScale={ 1.05 }
             highlight={ false }
@@ -19,12 +20,14 @@ function GamesComponent({ games }:any) {
           >
 
             <img
+              data-testid="game-box"
               width="300px"
               key={ src }
               src={ src }
               alt={ src }
             />
             <img
+              data-testid="over-logo"
               width="80px"
               className="text-over"
               data-atropos-offset="10"
@@ -32,6 +35,7 @@ function GamesComponent({ games }:any) {
               alt="logo"
             />
             <img
+              data-testid="over-title"
               width="240px"
               className="text-over2"
               data-atropos-offset="5"

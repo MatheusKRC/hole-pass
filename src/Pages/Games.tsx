@@ -56,29 +56,33 @@ function Games() {
   return (
     <div>
       <NavBar />
-      <div className="gamesPage">
-        <h1 className="gamesPageTitle">NOVIDADES</h1>
+      <div className="gamesPage" data-testid="games-page">
+        <h1 className="gamesPageTitle" data-testid="games-page-title">NOVIDADES</h1>
 
-        <div className="slider">
+        <div className="slider" data-testid="slider">
 
-          <div className="slides">
+          <div className="slides" data-testid="slides">
             <input
               name="radio"
               type="radio"
               className="slideButton"
               id="radio0"
+              data-testid="radio-buttons"
             />
             <input
               name="radio"
               type="radio"
               className="slideButton"
               id="radio1"
+              data-testid="radio-buttons"
+
             />
             <input
               name="radio"
               type="radio"
               className="slideButton"
               id="radio2"
+              data-testid="radio-buttons"
             />
 
             <NewGames
@@ -96,27 +100,38 @@ function Games() {
               game={ Ragnarok }
             />
 
-            <div className="navAuto">
-              <div className="autoBtn0" />
-              <div className="autoBtn1" />
-              <div className="autoBtn2" />
+            <div className="navAuto" data-testid="nav-auto">
+              <div className="autoBtn0" data-testid="nav-auto-btn" />
+              <div className="autoBtn1" data-testid="nav-auto-btn" />
+              <div className="autoBtn2" data-testid="nav-auto-btn" />
             </div>
 
           </div>
         </div>
 
-        <div className="manualNav">
-          <label htmlFor="radio0" className="manualBtn" />
-          <label htmlFor="radio1" className="manualBtn" />
-          <label htmlFor="radio2" className="manualBtn" />
+        <div className="manualNav" data-testid="nav-manual">
+          <label data-testid="nav-manual-btn" htmlFor="radio0" className="manualBtn" />
+          <label data-testid="nav-manual-btn" htmlFor="radio1" className="manualBtn" />
+          <label data-testid="nav-manual-btn" htmlFor="radio2" className="manualBtn" />
         </div>
 
       </div>
 
-      <div className="allGames">
-        <h1 className="allGamesTitle">TODOS OS JOGOS DISPONIVEIS</h1>
+      <div className="allGames" data-testid="all-games">
+        <h1
+          className="allGamesTitle"
+          data-testid="all-games-title"
+        >
+          TODOS OS JOGOS DISPONIVEIS
 
-        <input className="search" type="text" onChange={ handleChange } />
+        </h1>
+
+        <input
+          data-testid="search"
+          className="search"
+          type="text"
+          onChange={ handleChange }
+        />
 
         <GamesComponent games={ gamesView } />
       </div>
