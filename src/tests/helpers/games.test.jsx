@@ -4,7 +4,9 @@ import { clear } from 'console';
 import Games from '../../Pages/Games';
 
 describe('Testes da página de Jogos', () => {
+  const radio = 'radio-buttons';
   beforeEach(() => {
+    jest.useFakeTimers();
     render(<Games />, { wrapper: BrowserRouter });
   });
 
@@ -63,5 +65,29 @@ describe('Testes da página de Jogos', () => {
     const linkToGame = screen.getAllByTestId('link-to-game');
     expect(search.value).toBe('spider');
     expect(linkToGame.length).toBe(3);
+  });
+
+  test('Verificando se o slide 1 funciona corretamente', async () => {
+    const radioButtons = screen.getAllByTestId(radio);
+    jest.advanceTimersToNextTimer(2000);
+    expect(radioButtons[0].checked).toBe(true);
+    expect(radioButtons[1].checked).toBe(false);
+    expect(radioButtons[2].checked).toBe(false);
+  });
+
+  test('Verificando se o slide 2 funciona corretamente', async () => {
+    const radioButtons = screen.getAllByTestId(radio);
+    jest.advanceTimersByTime(2000);
+    expect(radioButtons[0].checked).toBe(false);
+    expect(radioButtons[1].checked).toBe(true);
+    expect(radioButtons[2].checked).toBe(false);
+  });
+
+  test('Verificando se o slide 3 funciona corretamente', async () => {
+    const radioButtons = screen.getAllByTestId(radio);
+    jest.advanceTimersByTime(4000);
+    expect(radioButtons[0].checked).toBe(false);
+    expect(radioButtons[1].checked).toBe(false);
+    expect(radioButtons[2].checked).toBe(true);
   });
 });
