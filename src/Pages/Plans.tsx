@@ -16,27 +16,34 @@ function Plans() {
   const intermediarioPlan = objGames.filter(({ plan }) => plan === 'intermediario');
   const supermassivoPlan = objGames.filter(({ plan }) => plan === 'supermassivo');
   return (
-    <div className="plansPage">
+    <div className="plansPage" data-testid="plans-page">
       <NavBar />
-      <div className="plansMain">
-        <div className="divTitle">
-          <h1 className="allGamesTitle">ENTRE NO HORIZONTE DE EVENTOS</h1>
+      <div className="plansMain" data-testid="plans-main">
+        <div className="divTitle" data-testid="div-title">
+          <h1
+            className="allGamesTitle"
+            data-testid="all-games-title"
+          >
+            ENTRE NO HORIZONTE DE EVENTOS
+
+          </h1>
         </div>
 
-        <div className="PLANS">
-          <div className="plansContent">
-            <div className="home">
+        <div className="PLANS" data-testid="plans">
+          <div className="plansContent" data-testid="plans-content">
+            <div className="home" data-testid="home">
               <img
+                data-testid="pass-logo"
                 className="passLogo"
                 src={ logo2 }
                 alt="Logo do Hole pass"
               />
-              <h1 className="homeTitle">Hole Pass</h1>
+              <h1 data-testid="home-title" className="homeTitle">Hole Pass</h1>
 
               {' '}
 
             </div>
-            <p className="passDesc">
+            <p data-testid="pass-desc" className="passDesc">
               Aqui estão as bibliotecas de jogos presentes em cada plano
               de assinatura, estelar, intermediário e supermassivo, cada
               plano tem sua respectiva biblioteca, mas isso não significa
@@ -46,21 +53,24 @@ function Plans() {
 
           </div>
 
-          <div className="plansHoles">
+          <div data-testid="plans-hole" className="plansHoles">
             {' '}
             <img
+              data-testid="plan-hole"
               className="planHole"
               width="400px"
               src={ estelar }
               alt="Logo do Hole pass"
             />
             <img
+              data-testid="plan-hole"
               className="planHole"
               width="450px"
               src={ intermediario }
               alt="Logo do Hole pass"
             />
             <img
+              data-testid="plan-hole"
               className="planHole"
               width="500px"
               src={ supermassivo }

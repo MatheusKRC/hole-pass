@@ -16,26 +16,34 @@ function PlansComponent({
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
   }, []);
   return (
-    <div className="games">
+    <div className="games" data-testid="games">
 
-      <img id={ planSize } className="plansBackground" src={ plan } alt={ plan } />
+      <img
+        data-testid="plans-background"
+        id={ planSize }
+        className="plansBackground"
+        src={ plan }
+        alt={ plan }
+      />
 
       {
       button === 'true'
         ? (
-          <Link className="planLink" to="/#plans">
-            <button className="buyButton">Adquira Ja</button>
+          <Link data-testid="plan-link" className="planLink" to="/#plans">
+            <button data-testid="buy-button" className="buyButton">Adquira Ja</button>
 
           </Link>) : (null)
 }
 
       <motion.div
+        data-testid="carrousel"
         ref={ carousel }
         whileTap={ { cursor: 'grabbing' } }
         className="carrousel"
         id={ planSize }
       >
         <motion.div
+          data-testid="motion-div"
           className="inner"
           drag="x"
           dragConstraints={ { right: 0, left: -width } }
@@ -45,8 +53,9 @@ function PlansComponent({
         >
           {games.map(({ src, link }:any, index: any) => (
 
-            <motion.div key={ index } className="atropos">
+            <motion.div data-testid="motion-div" key={ index } className="atropos">
               <Atropos
+                data-testid="atropos"
                 key={ index }
                 activeOffset={ 1 }
                 shadowScale={ 1.05 }
@@ -56,6 +65,7 @@ function PlansComponent({
               >
 
                 <img
+                  data-testid="game-box"
                   className={ boxSize }
                   key={ src }
                   src={ src }
@@ -63,13 +73,15 @@ function PlansComponent({
                 />
 
                 <img
+                  data-testid="over-logo"
                   className={ nameSize }
                   data-atropos-offset="10"
                   src={ logo2 }
                   alt="logo"
                 />
-                <Link to={ link }>
+                <Link data-testid="link-game" to={ link }>
                   <img
+                    data-testid="over-name"
                     className={ logoSize }
                     data-atropos-offset="5"
                     src={ name }
