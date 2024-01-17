@@ -54,7 +54,7 @@
     "testEnvironment": "jsdom",
     "moduleNameMapper": {
       "^.+\\.svg$": "jest-svg-transformer",
-      "\\.(png|jpg|webp|ttf|woff|woff2|svg|mp4)$": "<rootDir>/src/tests/mocks/fileMock.js"
+      "\\.(png|jpg|webp|ttf|woff|woff2|svg|mp4|jfif)$": "<rootDir>/src/tests/mocks/fileMock.js"
     },
     "transformIgnorePatterns": [
       "node_modules/(?!(atropos|atropos-react))"
