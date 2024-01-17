@@ -1,6 +1,7 @@
 import { ClassicGame } from '../Interfaces/homepage';
 
-function ClassicGames({ background, desc, character, name, className }: ClassicGame) {
+function ClassicGames({
+  background, desc, character, name, className, gameName }: ClassicGame) {
   return (
     <div className="classicGames" data-testid="classic-games">
 
@@ -29,7 +30,7 @@ function ClassicGames({ background, desc, character, name, className }: ClassicG
             data-testid="classic-name"
             className={ className }
             src={ name }
-            alt="nome do jogo"
+            alt={ gameName }
           />
 
         </div>

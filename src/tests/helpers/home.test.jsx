@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { clear } from 'console';
 import Home from '../../Pages/Home';
@@ -80,6 +80,25 @@ describe('Testes da página inicial', () => {
     expect(classicName).toBeInTheDocument();
     expect(classicsLinks).toBeInTheDocument();
     expect(classicsButton.length).toBe(3);
+  });
+
+  test('Verificando de o slider de jogos clássicos funciona corretamente', () => {
+    const classicsButton = screen.getAllByTestId('classics-button');
+
+    fireEvent.click(classicsButton[1]);
+    const castlevania = screen.getByAltText('castlevania symphony of the night');
+    expect(classicsButton[1].className).toBe('buttonGamecastle');
+    expect(castlevania).toBeInTheDocument();
+
+    fireEvent.click(classicsButton[2]);
+    const darkSouls = screen.getByAltText('dark souls');
+    expect(classicsButton[2].className).toBe('buttonGameds');
+    expect(darkSouls).toBeInTheDocument();
+
+    fireEvent.click(classicsButton[0]);
+    const residentEvil4 = screen.getByAltText('resident evil 4');
+    expect(classicsButton[0].className).toBe('buttonGamere4');
+    expect(residentEvil4).toBeInTheDocument();
   });
 
   test('Verificando se todos os elementos da quarta parte existem', () => {
