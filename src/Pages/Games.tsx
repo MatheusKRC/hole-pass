@@ -88,16 +88,19 @@ function Games() {
             <NewGames
               classname="first"
               game={ spiderman }
+              gameName="spiderman 2"
             />
 
             <NewGames
               classname=""
               game={ Cyberpunk }
+              gameName="cyberpunk"
             />
 
             <NewGames
               classname=""
               game={ Ragnarok }
+              gameName="gof of war ragnarok"
             />
 
             <div className="navAuto" data-testid="nav-auto">

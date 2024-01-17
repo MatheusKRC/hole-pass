@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { clear } from 'console';
 import Games from '../../Pages/Games';
@@ -54,5 +54,14 @@ describe('Testes da página de Jogos', () => {
     expect(gameBox.length).toBe(43);
     expect(overLogo.length).toBe(43);
     expect(overTitle.length).toBe(43);
+  });
+
+  test('Verificando se a barra de busca por jogos funciona corretamente', async () => {
+    const search = screen.getByTestId('search');
+
+    fireEvent.change(search, { target: { value: 'spider' } });
+    const linkToGame = screen.getAllByTestId('link-to-game');
+    expect(search.value).toBe('spider');
+    expect(linkToGame.length).toBe(3);
   });
 });
