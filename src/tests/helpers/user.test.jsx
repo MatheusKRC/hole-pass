@@ -1,12 +1,13 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { clear } from 'console';
 import User from '../../Pages/User';
 
 describe('Testes da página de Usuário', () => {
+  const buttonUser = 'user-button';
   beforeEach(() => {
     const mockId = 'blackHoleUser';
-    const mockJson = { firstName: 'Matheus', lastName: 'Santos Leão', email: 'usuário@gmail.com', password: 'usuario123', cpf: '00000000000' };
+    const mockJson = { firstName: 'Matheus', lastName: 'Leão', email: 'usuário@gmail.com', password: 'usuario123', cpf: '79288299327' };
     localStorage.setItem(mockId, JSON.stringify(mockJson));
     render(<User />, { wrapper: BrowserRouter });
   });
@@ -25,7 +26,7 @@ describe('Testes da página de Usuário', () => {
     const userInfo = screen.getAllByTestId('user-info');
     const username = screen.getByTestId('username');
     const userName = screen.getByTestId('user-name');
-    const userButton = screen.getAllByTestId('user-button');
+    const userButton = screen.getAllByTestId(buttonUser);
     const assignPlan = screen.getByTestId('assign-plan');
     const userTitle = screen.getByTestId('user-title');
     const games = screen.getAllByTestId('games');
@@ -56,5 +57,29 @@ describe('Testes da página de Usuário', () => {
     expect(overLogo.length).toBe(5);
     expect(overName.length).toBe(5);
     expect(changePlan).toBeInTheDocument();
+  });
+
+  test('Verificando se é possivel inserir o username', () => {
+    const userButton = screen.getAllByTestId(buttonUser);
+    fireEvent.click(userButton[0]);
+
+    const username = screen.getByTestId('username');
+    fireEvent.change(username, { target: { value: 'MatheusKRC' } });
+    fireEvent.click(userButton[0]);
+
+    const user = screen.getByTestId('username');
+    expect(user.value).toBe('MatheusKRC');
+  });
+
+  test('Verificando se é possivel sair da conta', async () => {
+    expect(localStorage.length).toBe(1);
+    const userButton = screen.getAllByTestId(buttonUser);
+
+    await waitFor(() => {
+      fireEvent.click(userButton[1]);
+
+      expect(window.location.pathname).toBe('/');
+      expect(localStorage.length).toBe(0);
+    });
   });
 });
