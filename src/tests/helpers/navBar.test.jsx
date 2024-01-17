@@ -86,7 +86,7 @@ describe('Testes do Componente da barra de navegação', () => {
 
   test('Verificando se o icone de usuário leva para tela de perfil', () => {
     const mockId = 'blackHoleUser';
-    const mockJson = { data: { firstName: 'Matheus', lastName: 'Santos Leão', email: 'kyracraft0@gmail.com', password: 'kyarcarft12', cpf: '09639652393' } };
+    const mockJson = { data: { firstName: 'Matheus', lastName: 'Santos Leão', email: 'usuário@gmail.com', password: 'usuario123', cpf: '00000000000' } };
     setLocalStorage(mockId, mockJson);
 
     expect(localStorage.getItem(mockId)).toEqual(JSON.stringify(mockJson));
