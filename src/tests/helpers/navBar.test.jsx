@@ -1,25 +1,11 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import userEvent from '@testing-library/user-event';
 import { clear } from 'console';
 import NavBar from '../../Components/01-Navbar';
 
 describe('Testes do Componente da barra de navegação', () => {
-  beforeEach(() => {
-    render(<NavBar />, { wrapper: BrowserRouter });
-  });
-
-  afterEach(() => {
-    clear();
-  });
-
-  const user = userEvent.setup();
-
-  const setLocalStorage = (id, data) => {
-    window.localStorage.setItem(id, JSON.stringify(data));
-  };
-
   test('Verificando se todos os elementos da barra de navegação estão presentes', () => {
+    render(<NavBar />, { wrapper: BrowserRouter });
     const navBar = screen.getByTestId('nav-bar');
     const homeLink = screen.getByTestId('home-link');
     const holeLogo = screen.getByTestId('hole-logo');
@@ -41,66 +27,19 @@ describe('Testes do Componente da barra de navegação', () => {
     expect(userIcon).toBeInTheDocument();
   });
 
-  test('Verificando se os links de navegação estão funcionando corretamente', async () => {
-    const homeLink = screen.getByTestId('home-link');
-
-    waitFor(() => {
-      user.click(homeLink);
-      expect(window.location.pathname).toEqual('/');
-    });
-
-    const linkGames = screen.getAllByTestId('nav-link');
-    waitFor(() => {
-      user.click(linkGames[0]);
-      expect(window.location.pathname).toEqual('/Jogos');
-    });
-
-    waitFor(() => {
-      user.click(linkGames[1]);
-      expect(window.location.pathname).toEqual('/Plans');
-    });
-
-    waitFor(() => {
-      user.click(linkGames[2]);
-      expect(window.location.pathname).toEqual('/https://www.xbox.com/pt-BR/xbox-game-pass');
-    });
-
-    waitFor(() => {
-      user.click(linkGames[3]);
-      expect(window.location.pathname).toEqual('https://matheus-santos-leao.netlify.app/');
-    });
-  });
-
-  test('Testando o botão de inscreva-se agora', async () => {
-    const assignButton = screen.getByTestId('assign-button');
-
-    waitFor(() => {
-      user.click(assignButton);
-      expect(window.location.pathname).toEqual('http://localhost:5173/#plans');
-    });
-  });
-
-  test('Verificando se o icone de usuário leva para tela de login', () => {
+  test('Verificando se o icone de usuário muda dependendo da existência do local storage', () => {
+    render(<NavBar />, { wrapper: BrowserRouter });
     const userIcon = screen.getByTestId('user-icon');
-
-    waitFor(() => {
-      user.click(userIcon);
-      expect(window.location.pathname).toEqual('/Login');
-    });
+    expect(userIcon.className).toBe('defaultUser');
   });
 
-  test('Verificando se o icone de usuário leva para tela de perfil', () => {
+  test('Verificando se o icone de usuário muda dependendo da existência do local storage', () => {
     const mockId = 'blackHoleUser';
-    const mockJson = { data: { firstName: 'Matheus', lastName: 'Santos Leão', email: 'usuário@gmail.com', password: 'usuario123', cpf: '00000000000' } };
-    setLocalStorage(mockId, mockJson);
-
-    expect(localStorage.getItem(mockId)).toEqual(JSON.stringify(mockJson));
+    const mockJson = { firstName: 'Matheus', lastName: 'Santos Leão', email: 'usuário@gmail.com', password: 'usuario123', cpf: '00000000000' };
+    localStorage.setItem(mockId, JSON.stringify(mockJson));
+    render(<NavBar />, { wrapper: BrowserRouter });
 
     const userIcon = screen.getByTestId('user-icon');
-
-    waitFor(() => {
-      user.click(userIcon);
-      expect(window.location.pathname).toEqual('/User');
-    });
+    expect(userIcon.className).toBe('userIcon');
   });
 });
