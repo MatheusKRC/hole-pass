@@ -60,8 +60,6 @@ function PlansComponent({
                 activeOffset={ 1 }
                 shadowScale={ 1.05 }
                 highlight={ false }
-                onEnter={ () => console.log('Enter') }
-                onLeave={ () => console.log('Leave') }
               >
 
                 <img
