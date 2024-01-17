@@ -28,7 +28,6 @@ function PaymentComponent({ planGames }:any) {
   });
 
   api.interceptors.request.use(async (config) => {
-    // eslint-disable-next-line max-len
     const token = apiKey;
     config.headers.Authorization = `Bearer ${token}`;
 
@@ -221,7 +220,7 @@ function PaymentComponent({ planGames }:any) {
             return (<img
               data-testid="some-games-imgs"
               width="100px"
-              key={ src }
+              key={ index }
               alt={ src }
               src={ src }
             />);

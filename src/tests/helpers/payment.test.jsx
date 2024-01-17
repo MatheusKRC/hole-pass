@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { clear } from 'console';
 import Payment from '../../Pages/Payment';
 
 describe('Testes da página de Pagamento', () => {
@@ -8,6 +9,11 @@ describe('Testes da página de Pagamento', () => {
     const mockJson = { firstName: 'Matheus', lastName: 'Santos Leão', email: 'usuário@gmail.com', password: 'usuario123', cpf: '00000000000', username: 'MatheusKRC', planImage: '/src/Images/Estelar.png', planName: 'estelar', plan: '/src/Assets/Estelar.png', planValue: 'R$39,99', benefits: [['Jogos Mensais'], ['Descontos exclusivos'], ['Conteúdo exclusivo'], ['Armazenamento em nuvem'], ['Biblioteca de 2013 à 2017']] };
     localStorage.setItem(mockId, JSON.stringify(mockJson));
     render(<Payment />, { wrapper: BrowserRouter });
+  });
+
+  afterEach(() => {
+    localStorage.clear();
+    clear();
   });
 
   test('Verificando se todos os elementos da tela de pagamento existem', () => {

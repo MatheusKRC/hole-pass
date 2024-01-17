@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { clear } from 'console';
 import User from '../../Pages/User';
 
 describe('Testes da página de Usuário', () => {
@@ -8,6 +9,11 @@ describe('Testes da página de Usuário', () => {
     const mockJson = { firstName: 'Matheus', lastName: 'Santos Leão', email: 'usuário@gmail.com', password: 'usuario123', cpf: '00000000000' };
     localStorage.setItem(mockId, JSON.stringify(mockJson));
     render(<User />, { wrapper: BrowserRouter });
+  });
+
+  afterEach(() => {
+    localStorage.clear();
+    clear();
   });
 
   test('Verificando se todos os elementos da tela de usuário existem', () => {

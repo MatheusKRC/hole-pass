@@ -1,10 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { clear } from 'console';
 import Home from '../../Pages/Home';
 
 describe('Testes da página inicial', () => {
   beforeEach(() => {
     render(<Home />, { wrapper: BrowserRouter });
+  });
+
+  afterEach(() => {
+    clear();
   });
 
   test('Verificando se todos os elementos da primeira parte existem', () => {

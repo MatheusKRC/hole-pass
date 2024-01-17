@@ -1,10 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { clear } from 'console';
 import Games from '../../Pages/Games';
 
 describe('Testes da página de Jogos', () => {
   beforeEach(() => {
     render(<Games />, { wrapper: BrowserRouter });
+  });
+
+  afterEach(() => {
+    clear();
   });
 
   test('Verificando se todos os elementos da tela de jogos existem', () => {

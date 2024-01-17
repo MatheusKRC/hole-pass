@@ -1,10 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { clear } from 'console';
 import LoginRegister from '../../Pages/LoginRegister';
 
 describe('Testes da página de Login e Registro', () => {
   beforeEach(() => {
     render(<LoginRegister />, { wrapper: BrowserRouter });
+  });
+
+  afterEach(() => {
+    clear();
   });
 
   test('Verificando se todos os elementos da tela de login e registro existem', () => {

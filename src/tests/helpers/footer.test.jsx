@@ -1,10 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { clear } from 'console';
 import Footer from '../../Components/08-Footer';
 
 describe('Testes do rodapé', () => {
   beforeEach(() => {
     render(<Footer />, { wrapper: BrowserRouter });
+  });
+
+  afterEach(() => {
+    clear();
   });
 
   test('Verificando se todos os elementos do rodapé existem', () => {

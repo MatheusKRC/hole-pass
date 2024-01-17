@@ -1,11 +1,16 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
+import { clear } from 'console';
 import NavBar from '../../Components/01-Navbar';
 
 describe('Testes do Componente da barra de navegação', () => {
   beforeEach(() => {
     render(<NavBar />, { wrapper: BrowserRouter });
+  });
+
+  afterEach(() => {
+    clear();
   });
 
   const user = userEvent.setup();
