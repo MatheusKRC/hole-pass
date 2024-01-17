@@ -106,12 +106,17 @@ function LoginRegister() {
   };
 
   return (
-    <div className="loginRegisterPage">
-      <div className="loginContent">
-        <img className="loginLogo" src={ logoPass } alt="logo hole pass" />
-        <h1 className="loginTitle">Hole Pass</h1>
+    <div className="loginRegisterPage" data-testid="login-page">
+      <div className="loginContent" data-testid="login-content">
+        <img
+          data-testid="login-logo"
+          className="loginLogo"
+          src={ logoPass }
+          alt="logo hole pass"
+        />
+        <h1 data-testid="login-title" className="loginTitle">Hole Pass</h1>
 
-        <p className="loginDesc">
+        <p data-testid="login-desc" className="loginDesc">
           Um plano de assinatura que disponibiliza uma
           biblioteca de jogos baseados em suas épocas
           de lançamento, tendo jogos clássicos incluídos
@@ -121,15 +126,28 @@ function LoginRegister() {
 
         </p>
       </div>
-      <div className="loginForm">
-        <img className="loginHoleLogo" src={ logo } alt="logo black hole" />
-        <h1 className="loginRegTitle">{login}</h1>
+      <div data-testid="login-form" className="loginForm">
+        <img
+          data-testid="login-hole-logo"
+          className="loginHoleLogo"
+          src={ logo }
+          alt="logo black hole"
+        />
+        <h1 data-testid="login-reg-title" className="loginRegTitle">{login}</h1>
 
         {inputs.map(({ pholder, id }) => (
-          <div key={ id }>
-            <label htmlFor={ id } className="pholder">{pholder}</label>
+          <div data-testid="form" key={ id }>
+            <label
+              data-testid="placeholder"
+              htmlFor={ id }
+              className="pholder"
+            >
+              {pholder}
+
+            </label>
             <br />
             <input
+              data-testid="login-input"
               name={ id }
               className="loginInput"
               key={ pholder }
@@ -142,13 +160,21 @@ function LoginRegister() {
         ))}
 
         <button
+          data-testid="login-button"
           className="buyButton"
           onClick={ login === 'LOGIN' ? handleLogin : handleRegister }
         >
           {login}
 
         </button>
-        <button className="already" onClick={ handleClick }>{exist}</button>
+        <button
+          data-testid="already-exist"
+          className="already"
+          onClick={ handleClick }
+        >
+          {exist}
+
+        </button>
       </div>
     </div>
   );

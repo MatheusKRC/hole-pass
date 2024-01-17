@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import Games from '../../Pages/Games';
 
-describe('Testes da página inicial', () => {
+describe('Testes da página de Jogos', () => {
   beforeEach(() => {
     render(<Games />, { wrapper: BrowserRouter });
   });

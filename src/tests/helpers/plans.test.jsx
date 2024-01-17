@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import Plans from '../../Pages/Plans';
 
-describe('Testes da página inicial', () => {
+describe('Testes da página de Planos de Assinatura', () => {
   beforeEach(() => {
     render(<Plans />, { wrapper: BrowserRouter });
   });
