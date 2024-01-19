@@ -81,7 +81,7 @@ function User() {
               id="username"
               onChange={ handleChange }
               type="text"
-              value={ mainUser.username }
+              value={ mainUser.username || '' }
               disabled={ inputs }
             />
 
