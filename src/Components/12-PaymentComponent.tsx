@@ -141,6 +141,7 @@ function PaymentComponent({ planGames }:any) {
 
       ) : (
         <div data-testid="card-div" className="cardDiv">
+          <p className="seeMore">Esta Forma de Pagamento ainda não foi implementada</p>
           <input
             data-testid="card-input"
             className="cardInput"
