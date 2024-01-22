@@ -3,7 +3,8 @@ interface ClassicGame {
   desc: string,
   character: string,
   name: string,
-  className: string
+  className: string,
+  gameName: string
 }
 
 interface PlanCardsI {

@@ -146,6 +146,21 @@
   font-style: normal;
   font-weight: 700;
   line-height: 95.063%; /* 22.815px */
+
+  transition: 1s;
+}
+
+.alert {
+  color: var(--primary-color);
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95.063%; /* 22.815px */
+  text-shadow: 0px 0px 10px var(--primary-color);
+
+  transition: 1s;
 }
 
 .already:hover {

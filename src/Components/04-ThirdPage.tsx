@@ -20,6 +20,7 @@ function ThirdPage() {
     background: village,
     desc: 'A história segue o agente especial Leon S. Kennedy, que é enviado em uma missão para resgatar a filha do presidente dos Estados Unidos, Ashley Graham, que foi sequestrada por um culto religioso em uma parte rural da Espanha.',
     character: Leon,
+    gameName: 'Resident Evil 4',
     name: re4,
   });
 
@@ -34,6 +35,7 @@ function ThirdPage() {
         background: village,
         desc: 'A história segue o agente especial Leon S. Kennedy, que é enviado em uma missão para resgatar a filha do presidente dos Estados Unidos, Ashley Graham, que foi sequestrada por um culto religioso em uma parte rural da Espanha.',
         character: Leon,
+        gameName: 'resident evil 4',
         name: re4,
       });
     }
@@ -46,6 +48,7 @@ function ThirdPage() {
         background: castle,
         desc: 'Symphony of the Night apresenta jogabilidade de rolagem lateral. O objetivo é explorar o castelo de Dracula para derrotar uma entidade que está controlando Richter Belmont, que se auto-proclamou lorde do castelo e herói dos eventos que aconteceram em Rondo of Blood.',
         character: Alucard,
+        gameName: 'castlevania symphony of the night',
         name: castleName,
       });
     }
@@ -58,16 +61,18 @@ function ThirdPage() {
         background: dark,
         desc: 'Dark Souls se passa primariamente no reino fictício de Lordran, onde os jogadores assumem o papel de um personagem denominado "Chosen Undead" que, segundo lendas, seria responsável pela quebra de uma maldição que torna incapazes de morrer aqueles que são afligidos por uma misteriosa marca negra.',
         character: knight,
+        gameName: 'dark souls',
         name: ds,
       });
     }
   };
 
   return (
-    <div className="thirdPage">
-      <h1 className="titlePage3">OU RELEMBRE O PASSADO</h1>
+    <div className="thirdPage" data-testid="third-page">
+      <h1 className="titlePage3" data-testid="classics-title">OU RELEMBRE O PASSADO</h1>
 
       <ClassicGames
+        gameName={ Game.gameName }
         background={ Game.background }
         desc={ Game.desc }
         name={ Game.name }
@@ -75,9 +80,10 @@ function ThirdPage() {
         className={ `game${Game.id}` }
       />
 
-      <div className="links">
+      <div data-testid="classics-links" className="links">
         {' '}
         <button
+          data-testid="classics-button"
           className={ `buttonGame${Game.re4}` }
           onClick={ handleClick }
           id="0"
@@ -86,6 +92,7 @@ function ThirdPage() {
 
         </button>
         <button
+          data-testid="classics-button"
           className={ `buttonGame${Game.castle}` }
           onClick={ handleClick }
           id="1"
@@ -95,6 +102,7 @@ function ThirdPage() {
 
         </button>
         <button
+          data-testid="classics-button"
           className={ `buttonGame${Game.ds}` }
           onClick={ handleClick }
           id="2"

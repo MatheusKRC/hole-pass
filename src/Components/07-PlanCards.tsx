@@ -18,14 +18,27 @@ function PlanCards({ name, img, benefits, value, id, planCard, planImage }: Plan
   };
 
   return (
-    <div className="planCard" id={ planCard }>
-      <img className="benefitName" src={ img } alt="Nome do beneficio" />
+    <div data-testid="plan-card" className="planCard" id={ planCard }>
+      <img
+        data-testid="benefit-name"
+        className="benefitName"
+        src={ img }
+        alt="Nome do beneficio"
+      />
 
       {benefits.map((line, index) => (
-        <li className="benefitsList" key={ index }>{line}</li>
+        <li data-testid="benefits-list" className="benefitsList" key={ index }>{line}</li>
       ))}
 
-      <button id={ id } className="buyButton" onClick={ handleClick }>{value}</button>
+      <button
+        data-testid="buy-button"
+        id={ id }
+        className="buyButton"
+        onClick={ handleClick }
+      >
+        {value}
+
+      </button>
     </div>
   );
 }

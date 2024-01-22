@@ -59,28 +59,35 @@ function User() {
     navigate('/');
   };
   return (
-    <div>
+    <div data-testid="user-main">
       <NavBar />
-      <div className="userPage">
-        <div className="user">
+      <div data-testid="user-page" className="userPage">
+        <div data-testid="user" className="user">
           {}
-          <img className="userImage" src={ userIcon } alt="Imagem de Perfil" />
+          <img
+            data-testid="user-image"
+            className="userImage"
+            src={ userIcon }
+            alt="Imagem de Perfil"
+          />
 
           <div />
 
-          <div className="infos">
-            <p className="userInfo">Username</p>
+          <div data-testid="infos" className="infos">
+            <p data-testid="user-info" className="userInfo">Username</p>
             <input
+              data-testid="username"
               className={ `inputUsername ${editId}` }
               id="username"
               onChange={ handleChange }
               type="text"
-              value={ mainUser.username }
+              value={ mainUser.username || '' }
               disabled={ inputs }
             />
 
-            <p className="userInfo">Nome Completo</p>
+            <p data-testid="user-info" className="userInfo">Nome Completo</p>
             <input
+              data-testid="user-name"
               className={ `inputUser ${editId}` }
               id="name"
               onChange={ handleChange }
@@ -89,14 +96,34 @@ function User() {
               disabled={ inputs }
             />
 
-            <button className="userButton" onClick={ handleClick }>Editar Perfil</button>
-            <button className="userButton" onClick={ logout }>Sair da Conta</button>
+            <button
+              data-testid="user-button"
+              className="userButton"
+              onClick={ handleClick }
+            >
+              Editar Perfil
+
+            </button>
+            <button
+              data-testid="user-button"
+              className="userButton"
+              onClick={ logout }
+            >
+              Sair da Conta
+
+            </button>
           </div>
 
         </div>
 
-        <div className="assignPlan">
-          <h1 className="userTitle">PLANO DE ASSINATURA ATUAL</h1>
+        <div data-testid="assign-plan" className="assignPlan">
+          <h1
+            data-testid="user-title"
+            className="userTitle"
+          >
+            PLANO DE ASSINATURA ATUAL
+
+          </h1>
 
           {mainUser.plan ? (
             <PlansComponent
@@ -123,7 +150,7 @@ function User() {
               logoSize="mini-text-over2"
             />)}
 
-          <button className="buyButton">MUDE SEU PLANO</button>
+          <button data-testid="change-plan" className="buyButton">MUDE SEU PLANO</button>
         </div>
       </div>
 

@@ -28,7 +28,6 @@ function PaymentComponent({ planGames }:any) {
   });
 
   api.interceptors.request.use(async (config) => {
-    // eslint-disable-next-line max-len
     const token = apiKey;
     config.headers.Authorization = `Bearer ${token}`;
 
@@ -97,11 +96,12 @@ function PaymentComponent({ planGames }:any) {
   setInterval(verifyStatus, 30000);
 
   return (
-    <div className="paymentComponent">
-      <h1 className="paymentTitle">FORMA DE PAGAMENTO</h1>
+    <div className="paymentComponent" data-testid="payment-component">
+      <h1 className="paymentTitle" data-testid="payment-title">FORMA DE PAGAMENTO</h1>
 
-      <div>
+      <div data-testid="payment-div">
         <button
+          data-testid="payment-method"
           className="paymentMethod"
           onClick={ handleClick }
           value="pix"
@@ -110,6 +110,7 @@ function PaymentComponent({ planGames }:any) {
 
         </button>
         <button
+          data-testid="payment-method"
           className="paymentMethod"
           onClick={ handleClick }
           value="cartão"
@@ -121,14 +122,16 @@ function PaymentComponent({ planGames }:any) {
       </div>
 
       {type === 'pix' ? (
-        <div className="pixDiv">
+        <div data-testid="pix" className="pixDiv">
           <img
+            data-testid="pix-image"
             className="pix"
             width="200px"
             alt="qrCode"
             src={ `data:image/jpeg;base64,${qrCode}` }
           />
           <input
+            data-testid="pix-input"
             className="pixInput"
             type="text"
             onChange={ handleChange }
@@ -137,8 +140,9 @@ function PaymentComponent({ planGames }:any) {
         </div>
 
       ) : (
-        <div className="cardDiv">
+        <div data-testid="card-div" className="cardDiv">
           <input
+            data-testid="card-input"
             className="cardInput"
             onChange={ handleChange }
             id="name"
@@ -146,6 +150,7 @@ function PaymentComponent({ planGames }:any) {
             type="text"
           />
           <input
+            data-testid="card-input"
             className="cardInput"
             onChange={ handleChange }
             id="number"
@@ -154,9 +159,17 @@ function PaymentComponent({ planGames }:any) {
             type="text"
           />
           <div>
-            <label className="expiration" htmlFor="mmaa">Data de Expiração</label>
+            <label
+              data-testid="expiration"
+              className="expiration"
+              htmlFor="mmaa"
+            >
+              Data de Expiração
+
+            </label>
             <br />
             <input
+              data-testid="card-date"
               className="cardDate"
               onChange={ handleChange }
               id="mm"
@@ -165,6 +178,7 @@ function PaymentComponent({ planGames }:any) {
               name="mmaa"
             />
             <input
+              data-testid="card-date"
               className="cardDate"
               onChange={ handleChange }
               id="aa"
@@ -173,6 +187,7 @@ function PaymentComponent({ planGames }:any) {
               type="text"
             />
             <input
+              data-testid="card-cvv"
               className="cardCVV"
               onChange={ handleChange }
               id="cvv"
@@ -183,6 +198,7 @@ function PaymentComponent({ planGames }:any) {
           </div>
 
           <button
+            data-testid="confirm-button"
             className="buyButton"
           >
             Confirmar
@@ -192,21 +208,28 @@ function PaymentComponent({ planGames }:any) {
       )}
 
       <h1
+        data-testid="some-games"
         className="paymentTitle"
       >
         ALGUNS JOGOS DESSE PLANO
 
       </h1>
-      <div>
+      <div data-testid="some-games-div">
         {planGames.map(({ src }:any, index:any) => {
           if (index < 4) {
-            return <img width="100px" key={ src } alt={ src } src={ src } />;
+            return (<img
+              data-testid="some-games-imgs"
+              width="100px"
+              key={ index }
+              alt={ src }
+              src={ src }
+            />);
           } return false;
         })}
 
       </div>
 
-      <a className="seeMore" href="/Plans">Veja Mais</a>
+      <a data-testid="see-more" className="seeMore" href="/Plans">Veja Mais</a>
     </div>
   );
 }

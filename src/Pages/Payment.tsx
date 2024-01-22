@@ -7,12 +7,12 @@ function Payment() {
   const user = JSON.parse(localUser);
   const holePlan = objGames.filter(({ plan }) => plan === user.planName);
   return (
-    <div className="paymentPage">
-      <div className="payment">
+    <div className="paymentPage" data-testid="payment-page">
+      <div className="payment" data-testid="payment">
         <div className="paymentComponent">
           <PaymentComponent planGames={ holePlan } />
         </div>
-        <div className="paymentCard">
+        <div className="paymentCard" data-testid="payment-card">
           <PlanCards
             planImage=""
             planCard="paymentPlanCard"
