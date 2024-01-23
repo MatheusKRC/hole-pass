@@ -13,6 +13,7 @@ import './CSS/plans.css';
 import './CSS/user.css';
 import './CSS/loginRegister.css';
 import './CSS/payment.css';
+import './CSS/final.css';
 import Games from './Pages/Games.tsx';
 import Plans from './Pages/Plans.tsx';
 import LoginRegister from './Pages/LoginRegister.tsx';

@@ -91,7 +91,7 @@ function PaymentComponent({ planGames }:any) {
     if (status === 'approved') {
       return navigate('/Final');
     }
-  }, [status]);
+  }, [navigate, status]);
 
   setInterval(verifyStatus, 30000);
 

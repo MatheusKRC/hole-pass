@@ -29,7 +29,7 @@ function FourthPage() {
           img={ Estelar }
           benefits={ estelar }
           id="estelar"
-          value="R$39,99"
+          value="R$1.99"
         />
         <PlanCards
           planCard=""
