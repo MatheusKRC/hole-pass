@@ -18,6 +18,7 @@ import Plans from './Pages/Plans.tsx';
 import LoginRegister from './Pages/LoginRegister.tsx';
 import User from './Pages/User.tsx';
 import Payment from './Pages/Payment.tsx';
+import Final from './Pages/Final.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -29,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/Login" Component={ LoginRegister } />
         <Route path="/User" Component={ User } />
         <Route path="/Payment" Component={ Payment } />
+        <Route path="Final" Component={ Final } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
