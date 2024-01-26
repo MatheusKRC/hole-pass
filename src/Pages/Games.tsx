@@ -9,19 +9,20 @@ import { objGames } from '../Utils/importGames';
 import Cyberpunk from '../Images/cyberpunk.png';
 import Ragnarok from '../Images/ragnarok.png';
 import spiderman from '../Images/spiderman.png';
+import { HandleChangeFunction } from '../Interfaces/gamePage';
 
 function Games() {
   const [gamesView, setGamesView] = useState(objGames);
   const [filter, setFilter] = useState('');
 
-  const handleChange = ({ target }: any) => {
-    const { value } = target;
+  const handleChange:HandleChangeFunction = (event) => {
+    const { value } = event.target;
     setFilter(value);
   };
 
   useEffect(() => {
     if (filter.length > 0) {
-      const lowerFilter = filter.toLowerCase();
+      const lowerFilter:string = filter.toLowerCase();
       const newGames = objGames.filter(({ name }:any) => {
         const nameLower = name.toLowerCase();
         return nameLower.includes(lowerFilter);
@@ -39,7 +40,7 @@ function Games() {
     nextSlide();
   }, 2000);
 
-  const nextSlide = () => {
+  const nextSlide:VoidFunction = () => {
     count += 1;
 
     if (count > 3) {

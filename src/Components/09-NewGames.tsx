@@ -1,4 +1,4 @@
-import NewGamesI from '../Interfaces/gamePage';
+import { NewGamesI } from '../Interfaces/gamePage';
 
 function NewGames({ game, classname, gameName }: NewGamesI) {
   return (

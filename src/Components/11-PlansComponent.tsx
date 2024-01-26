@@ -6,9 +6,11 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo2 from '../Games/Logo.png';
 import name from '../Games/Name.png';
+import { PlanComponentI } from '../Interfaces/planPage';
 
 function PlansComponent({
-  games, plan, button, boxSize, nameSize, logoSize, planSize }:any) {
+  games, plan, button, boxSize, nameSize, logoSize,
+  planSize }:PlanComponentI) {
   const carousel = useRef(null);
   const [width, setWidth] = useState(0);
 

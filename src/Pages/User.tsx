@@ -1,20 +1,20 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 import logo from '../Assets/Logo.png';
 import NavBar from '../Components/01-Navbar';
 import PlansComponent from '../Components/11-PlansComponent';
-import Space from '../Images/Space.jfif';
-import Starfield from '../Images/Starfield.png';
-import holeBack from '../Images/HoleBack.png';
 import holePass from '../Games/holePass.png';
 import emptyPlan from '../Images/emptyPlan.png';
 import { objGames } from '../Utils/importGames';
+import { ActualPlan, BlackHoleUserFinal } from '../Interfaces/user';
+import { HandleChangeFunction } from '../Interfaces/gamePage';
+import { PlanI } from '../Interfaces/planPage';
 
 function User() {
   const localUser:any = localStorage.getItem('blackHoleUser');
-  const user = JSON.parse(localUser);
-  const navigate = useNavigate();
-  const holeGames = [
+  const user:BlackHoleUserFinal = JSON.parse(localUser);
+  const navigate:NavigateFunction = useNavigate();
+  const holeGames:Array<ActualPlan> = [
     { src: holePass },
     { src: holePass }, { src: holePass }, { src: holePass }, { src: holePass }];
 
@@ -34,17 +34,19 @@ function User() {
     purchased: user.purchased,
   });
 
-  const actualPlan = objGames.filter(({ plan }) => plan === user.planName);
+  const actualPlan:Array<PlanI> = objGames.filter(
+    ({ plan }) => plan === user.planName,
+  );
 
-  const handleChange = ({ target }: any) => {
-    const { id, value } = target;
+  const handleChange:HandleChangeFunction = (event) => {
+    const { id, value } = event.target;
     setUser({
       ...user,
       [id]: value,
     });
   };
 
-  const handleClick = () => {
+  const handleClick:VoidFunction = () => {
     if (inputs === true) {
       setInput(false);
       setEditId('edit');
@@ -55,7 +57,7 @@ function User() {
     }
   };
 
-  const logout = () => {
+  const logout:VoidFunction = () => {
     localStorage.removeItem('blackHoleUser');
     navigate('/');
   };
@@ -129,8 +131,6 @@ function User() {
           {mainUser.purchased ? (
             <PlansComponent
               games={ actualPlan }
-              background={ Space }
-              character={ Starfield }
               plan={ mainUser.planImage }
               button="false"
               planSize="miniPlan"
@@ -141,8 +141,6 @@ function User() {
           ) : (
             <PlansComponent
               games={ holeGames }
-              background={ holeBack }
-              character=""
               plan={ emptyPlan }
               button="false"
               planSize=""

@@ -10,11 +10,19 @@ import { objGames } from '../Utils/importGames';
 import plan2 from '../Images/Supermassivo.png';
 import plan1 from '../Images/Estelar.png';
 import plan3 from '../Images/Intermediario.png';
+import { PlanI } from '../Interfaces/planPage';
 
 function Plans() {
-  const estelarPlan = objGames.filter(({ plan }) => plan === 'estelar');
-  const intermediarioPlan = objGames.filter(({ plan }) => plan === 'intermediario');
-  const supermassivoPlan = objGames.filter(({ plan }) => plan === 'supermassivo');
+  const estelarPlan:Array<PlanI> = objGames.filter(
+    ({ plan }) => plan === 'estelar',
+  );
+  const intermediarioPlan:Array<PlanI> = objGames.filter(
+    ({ plan }) => plan === 'intermediario',
+  );
+  const supermassivoPlan:Array<PlanI> = objGames.filter(
+    ({ plan }) => plan === 'supermassivo',
+  );
+
   return (
     <div className="plansPage" data-testid="plans-page">
       <NavBar />

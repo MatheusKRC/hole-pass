@@ -1,19 +1,20 @@
-import { useNavigate } from 'react-router-dom';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import logo2 from '../Assets/Logo2.png';
+import { BlackHoleUser } from '../Interfaces/user';
 
 function Final() {
   const localUser:any = localStorage.getItem('blackHoleUser');
-  const user = JSON.parse(localUser);
+  const user:BlackHoleUser = JSON.parse(localUser);
 
-  const havePlan = () => {
+  const havePlan:VoidFunction = () => {
     const planPurchased = { ...user, purchased: true };
     localStorage.setItem('blackHoleUser', JSON.stringify(planPurchased));
   };
 
-  const navigate = useNavigate();
+  const navigate:NavigateFunction = useNavigate();
 
-  const handleClick = () => {
+  const handleClick:VoidFunction = () => {
     navigate('/');
   };
 

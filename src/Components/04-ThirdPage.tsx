@@ -24,8 +24,8 @@ function ThirdPage() {
     name: re4,
   });
 
-  const handleClick = ({ target }: any) => {
-    const { id } = target;
+  const handleClick = (event:any) => {
+    const { id } = event.target;
     if (id === '0') {
       setGame({
         id: '0',

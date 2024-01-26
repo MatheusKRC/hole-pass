@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 import logoPass from '../Assets/Logo2.png';
 import logo from '../Assets/Logo.png';
 import { validarCPF, validateEmail } from '../Utils/validate';
+import { HandleChangeFunction } from '../Interfaces/gamePage';
 
 function LoginRegister() {
   const [login, setLogin] = useState('LOGIN');
@@ -18,9 +19,9 @@ function LoginRegister() {
     cpf: '',
   });
 
-  const navigate = useNavigate();
+  const navigate:NavigateFunction = useNavigate();
 
-  const handleClick = () => {
+  const handleClick:VoidFunction = () => {
     if (login === 'LOGIN') {
       setLogin('REGISTER');
       setInputs([
@@ -39,26 +40,28 @@ function LoginRegister() {
     }
   };
 
-  const handleChange = ({ target }: any) => {
-    const { id, value } = target;
+  const handleChange:HandleChangeFunction = (event) => {
+    const { id, value } = event.target;
     setUser({
       ...user,
       [id]: value,
     });
   };
 
-  const handleLogin = () => {
+  const handleLogin = ():boolean => {
     if (validateLogin()) {
       localStorage.setItem('blackHoleUser', JSON.stringify(user));
       navigate('/');
-    } else { return false; }
+      return true;
+    } return false;
   };
 
-  const handleRegister = () => {
+  const handleRegister = ():boolean => {
     if (validateRegister()) {
       localStorage.setItem('blackHoleUser', JSON.stringify(user));
       navigate('/');
-    } else { return false; }
+      return true;
+    } return false;
   };
 
   useEffect(() => {
@@ -70,7 +73,7 @@ function LoginRegister() {
     }
   }, [navigate]);
 
-  const validateLogin = () => {
+  const validateLogin = ():boolean => {
     const { email, password } = user;
     if (!email || !validateEmail(email)) {
       setAlert('preencha o campo E-Mail corretamente');
@@ -83,7 +86,7 @@ function LoginRegister() {
     return true;
   };
 
-  const validateRegister = () => {
+  const validateRegister = ():boolean => {
     const { firstName, lastName, cpf } = user;
 
     if (!firstName) {

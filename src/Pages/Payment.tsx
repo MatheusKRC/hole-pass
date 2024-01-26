@@ -1,10 +1,11 @@
 import PlanCards from '../Components/07-PlanCards';
 import PaymentComponent from '../Components/12-PaymentComponent';
+import { BlackHoleUser } from '../Interfaces/user';
 import { objGames } from '../Utils/importGames';
 
 function Payment() {
   const localUser:any = localStorage.getItem('blackHoleUser');
-  const user = JSON.parse(localUser);
+  const user:BlackHoleUser = JSON.parse(localUser);
   const holePlan = objGames.filter(({ plan }) => plan === user.planName);
   return (
     <div className="paymentPage" data-testid="payment-page">

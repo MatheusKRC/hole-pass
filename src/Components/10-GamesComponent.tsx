@@ -3,8 +3,9 @@ import Atropos from 'atropos/react';
 import { Link } from 'react-router-dom';
 import logo2 from '../Games/Logo.png';
 import name from '../Games/Name.png';
+import { GamesI } from '../Interfaces/gamePage';
 
-function GamesComponent({ games }:any) {
+function GamesComponent({ games }:GamesI) {
   return (
     <div data-testid="games-component" className="games">
 
