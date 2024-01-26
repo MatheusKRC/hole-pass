@@ -29,7 +29,7 @@ function FourthPage() {
           img={ Estelar }
           benefits={ estelar }
           id="estelar"
-          value="R$39,99"
+          value="R$39.99"
         />
         <PlanCards
           planCard=""
@@ -38,7 +38,7 @@ function FourthPage() {
           img={ Intermediario }
           benefits={ intermediário }
           id="intermediario"
-          value="R$59,99"
+          value="R$59.99"
         />
         <PlanCards
           planCard=""
@@ -47,7 +47,7 @@ function FourthPage() {
           img={ Supermassivo }
           benefits={ supermassivo }
           id=""
-          value="R$79,99"
+          value="R$79.99"
         />
       </div>
 

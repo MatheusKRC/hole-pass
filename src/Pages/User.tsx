@@ -31,6 +31,7 @@ function User() {
     desc: user.desc,
     plan: user.plan,
     planImage: user.planImage,
+    purchased: user.purchased,
   });
 
   const actualPlan = objGames.filter(({ plan }) => plan === user.planName);
@@ -125,7 +126,7 @@ function User() {
 
           </h1>
 
-          {mainUser.plan ? (
+          {mainUser.purchased ? (
             <PlansComponent
               games={ actualPlan }
               background={ Space }
