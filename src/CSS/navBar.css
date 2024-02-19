@@ -119,3 +119,18 @@
 .backButton:active {
   background-color: black;
 }
+
+/* Notebooks */
+@media only screen and (max-width: 1550px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .holeLogo {
+    width: 180px;
+  }
+
+  .navLink {
+    font-size: 15px;
+  }
+}
