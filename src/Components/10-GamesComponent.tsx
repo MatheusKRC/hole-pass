@@ -21,6 +21,7 @@ function GamesComponent({ games }:GamesI) {
             <img
               data-testid="game-box"
               width="300px"
+              className="gameBox"
               key={ src }
               src={ src }
               alt={ src }

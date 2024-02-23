@@ -4,7 +4,7 @@
 
 .slider {
   margin: 0 auto;
-  width: 1920px;
+  width: 100%;
   height: 836px;
 
   margin-top: -600px;
@@ -31,7 +31,7 @@
 
 .manualNav {
   position: relative;
-  width: 1920px;
+  width: 100%;
   margin-top: -40px;
   display: flex;
   justify-content: center;
@@ -90,7 +90,7 @@
 
 .navAuto {
   position: absolute;
-  width: 1905px;
+  width: 100%;
   margin-top: 796px;
   display: flex;
   justify-content: center;
@@ -121,7 +121,7 @@
 
   position: relative;
 
-  margin-left: -1300px;
+  margin-left: -1100px;
 }
 
 .sliderGame {
@@ -153,6 +153,10 @@
 
   background-image: url(../Images/starBackground.png);
   transition: 1s;
+}
+
+.sliderBackground {
+  width: 75%;
 }
 
 .allGamesTitle {
@@ -259,4 +263,52 @@
   transform: translate(0px, -10px);
 
   transition: 0.5s;
+}
+
+/* Notebooks */
+@media only screen and (max-width: 1550px) {
+  .gamesPageTitle {
+    font-size: 80px;
+    margin-left: -1000px;
+  }
+
+  .slides {
+    margin-top: 150px;
+  }
+
+  .slider {
+    margin-bottom: -80px;
+  }
+
+  .sliderBackground {
+    width: 75%;
+  }
+
+  .navAuto {
+    width: 100%;
+    margin-top: 596px;
+  }
+
+  .allGamesTitle {
+    font-size: 70px;
+    width: 700px;
+  }
+
+  .gameBox {
+    width: 250px;
+  }
+
+  .text-over {
+    width: 60px;
+    left: 170px;
+  }
+
+  .text-over2 {
+    width: 220px;
+    bottom: 290px;
+  }
+
+  .manualNav {
+    margin-top: -10px;
+  }
 }
