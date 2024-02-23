@@ -41,6 +41,10 @@
   transition: 1s;
 }
 
+.plansBackground {
+  width: 120%;
+}
+
 .planHole:hover {
   filter: grayscale(0%);
   transition: 0.5s;
@@ -57,4 +61,14 @@
   overflow: hidden;
 
   margin-top: -350px;
+}
+
+@media only screen and (max-width: 1550px) {
+  .plansMain {
+    background-image: url(../Images/laptopPlansBackground.png);
+  }
+
+  .plansBackground {
+    width: 120%;
+  }
 }
