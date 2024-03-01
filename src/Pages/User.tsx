@@ -143,7 +143,7 @@ function User() {
               games={ holeGames }
               plan={ emptyPlan }
               button="false"
-              planSize=""
+              planSize="miniPlan"
               boxSize="miniGameBox"
               nameSize="mini-text-over"
               logoSize="mini-text-over2"

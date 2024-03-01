@@ -239,3 +239,38 @@
   }
 }
 
+@media only screen and (max-width: 1250px) {
+  .userPage {
+    height: 700px;
+  }
+
+  .user {
+    height: 500px;
+  }
+
+  #miniPlan {
+    width: 800px;
+  }
+
+  .userInfo {
+    font-size: 15px;
+  }
+
+  .inputUser {
+    font-size: 15px;
+  }
+  
+  .inputUsername{
+    font-size: 25px;
+  }
+
+  .userButton {
+    font-size: 15px;
+  }
+
+  .userTitle {
+    font-size: 40px;
+
+    margin-right: 250px;
+  }
+}
