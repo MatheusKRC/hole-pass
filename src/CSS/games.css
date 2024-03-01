@@ -312,3 +312,43 @@
     margin-top: -10px;
   }
 }
+
+@media only screen and (max-width: 1250px) {
+  .gamesPageTitle {
+    font-size: 60px;
+
+    margin-left: -600px;
+  }
+
+  .slides {
+    margin-top: 300px;
+  }
+
+  .navAuto {
+    margin-top: 426px;
+  }
+
+  .manualNav {
+    margin-top: -30px;
+  }
+
+  .allGamesTitle {
+    font-size: 50px;
+    width: 500px;
+  }
+
+  .gameBox {
+    width: 150px;
+  }
+
+  .text-over {
+    width: 40px;
+    bottom: 15px;
+    left: 100px;
+  }
+
+  .text-over2 {
+    width: 130px;
+    bottom: 175px;
+  }
+}
