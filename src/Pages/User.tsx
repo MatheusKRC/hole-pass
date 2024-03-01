@@ -149,7 +149,6 @@ function User() {
               logoSize="mini-text-over2"
             />)}
 
-          <button data-testid="change-plan" className="buyButton">MUDE SEU PLANO</button>
         </div>
       </div>
 

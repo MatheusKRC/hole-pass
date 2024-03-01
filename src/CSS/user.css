@@ -8,14 +8,15 @@
 
 #miniPlan {
   width: 1152px;
-  height: 558px;
 
   margin-right: 0px;
 }
 
 .user {
   width: 885px;
+  width: 30%;
   height: 841px;
+  height: 70%;
   border: 6px solid #ffde59;
 
   display: flex;
@@ -38,7 +39,7 @@
 
   border-radius: 300px;
 
-  width: 420px;
+  width: 80%;
 }
 
 .userInfo {
@@ -154,7 +155,7 @@
   font-family: koulen;
 
   text-align: center;
-  font-size: 90px;
+  font-size: 70px;
   font-weight: 400;
   text-shadow: 0px 0px 20px var(--primary-color);
   line-height: 95.063%; /* 91.26px */
@@ -185,7 +186,7 @@
 }
 
 .assignPlan {
-  width: 1400px;
+  width: 100%;
   margin-left: 0px;
 
   display: flex;
@@ -195,4 +196,46 @@
 
 .plansBackground {
   margin-bottom: 120px;
+}
+
+@media only screen and (max-width: 1550px) {
+  .userPage {
+    height: 1000px;
+  }
+
+
+  .user {
+    height: 700px;
+  }
+
+  #miniPlan {
+    width: 852px;
+
+    margin-left: -100px;
+  }
+
+  .miniGameBox {
+    width: 160px;
+  }
+  
+  .mini-text-over {
+    width: 40px;
+    position: absolute;
+    color: white;
+  
+    bottom: 20px;
+    left: 110px;
+  }
+  
+  .mini-text-over2 {
+    width: 140px;
+  
+    bottom: 185px;
+    left: 0px;
+  }
+
+  .userTitle {
+    font-size: 60px;
+    width: 1000px;
+  }
 }
