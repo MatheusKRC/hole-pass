@@ -190,7 +190,7 @@
 }
 
 .classicGameBack {
-  width: 1919px;
+  width: 100%;
   height: 836px;
 
   margin-top: -200px;
@@ -542,14 +542,17 @@
 
   .benefitsIcon {
     width: 150px;
+    margin-right: 200px;
   }
 
   .benefitsIconB {
     width: 350px;
+    margin-right: 200px;
   }
 
   .benefitsDesc {
     font-size: 20px;
+    margin-right: 200px;
   }
 
   /* Third Page */
@@ -622,6 +625,153 @@
 }
 
 /* Tablets */
-@media only screen and (max-width: 1250px) {
 
+@media only screen and (max-width: 1250px) {
+  /* FirstPage */
+  .content{
+    margin-top: -500px;
+  }
+
+  .passLogo {
+    width: 220px;
+  }
+
+  .homeGames {
+    margin-left: 10px;
+    margin-right: 80px;
+  }
+
+  .homeGame {
+    width: 40%;
+    height: 850px;
+  }
+
+  .homeGamesBoxs{
+    width: 110%;
+  }
+
+  .homeGamesBox{
+    width: 28%;
+    height: 250px;
+  }
+
+  .passDesc {
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .blackHole {
+    width: 70%;
+  }
+
+  /* SecondPage */
+  .titlePage {
+    font-size: 40px;
+  }
+
+  .portal {
+    width: 70%;
+    margin-top: 30px;
+  }
+
+  .secondPage {
+    width: 120%;
+    height: 780px;
+    background-image: url(../Images/TabletBackground.png);
+    /* background-image: url(../Images/tabletBackground.png); */
+  }
+
+  .benefitsIcon {
+    width: 100px;
+    margin-right: 250px;
+  }
+
+  .benefitsIconB {
+    width: 250px;
+    margin-right: 250px;
+  }
+
+  .benefitsDesc {
+    font-size: 15px;
+    width: 400px;
+    margin-right: 250px;
+  }
+
+  /* ThirdPage */
+  .titlePage3 {
+    font-size: 50px;
+  }
+
+  .classicGameBack {
+    margin-top: -120px;
+    height: 600px;
+  }
+
+  .classicDesc {
+    font-size: 20px;
+    width: 400px;
+    margin-top: 300px;
+
+    margin-left: 40px;
+  }
+
+  .classicCharacter {
+    width: 454px;
+    height: 600px;
+    margin-top: 300px;
+
+    margin-bottom: 70px;
+  }
+
+  .game0, .game1, .game2 {
+    width: 600px;
+    height: 304px;
+  }
+
+  .game1 {
+    margin-right: -80px;
+  }
+
+  .buttonGame {
+    font-size: 20px;
+
+    margin-bottom: 30px;
+  }
+
+  .buttonGamere4, .buttonGamecastle, .buttonGameds {
+    font-size: 27px;
+  }
+
+  /* FourthPage */
+  .benefitName{
+    width: 300px;
+    margin-top: -80px;
+  }
+
+  .planCard {
+    width: 260px;
+    height: 540px;
+  }
+
+  .benefitsList {
+    font-size: 12px;
+    margin-left: 400px;
+  }
+
+  .buyButton {
+    width: 164px;
+    font-size: 25px;
+  }
+
+  #estelar, #intermediario {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .secondPage {
+    width: 120%;
+    height: 780px;
+    background-image: url(../Images/tabletBackground.png);
+  }
 }

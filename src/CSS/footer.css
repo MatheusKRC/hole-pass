@@ -98,3 +98,28 @@
 
   transition: 1s;
 }
+
+@media only screen and (max-width: 1250px) {
+  .footerDesc{
+    font-size: 15px;
+    width: 280px;
+
+    margin-right: 140px;
+  }
+
+  .footerLogo {
+    width: 200px;
+  }
+
+  .BIE {
+    font-size: 18px;
+  }
+
+  .socialTitle {
+    font-size: 14px;
+  }
+
+  .socialIcon {
+    width: 40px;
+  }
+}
