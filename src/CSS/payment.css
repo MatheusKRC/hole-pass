@@ -9,6 +9,7 @@
 
 .payment {
   width: 1173px;
+  width: 65%;
   height: 850px;
   display: flex;
 
@@ -174,7 +175,15 @@
 
 #paymentPlanCard {
   margin-right: -300px;
-  margin-left: 200px;
+  margin-left: 70%;
 
   transition: 1s;
+}
+
+@media only screen and (max-width:1550px) {
+  .payment {
+    height: 780px;
+
+    margin-right: 100px;
+  }
 }
