@@ -72,3 +72,40 @@
     width: 120%;
   }
 }
+
+@media only screen and (max-width: 1250px) {
+  .plansMain {
+    background-image: url(../Images/ipadPlans.png);
+  }
+
+  .PLANS {
+    margin-top: 0px;
+  }
+
+  .plansHoles {
+    margin-right: 80px;
+  }
+
+  #acquire {
+    margin-left: 300px;
+    margin-top: 250px;
+  }
+
+  #planEstelar {
+    width: 300px;
+  }
+
+  #planInterm {
+    width: 350px;
+  }
+
+  #planSuperm{
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .plansMain {
+    background-image: url(../Images/IpadPlans.png);
+  }
+}

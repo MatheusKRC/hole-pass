@@ -32,7 +32,13 @@ function PlansComponent({
       button === 'true'
         ? (
           <Link data-testid="plan-link" className="planLink" to="/#plans">
-            <button data-testid="buy-button" className="buyButton">Adquira Ja</button>
+            <button
+              data-testid="buy-button"
+              id="acquire"
+              className="buyButton"
+            >
+              Adquira Ja
+            </button>
 
           </Link>) : (null)
 }

@@ -67,6 +67,7 @@ function Plans() {
               data-testid="plan-hole"
               className="planHole"
               width="400px"
+              id="planEstelar"
               src={ estelar }
               alt="Logo do Hole pass"
             />
@@ -74,6 +75,7 @@ function Plans() {
               data-testid="plan-hole"
               className="planHole"
               width="450px"
+              id="planInterm"
               src={ intermediario }
               alt="Logo do Hole pass"
             />
@@ -81,6 +83,7 @@ function Plans() {
               data-testid="plan-hole"
               className="planHole"
               width="500px"
+              id="planSuperm"
               src={ supermassivo }
               alt="Logo do Hole pass"
             />
