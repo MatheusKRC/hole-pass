@@ -173,3 +173,42 @@
     font-size: 27px;
   }
 }
+
+@media only screen and (max-width: 1250px) {
+  .loginDesc {
+    font-size: 20px;
+  }
+
+  .loginContent {
+    height: 566px;
+  }
+
+  .loginForm {
+    height: 566px;
+  }
+
+  .loginTitle {
+    width: 233px;
+    font-size: 44px;
+
+    margin-bottom: -10px;
+  }
+
+  .loginLogo {
+    width: 200px;
+  }
+
+  .loginRegTitle {
+    font-size: 44px;
+  }
+
+  .loginHoleLogo {
+    width: 338px;
+    margin-top: -50px;
+    margin-bottom: -100px;
+  }
+
+  .loginInput {
+    width: 250px;
+  }
+}
