@@ -85,6 +85,7 @@
   margin-right: 30px;
 
   width: 120px;
+  width: 80%;
 }
 
 .defaultUser {
@@ -92,6 +93,7 @@
   margin-right: 30px;
 
   width: 70px;
+  width: 80%;
 }
 
 .title:hover {
@@ -132,5 +134,31 @@
 
   .navLink {
     font-size: 15px;
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 1250px) {
+  .holeLogo {
+    width: 160px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .navLink {
+    font-size: 12px;
+  }
+
+  .assignButton {
+    font-size: 14px;
+    padding: 8px;
+    
+  }
+
+  .defaultUser {
+    margin-left: 0px;
+    width: 60%;
   }
 }
