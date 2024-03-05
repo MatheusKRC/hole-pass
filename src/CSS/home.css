@@ -390,6 +390,14 @@
   width: 900px;
 }
 
+.rigthArrow{
+  display: none;
+}
+
+.leftArrow {
+  display: none;
+}
+
 .plansBlackHole {
   margin-top: -500px;
 }
@@ -482,6 +490,10 @@
   margin-top: -220px;
 
   width: 95%;
+}
+
+.hiddenButton {
+  display: none;
 }
 
 /* Notebooks */
@@ -773,5 +785,247 @@
     width: 120%;
     height: 780px;
     background-image: url(../Images/tabletBackground.png);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* FirstPage */
+  .title {
+    font-size: 15px;
+  }
+  
+  .homePage {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    margin-top: -130px;
+    margin-bottom: 200px;
+  }
+
+  .homeGamesBoxs {
+    width: 110%;
+  }
+
+  .homeGamesBox {
+    width: 27.5%;
+    height: 150px;
+  }
+
+  .content {
+    margin-top: -320px;
+    margin-bottom: -50px;
+  }
+
+  .passLogo {
+    width: 180px;
+  }
+
+  .homeTitle {
+    font-size: 30px;
+  } 
+
+  .home {
+    margin-bottom: -20px;
+  }
+
+  .passDesc {
+    font-size: 15px;
+    width: 300px;
+
+    text-align: center;
+  }
+
+  .homeGames {
+    width: 135%;
+    margin-left: 0px;
+  }
+
+  .homeGame {
+    width: 25%;
+    height: 200px;
+  }
+
+  .blackHole {
+    width: 100%;
+    height: 150px;
+
+    margin-top: -50px;
+  }
+
+  /* SecondPage */
+
+  .secondPage {
+    margin-top: -30px;
+
+    flex-direction: column;
+  }
+
+  .titlePage {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .secondPage {
+    width: 120%;
+    height: 700px;
+    background-image: url(../Images/mobile.png);
+  }
+
+  .portal {
+    width: 60%;
+
+    margin-top: -80px;
+
+    margin-left: 50px;
+  }
+
+  .benefits {
+    margin-bottom: 50px;
+  }
+
+  .benefitsIcon {
+    width: 60px;
+    margin-right: 100px;
+  }
+
+  .benefitsDesc {
+    font-size: 10px;
+    margin-right: 100px;
+
+    width: 200px;
+  }
+
+  .benefitsIconB {
+    width: 180px;
+    margin-right: 100px;
+  }
+
+  /* ThirdPage */ 
+  .thirdPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titlePage3 {
+    font-size: 40px;
+  }
+
+  .classicDesc {
+    text-align: center;
+    font-size: 15px;
+
+    width: 350px;
+
+    margin-left: 0px;
+    margin-top: 400px;
+  }
+
+  .classicGameContent {
+    flex-direction: column;
+  }
+
+  .classicGameImages {
+    margin-top: -240px;
+    align-items: center;
+  }
+
+  .classicCharacter {
+    width: 254px;
+    height: 300px;
+
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .game0 {
+    width: 400px;
+    height: 170px;
+
+    margin-top: -200px;
+    margin-left: -40px;
+  }
+
+  .game1 {
+    width: 400px;
+    height: 170px;
+
+    margin-top: -220px;
+    margin-left: -40px;
+  }
+
+  .game2 {
+    width: 400px;
+    height: 170px;
+
+    margin-top: -240px;
+    margin-left: -100px;
+  }
+
+  .links {
+    width: 400px;
+  }
+
+  .buttonGame {
+    font-size: 10px;
+
+    margin-bottom: 0px;
+  }
+
+  .buttonGamere4, .buttonGamecastle, .buttonGameds {
+    font-size: 10px;
+
+    width: 300px;
+  }
+
+  /* FourthPage */
+  .plansTitle {
+    font-size: 40px;
+  }
+
+  .plansBlackHole {
+    width: 800px;
+    margin-top: -360px;
+  }
+
+  .rigthArrow {
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    transform: rotate(180deg);
+
+    margin-right: -20px;
+    margin-left: -25px;
+  }
+
+  .leftArrow {
+    position: absolute;
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    left: 80vw;
+  }
+
+  .planCards {
+    align-items: center;
+    transform: translateX(33.33%);
+    transition: 1s;
+
+    margin-bottom: 150px;
+  }
+
+  .planCards2 {
+    transform: translateX(0%);
+    transition: 1s;
+  }
+
+  .planCards3 {
+    transform: translateX(-33.33%);
+    transition: 1s;
   }
 }

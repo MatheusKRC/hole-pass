@@ -12,6 +12,7 @@
   --primary-color: #ffde59;
 }
 
+
 .navBar {
   height: 91px;
   position: relative;
@@ -58,6 +59,22 @@
   font-family: "Courier New", Courier, monospace;
 
   transition: 1s;
+
+  margin-right: 50px;
+}
+
+.mobileMenu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobileMenu div {
+  width: 32px;
+  height: 2px;
+  background-color: white;
+  margin: 8px;
+
+  box-shadow: 0px 0px 8px white;
 }
 
 .backButton {
@@ -166,5 +183,64 @@
     width: 100%;
     margin-right: -20px;
     margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .userIcon {
+    width: 100%;
+    margin-right: -50px;
+  }
+
+  .assignButton, .backButton {
+    display: none;
+  }
+
+  .deactive {
+    display: none;
+    opacity: 0%;
+  }
+
+  .divLinks {
+    display: flex;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    width: 100vw;
+    height: 92vh;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    background-image: url(../Images/starBackground.png);
+
+    transform: translateX(100%);
+  }
+
+  .divLinks.active {
+    transform: translateX(0);
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .navLink {
+    margin-right: 0px;
+
+    font-size: 18px;
+  }
+
+  .home {
+    margin-top: -20px
+  }
+
+  .navBar {
+    opacity: 100%;
+
+    margin-bottom: 90px;
+
+    align-items: center;
   }
 }

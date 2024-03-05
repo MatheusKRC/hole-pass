@@ -11,7 +11,7 @@ function Home() {
     <div data-testid="teste">
       <NavBar />
       <FirstPage />
-      <div className="homeBlackHole">
+      <div id="blackHole" className="homeBlackHole">
         {' '}
         <img className="blackHole" src={ blackHole } alt="buraco negro" />
       </div>

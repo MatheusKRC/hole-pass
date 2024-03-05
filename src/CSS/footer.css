@@ -123,3 +123,55 @@
     width: 40px;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    /* flex-direction: column; */
+    /* align-content: center; */
+    /* justify-content: center; */
+  }
+
+  .footerDivDesc {
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+
+  .footerDesc {
+    font-size: 8px;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: -10px;
+  }
+
+  .test {
+    width: 30px;
+  }
+
+  .footerLogo {
+    width: 120px;
+    margin-bottom: -20px;
+  }
+
+  .BIE {
+    width: 100px;
+    font-size: 12px;
+  }
+
+  .socialMedias {
+    margin-right: 0px;
+  }
+
+  .socialTitle {
+    font-size: 10px;
+  }
+
+  .socialIcon {
+    width: 20px;
+  }
+
+  #footerHoleLogo {
+    width: 120px;
+    margin-right: 10px;
+    margin-left: -20px;
+  }
+}

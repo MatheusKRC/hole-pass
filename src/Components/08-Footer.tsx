@@ -15,6 +15,7 @@ function Footer() {
           <img
             data-testid="footer-hole-logo"
             className="holeLogo"
+            id="footerHoleLogo"
             width="150px"
             src={ logo }
             alt="Logo minimalista de um buraco negro amarelo"

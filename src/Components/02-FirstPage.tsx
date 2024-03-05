@@ -2,9 +2,9 @@ import logo2 from '../Assets/Logo2.png';
 import spiderMan from '../Images/SpiderMan.png';
 import spiderMan2 from '../Images/SpiderMan2.png';
 import spiderManMiles from '../Images/SpiderManMiles.png';
-import GodOfWar from '../Images/GodRagnar.png';
-import baldursGate from '../Images/BaldursGate.png';
-import horizon from '../Images/Horizon.png';
+import GodOfWar from '../Images/GodRagnar2.png';
+import baldursGate from '../Images/BaldursGate2.png';
+import horizon from '../Images/Horizon2.png';
 import ori from '../Images/Ori.jpg';
 import itTakesTwo from '../Images/ItTakesTwo.png';
 import dmc from '../Images/DMC.png';
@@ -13,7 +13,11 @@ function FirstPage() {
   return (
     <div className="homePage" data-testid="first-page">
       {' '}
-      <div className="mainContent" data-testid="main-content">
+      <div
+        id="mainContent"
+        className="mainContent"
+        data-testid="main-content"
+      >
         {' '}
 
         <div className="homeGamesBoxs" data-testid="home-games-boxs">
@@ -87,6 +91,7 @@ function FirstPage() {
           src={ horizon }
           alt="Horizon zero dawn"
         />
+
         <img
           data-testid="home-game"
           className="homeGame"
