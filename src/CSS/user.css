@@ -280,4 +280,52 @@
     margin-top: -70px;
     margin-bottom: 150px;
   }
+
+  .userPage {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+  }
+
+  .user {
+    margin: 0px;
+    margin-top: -50px;
+
+    padding-bottom: 20px;
+
+    width: 60%;
+  }
+
+  .inputUsername {
+    font-size: 15px;
+  }
+
+  .userTitle {
+    font-size: 30px;
+    margin-right: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #miniPlan {
+    margin: 0px;
+    width: 60%;
+    margin-bottom: -70px;
+  }
+
+
+  .miniGameBox {
+    width: 100px;
+  }
+
+  .mini-text-over {
+    width: 20px;
+    bottom: 15px;
+    left: 70px;
+  }
+
+  .mini-text-over2 {
+    width: 85px;
+    bottom: 119px;
+  }
 }

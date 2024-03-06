@@ -26,7 +26,7 @@ function Plans() {
   return (
     <div className="plansPage" data-testid="plans-page">
       <NavBar />
-      <div className="plansMain" data-testid="plans-main">
+      <div id="plansMain" className="plansMain" data-testid="plans-main">
         <div className="divTitle" data-testid="div-title">
           <h1
             className="allGamesTitle"

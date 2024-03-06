@@ -28,6 +28,7 @@ function NavBar() {
     if (active === '') {
       setActive('active');
       document.getElementById('games')?.classList.add('deactive');
+      document.getElementById('plansMain')?.classList.add('deactive');
       document.getElementById('allGames')?.classList.add('deactive');
       document.getElementById('gamesPage')?.classList.add('deactive');
       document.getElementById('mainContent')?.classList.add('deactive');
@@ -35,6 +36,7 @@ function NavBar() {
     } else {
       setActive('');
       document.getElementById('games')?.classList.remove('deactive');
+      document.getElementById('plansMain')?.classList.remove('deactive');
       document.getElementById('allGames')?.classList.remove('deactive');
       document.getElementById('gamesPage')?.classList.remove('deactive');
       document.getElementById('mainContent')?.classList.remove('deactive');
