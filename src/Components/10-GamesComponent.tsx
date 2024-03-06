@@ -7,7 +7,7 @@ import { GamesI } from '../Interfaces/gamePage';
 
 function GamesComponent({ games }:GamesI) {
   return (
-    <div data-testid="games-component" className="games">
+    <div id="games" data-testid="games-component" className="games">
 
       {games.map(({ src, link }:any, index: any) => (
         <Link data-testid="link-to-game" to={ link } key={ index }>

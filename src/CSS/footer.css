@@ -125,16 +125,6 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .footer {
-    /* flex-direction: column; */
-    /* align-content: center; */
-    /* justify-content: center; */
-  }
-
-  .footerDivDesc {
-    /* align-items: center; */
-    /* justify-content: center; */
-  }
 
   .footerDesc {
     font-size: 8px;

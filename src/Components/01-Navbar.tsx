@@ -27,10 +27,16 @@ function NavBar() {
   const addMobileClass = () => {
     if (active === '') {
       setActive('active');
+      document.getElementById('games')?.classList.add('deactive');
+      document.getElementById('allGames')?.classList.add('deactive');
+      document.getElementById('gamesPage')?.classList.add('deactive');
       document.getElementById('mainContent')?.classList.add('deactive');
       document.getElementById('blackHole')?.classList.add('deactive');
     } else {
       setActive('');
+      document.getElementById('games')?.classList.remove('deactive');
+      document.getElementById('allGames')?.classList.remove('deactive');
+      document.getElementById('gamesPage')?.classList.remove('deactive');
       document.getElementById('mainContent')?.classList.remove('deactive');
       document.getElementById('blackHole')?.classList.remove('deactive');
     }

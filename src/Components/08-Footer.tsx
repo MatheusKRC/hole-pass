@@ -7,7 +7,7 @@ import xbox from '../Assets/Xbox_Logo 1.png';
 
 function Footer() {
   return (
-    <footer className="footer" data-testid="footer">
+    <footer id="footer" className="footer" data-testid="footer">
 
       <div data-testid="footer-div" className="footerDivDesc">
         <div className="test">

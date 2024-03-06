@@ -352,3 +352,61 @@
     bottom: 175px;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .slides {
+    margin-top: 460px;
+  }
+
+  .slider {
+    margin-bottom: -750px;
+  }
+
+  .navAuto {
+    margin-top: 180px;
+    opacity: 0%;
+  }
+  
+  .manualNav {
+    opacity: 0%;
+    margin-top: 455px;
+  }
+
+  .gamesPageTitle {
+    position: absolute;
+    font-size: 30px;
+    right: 280px;
+    top: 100px;
+  }
+
+  .sliderBackground {
+    width: 75%;
+  }
+
+  .allGamesTitle {
+    font-size: 30px;
+  }
+
+  .search {
+    width: 200px;
+  }
+
+  .games {
+    margin: 0px;
+  }
+
+  .gameBox {
+    width: 100px;
+  }
+
+  .text-over {
+    width: 20px;
+    bottom: 15px;
+    left: 70px;
+  }
+
+  .text-over2 {
+    width: 85px;
+    bottom: 119px;
+  }
+}
