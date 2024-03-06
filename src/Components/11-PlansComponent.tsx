@@ -23,7 +23,7 @@ function PlansComponent({
       <img
         data-testid="plans-background"
         id={ planSize }
-        className="plansBackground"
+        className="plansBackground plansBack"
         src={ plan }
         alt={ plan }
       />

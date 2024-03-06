@@ -109,3 +109,45 @@
     background-image: url(../Images/IpadPlans.png);
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .divTitle {
+    margin-top: -80px;
+    margin-bottom: 20px;
+  }
+
+  .plansMain {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .PLANS {
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+
+  .plansContent {
+    margin-left: 0px;
+  }
+
+  .plansHoles {
+    margin-right: 0px;
+  }
+
+  .plansBackground {
+    margin-bottom: 200px;
+  }
+
+  #acquire {
+    margin-left: 600px;
+    margin-top: 470px;
+
+    width: 100px;
+    height: 40px;
+
+    font-size: 15px;
+  }
+}
