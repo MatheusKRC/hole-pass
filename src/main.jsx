@@ -5,7 +5,7 @@ import 'atropos/css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Pages/Home.tsx';
+import Home from './Pages/Home.jsx';
 import './CSS/index.css';
 import './CSS/games.css';
 import './CSS/navBar.css';
@@ -16,12 +16,12 @@ import './CSS/user.css';
 import './CSS/loginRegister.css';
 import './CSS/payment.css';
 import './CSS/final.css';
-import Games from './Pages/Games.tsx';
+import Games from './Pages/Games.jsx';
 import Plans from './Pages/Plans.jsx';
-import LoginRegister from './Pages/LoginRegister.tsx';
+import LoginRegister from './Pages/LoginRegister.jsx';
 import User from './Pages/User.jsx';
-import Payment from './Pages/Payment.tsx';
-import Final from './Pages/Final.tsx';
+import Payment from './Pages/Payment.jsx';
+import Final from './Pages/Final.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
