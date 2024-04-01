@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-curly-spacing */
 /* eslint-disable no-unsafe-optional-chaining */
 /* eslint-disable import/no-unresolved */
 import Atropos from 'atropos/react';
@@ -58,7 +59,7 @@ function PlansComponent({
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
         >
-          {games.map(({ src, link }: any, index: any) => (
+          {games.map(({ src, link }, index) => (
 
             <motion.div data-testid="motion-div" key={index} className="atropos">
               <Atropos
