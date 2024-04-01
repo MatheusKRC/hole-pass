@@ -1,5 +1,6 @@
+/* eslint-disable react/jsx-curly-spacing */
 import { useEffect, useState } from 'react';
-import { NavigateFunction, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logoPass from '../Assets/Logo2.png';
 import logo from '../Assets/Logo.png';
 import { validarCPF, validateEmail } from '../Utils/validate';
@@ -19,9 +20,9 @@ function LoginRegister() {
     cpf: '',
   });
 
-  const navigate:NavigateFunction = useNavigate();
+  const navigate = useNavigate();
 
-  const handleClick:VoidFunction = () => {
+  const handleClick = () => {
     if (login === 'LOGIN') {
       setLogin('REGISTER');
       setInputs([
@@ -40,7 +41,7 @@ function LoginRegister() {
     }
   };
 
-  const handleChange:HandleChangeFunction = (event) => {
+  const handleChange = (event) => {
     const { id, value } = event.target;
     setUser({
       ...user,
@@ -48,7 +49,7 @@ function LoginRegister() {
     });
   };
 
-  const handleLogin = ():boolean => {
+  const handleLogin = () => {
     if (validateLogin()) {
       localStorage.setItem('blackHoleUser', JSON.stringify(user));
       navigate('/');
@@ -56,7 +57,7 @@ function LoginRegister() {
     } return false;
   };
 
-  const handleRegister = ():boolean => {
+  const handleRegister = () => {
     if (validateRegister()) {
       localStorage.setItem('blackHoleUser', JSON.stringify(user));
       navigate('/');
@@ -73,7 +74,7 @@ function LoginRegister() {
     }
   }, [navigate]);
 
-  const validateLogin = ():boolean => {
+  const validateLogin = () => {
     const { email, password } = user;
     if (!email || !validateEmail(email)) {
       setAlert('preencha o campo E-Mail corretamente');
@@ -86,7 +87,7 @@ function LoginRegister() {
     return true;
   };
 
-  const validateRegister = ():boolean => {
+  const validateRegister = () => {
     const { firstName, lastName, cpf } = user;
 
     if (!firstName) {
@@ -114,7 +115,7 @@ function LoginRegister() {
         <img
           data-testid="login-logo"
           className="loginLogo"
-          src={ logoPass }
+          src={logoPass}
           alt="logo hole pass"
         />
         <h1 data-testid="login-title" className="loginTitle">Hole Pass</h1>
@@ -133,17 +134,17 @@ function LoginRegister() {
         <img
           data-testid="login-hole-logo"
           className="loginHoleLogo"
-          src={ logo }
+          src={logo}
           alt="logo black hole"
         />
         <h1 data-testid="login-reg-title" className="loginRegTitle">{login}</h1>
         {alert === '' ? null : <p data-testid="alert" className="alert">{alert}</p>}
 
         {inputs.map(({ pholder, id }) => (
-          <div data-testid="form" key={ id }>
+          <div data-testid="form" key={id}>
             <label
               data-testid="placeholder"
-              htmlFor={ id }
+              htmlFor={id}
               className="pholder"
             >
               {pholder}
@@ -152,12 +153,12 @@ function LoginRegister() {
             <br />
             <input
               data-testid="login-input"
-              name={ id }
+              name={id}
               className="loginInput"
-              key={ pholder }
-              onChange={ handleChange }
-              type={ pholder }
-              id={ id }
+              key={pholder}
+              onChange={handleChange}
+              type={pholder}
+              id={id}
             />
           </div>
 
@@ -166,7 +167,7 @@ function LoginRegister() {
         <button
           data-testid="login-button"
           className="buyButton"
-          onClick={ login === 'LOGIN' ? handleLogin : handleRegister }
+          onClick={login === 'LOGIN' ? handleLogin : handleRegister}
         >
           {login}
 
@@ -174,7 +175,7 @@ function LoginRegister() {
         <button
           data-testid="already-exist"
           className="already"
-          onClick={ handleClick }
+          onClick={handleClick}
         >
           {exist}
 
