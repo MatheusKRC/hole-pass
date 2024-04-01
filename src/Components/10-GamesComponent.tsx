@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import Atropos from 'atropos/react';
+// import Atropos from 'atropos/react';
 import { Link } from 'react-router-dom';
 import logo2 from '../Games/Logo.png';
 import name from '../Games/Name.png';
@@ -11,7 +11,7 @@ function GamesComponent({ games }:GamesI) {
 
       {games.map(({ src, link }:any, index: any) => (
         <Link data-testid="link-to-game" to={ link } key={ index }>
-          <Atropos
+          {/* <Atropos
             data-testid="atropos-game"
             activeOffset={ 1 }
             shadowScale={ 1.05 }
@@ -43,7 +43,7 @@ function GamesComponent({ games }:GamesI) {
               alt="black hole name"
             />
 
-          </Atropos>
+          </Atropos> */}
 
         </Link>
 
