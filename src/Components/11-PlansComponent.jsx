@@ -6,11 +6,10 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo2 from '../Games/Logo.png';
 import name from '../Games/Name.png';
-import { PlanComponentI } from '../Interfaces/planPage';
 
 function PlansComponent({
   games, plan, button, boxSize, nameSize, logoSize,
-  planSize }:PlanComponentI) {
+  planSize }) {
   const carousel = useRef(null);
   const [width, setWidth] = useState(0);
 
@@ -22,75 +21,75 @@ function PlansComponent({
 
       <img
         data-testid="plans-background"
-        id={ planSize }
+        id={planSize}
         className="plansBackground plansBack"
-        src={ plan }
-        alt={ plan }
+        src={plan}
+        alt={plan}
       />
 
       {
-      button === 'true'
-        ? (
-          <Link data-testid="plan-link" className="planLink" to="/#plans">
-            <button
-              data-testid="buy-button"
-              id="acquire"
-              className="buyButton"
-            >
-              Adquira Ja
-            </button>
+        button === 'true'
+          ? (
+            <Link data-testid="plan-link" className="planLink" to="/#plans">
+              <button
+                data-testid="buy-button"
+                id="acquire"
+                className="buyButton"
+              >
+                Adquira Ja
+              </button>
 
-          </Link>) : (null)
-}
+            </Link>) : (null)
+      }
 
       <motion.div
         data-testid="carrousel"
-        ref={ carousel }
-        whileTap={ { cursor: 'grabbing' } }
+        ref={carousel}
+        whileTap={{ cursor: 'grabbing' }}
         className="carrousel"
-        id={ planSize }
+        id={planSize}
       >
         <motion.div
           data-testid="motion-div"
           className="inner"
           drag="x"
-          dragConstraints={ { right: 0, left: -width } }
-          initial={ { x: 300 } }
-          animate={ { x: 0 } }
-          transition={ { duration: 1 } }
+          dragConstraints={{ right: 0, left: -width }}
+          initial={{ x: 300 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1 }}
         >
-          {games.map(({ src, link }:any, index: any) => (
+          {games.map(({ src, link }: any, index: any) => (
 
-            <motion.div data-testid="motion-div" key={ index } className="atropos">
+            <motion.div data-testid="motion-div" key={index} className="atropos">
               <Atropos
                 data-testid="atropos"
-                key={ index }
-                activeOffset={ 1 }
-                shadowScale={ 1.05 }
-                highlight={ false }
+                key={index}
+                activeOffset={1}
+                shadowScale={1.05}
+                highlight={false}
               >
 
                 <img
                   data-testid="game-box"
-                  className={ boxSize }
-                  key={ src }
-                  src={ src }
-                  alt={ src }
+                  className={boxSize}
+                  key={src}
+                  src={src}
+                  alt={src}
                 />
 
                 <img
                   data-testid="over-logo"
-                  className={ nameSize }
+                  className={nameSize}
                   data-atropos-offset="10"
-                  src={ logo2 }
+                  src={logo2}
                   alt="logo"
                 />
-                <Link data-testid="link-game" to={ link }>
+                <Link data-testid="link-game" to={link}>
                   <img
                     data-testid="over-name"
-                    className={ logoSize }
+                    className={logoSize}
                     data-atropos-offset="5"
-                    src={ name }
+                    src={name}
                     alt="black hole name"
                   />
 
