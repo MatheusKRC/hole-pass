@@ -1,8 +1,8 @@
 // eslint-disable-next-line import/no-unresolved
 // import Atropos from 'atropos/react';
 import { Link } from 'react-router-dom';
-import logo2 from '../Games/Logo.png';
-import name from '../Games/Name.png';
+// import logo2 from '../Games/Logo.png';
+// import name from '../Games/Name.png';
 import { GamesI } from '../Interfaces/gamePage';
 
 function GamesComponent({ games }:GamesI) {
@@ -10,7 +10,7 @@ function GamesComponent({ games }:GamesI) {
     <div id="games" data-testid="games-component" className="games">
 
       {games.map(({ src, link }:any, index: any) => (
-        <Link data-testid="link-to-game" to={ link } key={ index }>
+        <Link data-testid="link-to-game" className={ src } to={ link } key={ index }>
           {/* <Atropos
             data-testid="atropos-game"
             activeOffset={ 1 }
