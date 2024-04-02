@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-curly-spacing */
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/naming-convention */
 import axios from 'axios';
@@ -5,8 +6,8 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import { apiKey } from '../Utils/credenciais';
 
-function PaymentComponent({ planGames }:any) {
-  const localUser:any = localStorage.getItem('blackHoleUser');
+function PaymentComponent({ planGames }) {
+  const localUser = localStorage.getItem('blackHoleUser');
   const user = JSON.parse(localUser);
 
   const [qrCode, setQrCode] = useState('');
@@ -71,12 +72,12 @@ function PaymentComponent({ planGames }:any) {
     return status;
   };
 
-  const handleClick = ({ target }:any) => {
+  const handleClick = ({ target }) => {
     const { value } = target;
     setType(value);
   };
 
-  const handleChange = ({ target }: any) => {
+  const handleChange = ({ target }) => {
     const { id, value } = target;
     setCard({
       ...card,
@@ -104,7 +105,7 @@ function PaymentComponent({ planGames }:any) {
         <button
           data-testid="payment-method"
           className="paymentMethod"
-          onClick={ handleClick }
+          onClick={handleClick}
           value="pix"
         >
           Pix
@@ -113,7 +114,7 @@ function PaymentComponent({ planGames }:any) {
         <button
           data-testid="payment-method"
           className="paymentMethod"
-          onClick={ handleClick }
+          onClick={handleClick}
           value="cartão"
         >
           Cartão
@@ -129,14 +130,14 @@ function PaymentComponent({ planGames }:any) {
             className="pix"
             width="200px"
             alt="qrCode"
-            src={ `data:image/jpeg;base64,${qrCode}` }
+            src={`data:image/jpeg;base64,${qrCode}`}
           />
           <input
             data-testid="pix-input"
             className="pixInput"
             type="text"
-            onChange={ handleChange }
-            value={ copy }
+            onChange={handleChange}
+            value={copy}
           />
         </div>
 
@@ -146,7 +147,7 @@ function PaymentComponent({ planGames }:any) {
           <input
             data-testid="card-input"
             className="cardInput"
-            onChange={ handleChange }
+            onChange={handleChange}
             id="name"
             placeholder="Nome do Titular"
             type="text"
@@ -154,7 +155,7 @@ function PaymentComponent({ planGames }:any) {
           <input
             data-testid="card-input"
             className="cardInput"
-            onChange={ handleChange }
+            onChange={handleChange}
             id="number"
             value=""
             placeholder="Número do Cartão"
@@ -173,7 +174,7 @@ function PaymentComponent({ planGames }:any) {
             <input
               data-testid="card-date"
               className="cardDate"
-              onChange={ handleChange }
+              onChange={handleChange}
               id="mm"
               placeholder="MM"
               type="text"
@@ -182,7 +183,7 @@ function PaymentComponent({ planGames }:any) {
             <input
               data-testid="card-date"
               className="cardDate"
-              onChange={ handleChange }
+              onChange={handleChange}
               id="aa"
               name="mmaa"
               placeholder="AA"
@@ -191,7 +192,7 @@ function PaymentComponent({ planGames }:any) {
             <input
               data-testid="card-cvv"
               className="cardCVV"
-              onChange={ handleChange }
+              onChange={handleChange}
               id="cvv"
               placeholder="CVV"
               type="text"
@@ -217,14 +218,14 @@ function PaymentComponent({ planGames }:any) {
 
       </h1>
       <div data-testid="some-games-div">
-        {planGames.map(({ src }:any, index:any) => {
+        {planGames.map(({ src }, index) => {
           if (index < 4) {
             return (<img
               data-testid="some-games-imgs"
               width="100px"
-              key={ index }
-              alt={ src }
-              src={ src }
+              key={index}
+              alt={src}
+              src={src}
             />);
           } return false;
         })}
