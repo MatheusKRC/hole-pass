@@ -8,7 +8,7 @@ interface PlanI {
 }
 
 interface PlanComponentI {
-  games: string | Array<PlanI> | Array<ActualPlan>,
+  games: Array<PlanI> | Array<ActualPlan>,
   plan:string,
   button:string,
   boxSize:string,

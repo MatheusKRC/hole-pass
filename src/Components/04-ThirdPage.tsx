@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-curly-spacing */
 /* eslint-disable max-len */
 import { useState } from 'react';
 import ClassicGames from './05-ClassicGames';
@@ -25,7 +24,7 @@ function ThirdPage() {
     name: re4,
   });
 
-  const handleClick = (event) => {
+  const handleClick = (event:any) => {
     const { id } = event.target;
     if (id === '0') {
       setGame({
@@ -73,20 +72,20 @@ function ThirdPage() {
       <h1 className="titlePage3" data-testid="classics-title">OU RELEMBRE O PASSADO</h1>
 
       <ClassicGames
-        gameName={Game.gameName}
-        background={Game.background}
-        desc={Game.desc}
-        name={Game.name}
-        character={Game.character}
-        className={`game${Game.id}`}
+        gameName={ Game.gameName }
+        background={ Game.background }
+        desc={ Game.desc }
+        name={ Game.name }
+        character={ Game.character }
+        className={ `game${Game.id}` }
       />
 
       <div data-testid="classics-links" className="links">
         {' '}
         <button
           data-testid="classics-button"
-          className={`buttonGame${Game.re4}`}
-          onClick={handleClick}
+          className={ `buttonGame${Game.re4}` }
+          onClick={ handleClick }
           id="0"
         >
           Resindent Evil 4
@@ -94,8 +93,8 @@ function ThirdPage() {
         </button>
         <button
           data-testid="classics-button"
-          className={`buttonGame${Game.castle}`}
-          onClick={handleClick}
+          className={ `buttonGame${Game.castle}` }
+          onClick={ handleClick }
           id="1"
         >
           Castlevania
@@ -104,8 +103,8 @@ function ThirdPage() {
         </button>
         <button
           data-testid="classics-button"
-          className={`buttonGame${Game.ds}`}
-          onClick={handleClick}
+          className={ `buttonGame${Game.ds}` }
+          onClick={ handleClick }
           id="2"
         >
           Dark Souls

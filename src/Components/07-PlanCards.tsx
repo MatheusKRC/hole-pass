@@ -1,42 +1,40 @@
-/* eslint-disable react/jsx-curly-spacing */
 import { useNavigate } from 'react-router-dom';
-// import { PlanCardsI } from '../Interfaces/homepage';
+import { PlanCardsI } from '../Interfaces/homepage';
 
-function PlanCards({ name, img, benefits, value, id, planCard, planImage }) {
+function PlanCards({ name, img, benefits, value, id, planCard, planImage }: PlanCardsI) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    const localUser = localStorage.getItem('blackHoleUser');
+    const localUser:any = localStorage.getItem('blackHoleUser');
     if (!localUser) {
       navigate('/Login');
     } else {
       const user = JSON.parse(localUser);
       const addPlan = {
-        ...user, planImage, planName: name, plan: img, planValue: value, benefits,
-      };
+        ...user, planImage, planName: name, plan: img, planValue: value, benefits };
       localStorage.setItem('blackHoleUser', JSON.stringify(addPlan));
       navigate('/Payment');
     }
   };
 
   return (
-    <div data-testid="plan-card" className="planCard" id={planCard}>
+    <div data-testid="plan-card" className="planCard" id={ planCard }>
       <img
         data-testid="benefit-name"
         className="benefitName"
-        src={img}
+        src={ img }
         alt="Nome do beneficio"
       />
 
       {benefits.map((line, index) => (
-        <li data-testid="benefits-list" className="benefitsList" key={index}>{line}</li>
+        <li data-testid="benefits-list" className="benefitsList" key={ index }>{line}</li>
       ))}
 
       <button
         data-testid="buy-button"
-        id={id}
+        id={ id }
         className="buyButton"
-        onClick={handleClick}
+        onClick={ handleClick }
       >
         {value}
 

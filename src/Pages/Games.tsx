@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-curly-spacing */
 /* eslint-disable react/jsx-max-depth */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useEffect, useState } from 'react';
@@ -10,20 +9,21 @@ import { objGames } from '../Utils/importGames';
 import Cyberpunk from '../Images/cyberpunk.png';
 import Ragnarok from '../Images/ragnarok.png';
 import spiderman from '../Images/spiderman.png';
+import { HandleChangeFunction } from '../Interfaces/gamePage';
 
 function Games() {
   const [gamesView, setGamesView] = useState(objGames);
   const [filter, setFilter] = useState('');
 
-  const handleChange = (event) => {
+  const handleChange:HandleChangeFunction = (event) => {
     const { value } = event.target;
     setFilter(value);
   };
 
   useEffect(() => {
     if (filter.length > 0) {
-      const lowerFilter = filter.toLowerCase();
-      const newGames = objGames.filter(({ name }) => {
+      const lowerFilter:string = filter.toLowerCase();
+      const newGames = objGames.filter(({ name }:any) => {
         const nameLower = name.toLowerCase();
         return nameLower.includes(lowerFilter);
       });
@@ -40,7 +40,7 @@ function Games() {
     nextSlide();
   }, 2000);
 
-  const nextSlide = () => {
+  const nextSlide:VoidFunction = () => {
     count += 1;
 
     if (count > 3) {
@@ -88,19 +88,19 @@ function Games() {
 
             <NewGames
               classname="first"
-              game={spiderman}
+              game={ spiderman }
               gameName="spiderman 2"
             />
 
             <NewGames
               classname=""
-              game={Cyberpunk}
+              game={ Cyberpunk }
               gameName="cyberpunk"
             />
 
             <NewGames
               classname=""
-              game={Ragnarok}
+              game={ Ragnarok }
               gameName="gof of war ragnarok"
             />
 
@@ -134,10 +134,10 @@ function Games() {
           data-testid="search"
           className="search"
           type="text"
-          onChange={handleChange}
+          onChange={ handleChange }
         />
 
-        <GamesComponent games={gamesView} />
+        <GamesComponent games={ gamesView } />
       </div>
       <Footer />
     </div>

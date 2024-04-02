@@ -1,20 +1,20 @@
-/* eslint-disable react/jsx-curly-spacing */
-import { useNavigate } from 'react-router-dom';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import logo2 from '../Assets/Logo2.png';
+import { BlackHoleUser } from '../Interfaces/user';
 
 function Final() {
-  const localUser = localStorage.getItem('blackHoleUser');
-  const user = JSON.parse(localUser);
+  const localUser:any = localStorage.getItem('blackHoleUser');
+  const user:BlackHoleUser = JSON.parse(localUser);
 
-  const havePlan = () => {
+  const havePlan:VoidFunction = () => {
     const planPurchased = { ...user, purchased: true };
     localStorage.setItem('blackHoleUser', JSON.stringify(planPurchased));
   };
 
-  const navigate = useNavigate();
+  const navigate:NavigateFunction = useNavigate();
 
-  const handleClick = () => {
+  const handleClick:VoidFunction = () => {
     navigate('/');
   };
 
@@ -29,7 +29,7 @@ function Final() {
           <img
             data-testid="pass-logo"
             className="passLogo"
-            src={logo2}
+            src={ logo2 }
             alt="Logo do Hole pass"
           />
           <h1
@@ -46,12 +46,12 @@ function Final() {
           Muito obrigado pela sua compra, aproveite e
           seja bem-vindo(a) ao horizonte de eventos
         </h1>
-        <img className="finalBackground" src={user.planImage} alt={user.planName} />
+        <img className="finalBackground" src={ user.planImage } alt={ user.planName } />
 
         <button
           id="backHome"
           className="buyButton"
-          onClick={handleClick}
+          onClick={ handleClick }
         >
           Voltar Para Tela Inicial
         </button>

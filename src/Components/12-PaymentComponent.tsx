@@ -1,13 +1,11 @@
-/* eslint-disable react/jsx-curly-spacing */
-/* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/naming-convention */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { apiKey } from '../Utils/credenciais';
+import apiKey from '../Utils/credenciais';
 
-function PaymentComponent({ planGames }) {
-  const localUser = localStorage.getItem('blackHoleUser');
+function PaymentComponent({ planGames }:any) {
+  const localUser:any = localStorage.getItem('blackHoleUser');
   const user = JSON.parse(localUser);
 
   const [qrCode, setQrCode] = useState('');
@@ -30,7 +28,7 @@ function PaymentComponent({ planGames }) {
   });
 
   api.interceptors.request.use(async (config) => {
-    const token = 'TEST-6667240715501519-090615-43a13614f8382626a65cadc43556742f-300449537';
+    const token = apiKey;
     config.headers.Authorization = `Bearer ${token}`;
 
     return config;
@@ -72,12 +70,12 @@ function PaymentComponent({ planGames }) {
     return status;
   };
 
-  const handleClick = ({ target }) => {
+  const handleClick = ({ target }:any) => {
     const { value } = target;
     setType(value);
   };
 
-  const handleChange = ({ target }) => {
+  const handleChange = ({ target }: any) => {
     const { id, value } = target;
     setCard({
       ...card,
@@ -105,7 +103,7 @@ function PaymentComponent({ planGames }) {
         <button
           data-testid="payment-method"
           className="paymentMethod"
-          onClick={handleClick}
+          onClick={ handleClick }
           value="pix"
         >
           Pix
@@ -114,7 +112,7 @@ function PaymentComponent({ planGames }) {
         <button
           data-testid="payment-method"
           className="paymentMethod"
-          onClick={handleClick}
+          onClick={ handleClick }
           value="cartão"
         >
           Cartão
@@ -130,14 +128,14 @@ function PaymentComponent({ planGames }) {
             className="pix"
             width="200px"
             alt="qrCode"
-            src={`data:image/jpeg;base64,${qrCode}`}
+            src={ `data:image/jpeg;base64,${qrCode}` }
           />
           <input
             data-testid="pix-input"
             className="pixInput"
             type="text"
-            onChange={handleChange}
-            value={copy}
+            onChange={ handleChange }
+            value={ copy }
           />
         </div>
 
@@ -147,7 +145,7 @@ function PaymentComponent({ planGames }) {
           <input
             data-testid="card-input"
             className="cardInput"
-            onChange={handleChange}
+            onChange={ handleChange }
             id="name"
             placeholder="Nome do Titular"
             type="text"
@@ -155,7 +153,7 @@ function PaymentComponent({ planGames }) {
           <input
             data-testid="card-input"
             className="cardInput"
-            onChange={handleChange}
+            onChange={ handleChange }
             id="number"
             value=""
             placeholder="Número do Cartão"
@@ -174,7 +172,7 @@ function PaymentComponent({ planGames }) {
             <input
               data-testid="card-date"
               className="cardDate"
-              onChange={handleChange}
+              onChange={ handleChange }
               id="mm"
               placeholder="MM"
               type="text"
@@ -183,7 +181,7 @@ function PaymentComponent({ planGames }) {
             <input
               data-testid="card-date"
               className="cardDate"
-              onChange={handleChange}
+              onChange={ handleChange }
               id="aa"
               name="mmaa"
               placeholder="AA"
@@ -192,7 +190,7 @@ function PaymentComponent({ planGames }) {
             <input
               data-testid="card-cvv"
               className="cardCVV"
-              onChange={handleChange}
+              onChange={ handleChange }
               id="cvv"
               placeholder="CVV"
               type="text"
@@ -218,14 +216,14 @@ function PaymentComponent({ planGames }) {
 
       </h1>
       <div data-testid="some-games-div">
-        {planGames.map(({ src }, index) => {
+        {planGames.map(({ src }:any, index:any) => {
           if (index < 4) {
             return (<img
               data-testid="some-games-imgs"
               width="100px"
-              key={index}
-              alt={src}
-              src={src}
+              key={ index }
+              alt={ src }
+              src={ src }
             />);
           } return false;
         })}

@@ -1,15 +1,14 @@
-/* eslint-disable react/jsx-curly-spacing */
-// import { ClassicGame } from '../Interfaces/homepage';
+import { ClassicGame } from '../Interfaces/homepage';
 
 function ClassicGames({
-  background, desc, character, name, className, gameName }) {
+  background, desc, character, name, className, gameName }: ClassicGame) {
   return (
     <div className="classicGames" data-testid="classic-games">
 
       <img
         data-testid="classic-games-back"
         className="classicGameBack"
-        src={background}
+        src={ background }
         alt="background do jogo"
       />
 
@@ -23,15 +22,15 @@ function ClassicGames({
           <img
             data-testid="classic-character"
             className="classicCharacter"
-            src={character}
+            src={ character }
             alt="personagem"
           />
 
           <img
             data-testid="classic-name"
-            className={className}
-            src={name}
-            alt={gameName}
+            className={ className }
+            src={ name }
+            alt={ gameName }
           />
 
         </div>

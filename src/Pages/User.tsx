@@ -1,18 +1,20 @@
-/* eslint-disable react/jsx-curly-spacing */
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 import logo from '../Assets/Logo.png';
 import NavBar from '../Components/01-Navbar';
 import PlansComponent from '../Components/11-PlansComponent';
 import holePass from '../Games/holePass.png';
 import emptyPlan from '../Images/emptyPlan.png';
 import { objGames } from '../Utils/importGames';
+import { ActualPlan, BlackHoleUserFinal } from '../Interfaces/user';
+import { HandleChangeFunction } from '../Interfaces/gamePage';
+import { PlanI } from '../Interfaces/planPage';
 
 function User() {
-  const localUser = localStorage.getItem('blackHoleUser');
-  const user = JSON.parse(localUser);
-  const navigate = useNavigate();
-  const holeGames = [
+  const localUser:any = localStorage.getItem('blackHoleUser');
+  const user:BlackHoleUserFinal = JSON.parse(localUser);
+  const navigate:NavigateFunction = useNavigate();
+  const holeGames:Array<ActualPlan> = [
     { src: holePass },
     { src: holePass }, { src: holePass }, { src: holePass }, { src: holePass }];
 
@@ -32,11 +34,11 @@ function User() {
     purchased: user.purchased,
   });
 
-  const actualPlan = objGames.filter(
+  const actualPlan:Array<PlanI> = objGames.filter(
     ({ plan }) => plan === user.planName,
   );
 
-  const handleChange = (event) => {
+  const handleChange:HandleChangeFunction = (event) => {
     const { id, value } = event.target;
     setUser({
       ...user,
@@ -44,7 +46,7 @@ function User() {
     });
   };
 
-  const handleClick = () => {
+  const handleClick:VoidFunction = () => {
     if (inputs === true) {
       setInput(false);
       setEditId('edit');
@@ -55,7 +57,7 @@ function User() {
     }
   };
 
-  const logout = () => {
+  const logout:VoidFunction = () => {
     localStorage.removeItem('blackHoleUser');
     navigate('/');
   };
@@ -64,11 +66,11 @@ function User() {
       <NavBar />
       <div data-testid="user-page" className="userPage">
         <div data-testid="user" className="user">
-          { }
+          {}
           <img
             data-testid="user-image"
             className="userImage"
-            src={userIcon}
+            src={ userIcon }
             alt="Imagem de Perfil"
           />
 
@@ -78,29 +80,29 @@ function User() {
             <p data-testid="user-info" className="userInfo">Username</p>
             <input
               data-testid="username"
-              className={`inputUsername ${editId}`}
+              className={ `inputUsername ${editId}` }
               id="username"
-              onChange={handleChange}
+              onChange={ handleChange }
               type="text"
-              value={mainUser.username || ''}
-              disabled={inputs}
+              value={ mainUser.username || '' }
+              disabled={ inputs }
             />
 
             <p data-testid="user-info" className="userInfo">Nome Completo</p>
             <input
               data-testid="user-name"
-              className={`inputUser ${editId}`}
+              className={ `inputUser ${editId}` }
               id="name"
-              onChange={handleChange}
+              onChange={ handleChange }
               type="text"
-              value={`${mainUser.firstName} ${mainUser.lastName}`}
-              disabled={inputs}
+              value={ `${mainUser.firstName} ${mainUser.lastName}` }
+              disabled={ inputs }
             />
 
             <button
               data-testid="user-button"
               className="userButton"
-              onClick={handleClick}
+              onClick={ handleClick }
             >
               Editar Perfil
 
@@ -108,7 +110,7 @@ function User() {
             <button
               data-testid="user-button"
               className="userButton"
-              onClick={logout}
+              onClick={ logout }
             >
               Sair da Conta
 
@@ -128,8 +130,8 @@ function User() {
 
           {mainUser.purchased ? (
             <PlansComponent
-              games={actualPlan}
-              plan={mainUser.planImage}
+              games={ actualPlan }
+              plan={ mainUser.planImage }
               button="false"
               planSize="miniPlan"
               boxSize="miniGameBox"
@@ -138,8 +140,8 @@ function User() {
             />
           ) : (
             <PlansComponent
-              games={holeGames}
-              plan={emptyPlan}
+              games={ holeGames }
+              plan={ emptyPlan }
               button="false"
               planSize="miniPlan"
               boxSize="miniGameBox"

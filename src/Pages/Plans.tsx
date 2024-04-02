@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-curly-spacing */
 /* eslint-disable react/jsx-max-depth */
 import logo2 from '../Assets/Logo2.png';
 import estelar from '../Assets/plan1.png';
@@ -11,15 +10,16 @@ import { objGames } from '../Utils/importGames';
 import plan2 from '../Images/Supermassivo.png';
 import plan1 from '../Images/Estelar.png';
 import plan3 from '../Images/Intermediario.png';
+import { PlanI } from '../Interfaces/planPage';
 
 function Plans() {
-  const estelarPlan = objGames.filter(
+  const estelarPlan:Array<PlanI> = objGames.filter(
     ({ plan }) => plan === 'estelar',
   );
-  const intermediarioPlan = objGames.filter(
+  const intermediarioPlan:Array<PlanI> = objGames.filter(
     ({ plan }) => plan === 'intermediario',
   );
-  const supermassivoPlan = objGames.filter(
+  const supermassivoPlan:Array<PlanI> = objGames.filter(
     ({ plan }) => plan === 'supermassivo',
   );
 
@@ -43,7 +43,7 @@ function Plans() {
               <img
                 data-testid="pass-logo"
                 className="passLogo"
-                src={logo2}
+                src={ logo2 }
                 alt="Logo do Hole pass"
               />
               <h1 data-testid="home-title" className="homeTitle">Hole Pass</h1>
@@ -68,7 +68,7 @@ function Plans() {
               className="planHole"
               width="400px"
               id="planEstelar"
-              src={estelar}
+              src={ estelar }
               alt="Logo do Hole pass"
             />
             <img
@@ -76,7 +76,7 @@ function Plans() {
               className="planHole"
               width="450px"
               id="planInterm"
-              src={intermediario}
+              src={ intermediario }
               alt="Logo do Hole pass"
             />
             <img
@@ -84,7 +84,7 @@ function Plans() {
               className="planHole"
               width="500px"
               id="planSuperm"
-              src={supermassivo}
+              src={ supermassivo }
               alt="Logo do Hole pass"
             />
 
@@ -95,8 +95,8 @@ function Plans() {
       </div>
 
       <PlansComponent
-        games={estelarPlan}
-        plan={plan1}
+        games={ estelarPlan }
+        plan={ plan1 }
         button="true"
         boxSize="gameBox"
         nameSize="text-over"
@@ -104,8 +104,8 @@ function Plans() {
         planSize=""
       />
       <PlansComponent
-        games={intermediarioPlan}
-        plan={plan3}
+        games={ intermediarioPlan }
+        plan={ plan3 }
         planSize=""
         button="true"
         boxSize="gameBox"
@@ -113,8 +113,8 @@ function Plans() {
         logoSize="text-over2"
       />
       <PlansComponent
-        games={supermassivoPlan}
-        plan={plan2}
+        games={ supermassivoPlan }
+        plan={ plan2 }
         button="true"
         boxSize="gameBox"
         nameSize="text-over"
