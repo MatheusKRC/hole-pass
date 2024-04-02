@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getData, postData } from '../Utils/request';
+import { postData } from '../Utils/request';
 
 function PaymentComponent({ planGames }:any) {
   const localUser:any = localStorage.getItem('blackHoleUser');
