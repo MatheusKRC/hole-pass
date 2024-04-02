@@ -14,7 +14,7 @@ import './CSS/user.css';
 import './CSS/loginRegister.css';
 import './CSS/payment.css';
 import './CSS/final.css';
-import Games from './Pages/Games.tsx';
+// import Games from './Pages/Games.tsx';
 import Plans from './Pages/Plans.tsx';
 import LoginRegister from './Pages/LoginRegister.tsx';
 import User from './Pages/User.tsx';
@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" Component={ Home } />
-        <Route path="/Jogos" Component={ Games } />
+        <Route path="/Jogos" Component={ Home } />
         <Route path="/Plans" Component={ Plans } />
         <Route path="/Login" Component={ LoginRegister } />
         <Route path="/User" Component={ User } />
