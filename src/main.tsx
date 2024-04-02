@@ -17,7 +17,7 @@ import './CSS/final.css';
 // import Games from './Pages/Games.tsx';
 import Plans from './Pages/Plans.tsx';
 import LoginRegister from './Pages/LoginRegister.tsx';
-import User from './Pages/User.tsx';
+// import User from './Pages/User.tsx';
 import Payment from './Pages/Payment.tsx';
 import Final from './Pages/Final.tsx';
 import Games from './Pages/Games.tsx';
