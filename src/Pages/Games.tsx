@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-max-depth */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 // import { useEffect, useState } from 'react';
-import NavBar from '../Components/01-Navbar';
-import Footer from '../Components/08-Footer';
-import NewGames from '../Components/09-NewGames';
+// import NavBar from '../Components/01-Navbar';
+// import Footer from '../Components/08-Footer';
+// import NewGames from '../Components/09-NewGames';
 // import GamesComponent from '../Components/10-GamesComponent';
 // import { objGames } from '../Utils/importGames';
-import Cyberpunk from '../Images/cyberpunk.png';
-import Ragnarok from '../Images/ragnarok.png';
-import spiderman from '../Images/spiderman.png';
+// import Cyberpunk from '../Images/cyberpunk.png';
+// import Ragnarok from '../Images/ragnarok.png';
+// import spiderman from '../Images/spiderman.png';
 // import { HandleChangeFunction } from '../Interfaces/gamePage';
 
 function Games() {
@@ -33,30 +33,31 @@ function Games() {
   //   }
   // }, [filter]);
 
-  let count = 0;
-  document.getElementById('radio0')?.setAttribute('checked', 'true');
+  // let count = 0;
+  // document.getElementById('radio0')?.setAttribute('checked', 'true');
 
-  setInterval(() => {
-    nextSlide();
-  }, 2000);
+  // setInterval(() => {
+  //   nextSlide();
+  // }, 2000);
 
-  const nextSlide:VoidFunction = () => {
-    count += 1;
+  // const nextSlide:VoidFunction = () => {
+  //   count += 1;
 
-    if (count > 3) {
-      count = 0;
-    }
+  //   if (count > 3) {
+  //     count = 0;
+  //   }
 
-    document.getElementById(`radio${count - 1}`)?.removeAttribute('checked');
-    document.getElementById(`radio${count}`)?.setAttribute('checked', 'true');
-    document.getElementById(`radio${count + 1}`)?.removeAttribute('checked');
-  };
+  //   document.getElementById(`radio${count - 1}`)?.removeAttribute('checked');
+  //   document.getElementById(`radio${count}`)?.setAttribute('checked', 'true');
+  //   document.getElementById(`radio${count + 1}`)?.removeAttribute('checked');
+  // };
 
   // Referencia do slider: https://www.youtube.com/watch?v=BpzyuuPIEaQ
 
   return (
     <div className="gamePage">
-      <NavBar />
+      <h1>Game Page</h1>
+      {/* <NavBar />
       <div id="gamesPage" className="gamesPage" data-testid="games-page">
         <h1 className="gamesPageTitle" data-testid="games-page-title">NOVIDADES</h1>
 
@@ -135,11 +136,11 @@ function Games() {
           className="search"
           type="text"
           // onChange={ handleChange }
-        />
+        /> */}
 
-        {/* <GamesComponent games={ gamesView } /> */}
-      </div>
-      <Footer />
+      {/* <GamesComponent games={ gamesView } /> */}
+      {/* </div>
+      <Footer /> */}
     </div>
   );
 }
