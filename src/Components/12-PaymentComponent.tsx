@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import apiKey from '../Utils/credenciais';
+// import apiKey from '../Utils/credenciais';
 
 function PaymentComponent({ planGames }:any) {
   const localUser:any = localStorage.getItem('blackHoleUser');
@@ -28,7 +28,7 @@ function PaymentComponent({ planGames }:any) {
   });
 
   api.interceptors.request.use(async (config) => {
-    const token = apiKey;
+    const token = 'teste';
     config.headers.Authorization = `Bearer ${token}`;
 
     return config;
