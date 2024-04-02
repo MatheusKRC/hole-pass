@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import { Link } from 'react-router-dom';
+import { Link, NavigateFunction, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import logo from '../Assets/Logo.png';
 import perfil from '../Assets/Perfil.png';
@@ -10,6 +10,16 @@ function NavBar() {
   const [userClass, setUserClass] = useState('defaultUser');
   const [link, setLink] = useState('/Login');
   const [active, setActive] = useState('');
+
+  const navigate:NavigateFunction = useNavigate();
+
+  const handleGames = () => {
+    navigate('/Games');
+  };
+
+  const handlePlans = () => {
+    navigate('/Plans');
+  };
 
   useEffect(() => {
     const loginUser = localStorage.getItem('blackHoleUser');
@@ -68,14 +78,20 @@ function NavBar() {
       </Link>
 
       <div className={ `divLinks ${active}` }>
-        <a data-testid="nav-link" className="navLink" href="/Jogos">Jogos</a>
-        <a
+        <button
           data-testid="nav-link"
           className="navLink"
-          href="/Plans"
+          onClick={ handleGames }
+        >
+          Jogos
+        </button>
+        <button
+          data-testid="nav-link"
+          className="navLink"
+          onClick={ handlePlans }
         >
           Planos de Assinatura
-        </a>
+        </button>
         <a data-testid="nav-link" className="navLink" href="https://www.xbox.com/pt-BR/xbox-game-pass">Serviços de Gamepass</a>
         <a data-testid="nav-link" className="navLink" href="https://matheus-santos-leao.netlify.app/">Outros Projetos</a>
       </div>

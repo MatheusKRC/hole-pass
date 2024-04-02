@@ -52,6 +52,8 @@
 }
 
 .navLink {
+  background: none;
+  border: none;
   color: white;
   font-size: 18px;
   font-style: normal;
@@ -120,6 +122,7 @@
 }
 
 .navLink:hover {
+  cursor: pointer;
   text-shadow: 0px 5px 13px white;
 
   transition: 0.5s;
