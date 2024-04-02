@@ -1,8 +1,9 @@
+/* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/naming-convention */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import apiKey from '../Utils/credenciais';
+import { getData, postData } from '../Utils/request';
 
 function PaymentComponent({ planGames }:any) {
   const localUser:any = localStorage.getItem('blackHoleUser');
@@ -28,7 +29,7 @@ function PaymentComponent({ planGames }:any) {
   });
 
   api.interceptors.request.use(async (config) => {
-    const token = 'teste';
+    const token = 'TEST-6667240715501519-090615-43a13614f8382626a65cadc43556742f-300449537';
     config.headers.Authorization = `Bearer ${token}`;
 
     return config;
@@ -48,16 +49,13 @@ function PaymentComponent({ planGames }:any) {
         last_name: user.lastName,
       },
     };
-    api.post('v1/payments', body).then((response) => {
-      const {
-        qr_code, qr_code_base64 } = response.data.point_of_interaction.transaction_data;
-      setId(response.data.id);
-      setQrCode(qr_code_base64);
-      setCopy(qr_code);
-    }).catch((err) => {
-      // eslint-disable-next-line no-alert
-      alert(err);
-    });
+    const pix = await postData('/paymentPix', body);
+    const { point_of_interaction } = pix;
+    const { transaction_data } = point_of_interaction;
+    const { qr_code, qr_code_base64 } = transaction_data;
+    setId(pix.id);
+    setQrCode(qr_code_base64);
+    setCopy(qr_code);
   };
 
   const verifyStatus = () => {
