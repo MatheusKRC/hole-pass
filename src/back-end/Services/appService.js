@@ -21,4 +21,33 @@ const payPix = async (body) => {
   return data;
 };
 
-export { getMethods, payPix };
+const createPreference = async (body) => {
+  const preference = {
+    body: {
+      items: [
+        {
+          id: body.id,
+          title: body.title,
+          unit_price: body.unit_price,
+          quantity: Number(body.quantity),
+        },
+      ],
+      back_urls: {
+        success: 'http://localhost:5173/Final',
+        failure: 'http://localhost:5173/Home',
+        pending: 'http://localhost:5173/Payment',
+      },
+      auto_return: 'approved',
+    },
+
+  };
+
+  return preference;
+};
+
+const getAllPreferences = async () => {
+  const { data } = await api.get('checkout/preferences/search');
+  return data;
+};
+
+export { getMethods, payPix, createPreference, getAllPreferences };

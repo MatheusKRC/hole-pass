@@ -1,8 +1,10 @@
+/* eslint-disable max-lines */
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/naming-convention */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Wallet, initMercadoPago } from '@mercadopago/sdk-react';
 import { postData } from '../Utils/request';
 
 function PaymentComponent({ planGames }:any) {
@@ -14,6 +16,7 @@ function PaymentComponent({ planGames }:any) {
   const [copy, setCopy] = useState('');
   const [status, setStatus] = useState('');
   const [type, setType] = useState('pix');
+  const [preferId, setPreferId] = useState('');
   const [card, setCard] = useState({
     name: '',
     number: '',
@@ -21,6 +24,8 @@ function PaymentComponent({ planGames }:any) {
     aa: '',
     cvv: '',
   });
+
+  initMercadoPago('TEST-758621d5-71f3-4726-835f-c7e0110073c2');
 
   const navigate = useNavigate();
 
@@ -41,7 +46,7 @@ function PaymentComponent({ planGames }:any) {
   const setPix = async () => {
     const body = {
       transaction_amount: parseFloat(number),
-      description: user.plaName,
+      description: user.planName,
       payment_method_id: 'pix',
       payer: {
         email: user.email,
@@ -56,6 +61,19 @@ function PaymentComponent({ planGames }:any) {
     setId(pix.id);
     setQrCode(qr_code_base64);
     setCopy(qr_code);
+  };
+
+  const setCreditCard = async () => {
+    setType('cartão');
+    const body = {
+      id: user.planName,
+      title: user.planName,
+      unit_price: 39,
+      quantity: 1,
+    };
+
+    const credit = await postData('/createPreference', body);
+    setPreferId(credit.id);
   };
 
   const verifyStatus = () => {
@@ -110,7 +128,7 @@ function PaymentComponent({ planGames }:any) {
         <button
           data-testid="payment-method"
           className="paymentMethod"
-          onClick={ handleClick }
+          onClick={ setCreditCard }
           value="cartão"
         >
           Cartão
@@ -138,71 +156,13 @@ function PaymentComponent({ planGames }:any) {
         </div>
 
       ) : (
-        <div data-testid="card-div" className="cardDiv">
-          <p className="seeMore">Esta Forma de Pagamento ainda não foi implementada</p>
-          <input
-            data-testid="card-input"
-            className="cardInput"
-            onChange={ handleChange }
-            id="name"
-            placeholder="Nome do Titular"
-            type="text"
-          />
-          <input
-            data-testid="card-input"
-            className="cardInput"
-            onChange={ handleChange }
-            id="number"
-            value=""
-            placeholder="Número do Cartão"
-            type="text"
-          />
-          <div>
-            <label
-              data-testid="expiration"
-              className="expiration"
-              htmlFor="mmaa"
-            >
-              Data de Expiração
+        <div id="cardDiv" data-testid="card-div" className="cardDiv">
 
-            </label>
-            <br />
-            <input
-              data-testid="card-date"
-              className="cardDate"
-              onChange={ handleChange }
-              id="mm"
-              placeholder="MM"
-              type="text"
-              name="mmaa"
-            />
-            <input
-              data-testid="card-date"
-              className="cardDate"
-              onChange={ handleChange }
-              id="aa"
-              name="mmaa"
-              placeholder="AA"
-              type="text"
-            />
-            <input
-              data-testid="card-cvv"
-              className="cardCVV"
-              onChange={ handleChange }
-              id="cvv"
-              placeholder="CVV"
-              type="text"
-            />
+          {preferId && <Wallet
+            initialization={ { preferenceId: preferId } }
+            customization={ { texts: { valueProp: 'smart_option' } } }
+          />}
 
-          </div>
-
-          <button
-            data-testid="confirm-button"
-            className="buyButton"
-          >
-            Confirmar
-
-          </button>
         </div>
       )}
 
