@@ -4,8 +4,8 @@ import Atropos from 'atropos/react';
 import { motion } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import logo2 from '../Games/Logo.png';
-import name from '../Games/Name.png';
+import logo2 from '../Games/Logo.webp';
+import name from '../Games/Name.webp';
 import { PlanComponentI } from '../Interfaces/planPage';
 import carouselCalc from '../Utils/carousel';
 

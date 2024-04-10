@@ -1,8 +1,8 @@
 // eslint-disable-next-line import/no-unresolved
 import Atropos from 'atropos/react';
 import { Link } from 'react-router-dom';
-import logo2 from '../Games/Logo.png';
-import name from '../Games/Name.png';
+import logo2 from '../Games/Logo.webp';
+import name from '../Games/Name.webp';
 import { GamesI } from '../Interfaces/gamePage';
 
 function GamesComponent({ games }:GamesI) {
