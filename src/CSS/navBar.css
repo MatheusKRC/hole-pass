@@ -195,6 +195,16 @@
     margin-right: -50px;
   }
 
+  .defaultUser {
+    margin-right: -10px;
+    margin-left: 0px;
+    width: 70%;
+  }
+
+  .holeLogo {
+    width: 140px;
+  }
+
   .assignButton, .backButton {
     display: none;
   }

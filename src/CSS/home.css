@@ -790,6 +790,10 @@
 
 @media only screen and (max-width: 500px) {
   /* FirstPage */
+  html {
+    overflow-x: hidden;
+  }
+
   .title {
     font-size: 15px;
   }
