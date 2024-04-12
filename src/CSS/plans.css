@@ -111,6 +111,10 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .plansPage {
+    overflow-x: hidden;
+  }
+
   .divTitle {
     margin-top: -80px;
     margin-bottom: 20px;
@@ -121,6 +125,10 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+  }
+
+  .plansMain.deactive {
+    margin-bottom: 100px;
   }
 
   .PLANS {

@@ -212,3 +212,83 @@
     width: 250px;
   }
 }
+
+@media only screen and (max-width: 500px) {  
+  .gamePage {
+    overflow-x: hidden;
+  }
+
+  .gamePage.active {
+    overflow-x: visible;
+  }
+
+  .deactive {
+    overflow-x: visible;
+  }
+
+  .loginDesc {
+    font-size: 12px;
+  }
+
+  .loginContent {
+    height: 420px;
+  }
+
+  .loginForm {
+    height: 420px;
+  }
+
+  .loginTitle {
+    width: 180px;
+    font-size: 25px;
+
+    margin-bottom: -60px;
+  }
+
+  .loginLogo {
+    width: 150px;
+    height: 150px;
+
+    margin-bottom: 10px;
+  }
+
+  .loginRegTitle {
+    font-size: 25px;
+  }
+
+  .loginHoleLogo {
+    width: 200px;
+    margin-top: -30px;
+    margin-bottom: -60px;
+  }
+
+  .pholder {
+    font-size: 12px;
+  }
+
+  .alert {
+    text-align: center;
+    font-size: 10px;
+    width: 150px;
+  }
+
+  .loginInput {
+    width: 100px;
+    font-size: 12px;
+  }
+
+  .already {
+    font-size: 12px;
+  }
+
+  #loginButton {
+    width: 100px;
+    height: 30px;
+
+    font-size: 15px;
+
+    margin-top: 10px;
+    margin-bottom: 15px;  }
+
+  
+}

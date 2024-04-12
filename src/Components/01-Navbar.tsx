@@ -41,6 +41,8 @@ function NavBar() {
       document.getElementById('plansMain')?.classList.add('deactive');
       document.getElementById('allGames')?.classList.add('deactive');
       document.getElementById('gamesPage')?.classList.add('deactive');
+      document.getElementById('divTitle')?.classList.add('deactive');
+      document.getElementById('gamePage')?.classList.add('active');
       document.getElementById('mainContent')?.classList.add('deactive');
       document.getElementById('blackHole')?.classList.add('deactive');
     } else {
@@ -48,7 +50,9 @@ function NavBar() {
       document.getElementById('games')?.classList.remove('deactive');
       document.getElementById('plansMain')?.classList.remove('deactive');
       document.getElementById('allGames')?.classList.remove('deactive');
+      document.getElementById('divTitle')?.classList.remove('deactive');
       document.getElementById('gamesPage')?.classList.remove('deactive');
+      document.getElementById('gamePage')?.classList.remove('active');
       document.getElementById('mainContent')?.classList.remove('deactive');
       document.getElementById('blackHole')?.classList.remove('deactive');
     }

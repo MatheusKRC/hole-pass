@@ -8,7 +8,7 @@ import blackHole from '../Assets/BlackHole.png';
 
 function Home() {
   return (
-    <div data-testid="teste">
+    <div data-testid="teste" className="mainDiv">
       <NavBar />
       <FirstPage />
       <div id="blackHole" className="homeBlackHole">

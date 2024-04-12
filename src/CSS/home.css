@@ -790,7 +790,7 @@
 
 @media only screen and (max-width: 500px) {
   /* FirstPage */
-  html {
+  .mainDiv {
     overflow-x: hidden;
   }
 
@@ -944,26 +944,26 @@
   }
 
   .game0 {
-    width: 400px;
-    height: 170px;
+    width: 350px;
+    height: 150px;
 
     margin-top: -200px;
     margin-left: -40px;
   }
 
   .game1 {
-    width: 400px;
-    height: 170px;
+    width: 350px;
+    height: 150px;
 
-    margin-top: -220px;
+    margin-top: -210px;
     margin-left: -40px;
   }
 
   .game2 {
-    width: 400px;
-    height: 170px;
+    width: 350px;
+    height: 150px;
 
-    margin-top: -240px;
+    margin-top: -220px;
     margin-left: -100px;
   }
 

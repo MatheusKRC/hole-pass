@@ -165,6 +165,7 @@ function LoginRegister() {
 
         <button
           data-testid="login-button"
+          id="loginButton"
           className="buyButton"
           onClick={ login === 'LOGIN' ? handleLogin : handleRegister }
         >

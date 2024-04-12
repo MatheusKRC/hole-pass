@@ -145,15 +145,26 @@
 /* Notebooks */
 @media only screen and (max-width: 1550px) {
   .title {
-    font-size: 26px;
+    font-size: 20px;
+    margin-right: 10px;
   }
 
   .holeLogo {
-    width: 180px;
+    width: 160px;
   }
 
   .navLink {
-    font-size: 15px;
+    font-size: 13px;
+  }
+
+  .assignButton {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .defaultUser {
+    margin-left: 20px;
+    width: 50%;
   }
 }
 

@@ -27,7 +27,7 @@ function Plans() {
     <div className="plansPage" data-testid="plans-page">
       <NavBar />
       <div id="plansMain" className="plansMain" data-testid="plans-main">
-        <div className="divTitle" data-testid="div-title">
+        <div id="divTitle" className="divTitle" data-testid="div-title">
           <h1
             className="allGamesTitle"
             data-testid="all-games-title"

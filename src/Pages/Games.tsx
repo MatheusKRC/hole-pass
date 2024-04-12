@@ -55,7 +55,7 @@ function Games() {
   // Referencia do slider: https://www.youtube.com/watch?v=BpzyuuPIEaQ
 
   return (
-    <div className="gamePage">
+    <div id="gamePage" className="gamePage">
       <NavBar />
       <div id="gamesPage" className="gamesPage" data-testid="games-page">
         <h1 className="gamesPageTitle" data-testid="games-page-title">NOVIDADES</h1>
