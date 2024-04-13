@@ -12,9 +12,10 @@ const createPayment = async (req, res) => {
   const data = await payPix(req.body);
   return res.status(200).json(data);
 };
-
+const production = process.env.PRODUCTION_KEY;
 const client = new MercadoPagoConfig({ accessToken:
-    'TEST-6667240715501519-090615-43a13614f8382626a65cadc43556742f-300449537' });
+  production
+    || 'TEST-6667240715501519-090615-43a13614f8382626a65cadc43556742f-300449537' });
 const preferenceClient = new Preference(client);
 
 const postPreference = async (req, res) => {

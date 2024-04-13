@@ -5,7 +5,10 @@ const api = axios.create({
 });
 
 api.interceptors.request.use(async (config) => {
-  const token = 'TEST-6667240715501519-090615-43a13614f8382626a65cadc43556742f-300449537';
+  const production = process.env.PRODUCTION_KEY;
+  const token = (
+    production
+    || 'TEST-6667240715501519-090615-43a13614f8382626a65cadc43556742f-300449537');
   config.headers.Authorization = `Bearer ${token}`;
 
   return config;
@@ -33,9 +36,9 @@ const createPreference = async (body) => {
         },
       ],
       back_urls: {
-        success: 'http://localhost:5173/Final',
-        failure: 'http://localhost:5173/Home',
-        pending: 'http://localhost:5173/Payment',
+        success: 'https://holepass.netlify.app/Final',
+        failure: 'https://holepass.netlify.app/Home',
+        pending: 'https://holepass.netlify.app/Payment',
       },
       auto_return: 'approved',
     },

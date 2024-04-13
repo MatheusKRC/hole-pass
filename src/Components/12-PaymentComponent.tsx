@@ -25,7 +25,7 @@ function PaymentComponent({ planGames }:any) {
     cvv: '',
   });
 
-  initMercadoPago('TEST-758621d5-71f3-4726-835f-c7e0110073c2');
+  initMercadoPago(process.env.APP_KEY || 'TEST-758621d5-71f3-4726-835f-c7e0110073c2');
 
   const navigate = useNavigate();
 
@@ -34,7 +34,8 @@ function PaymentComponent({ planGames }:any) {
   });
 
   api.interceptors.request.use(async (config) => {
-    const token = 'TEST-6667240715501519-090615-43a13614f8382626a65cadc43556742f-300449537';
+    const production = process.env.PRODUCTION_KEY;
+    const token = production || 'TEST-6667240715501519-090615-43a13614f8382626a65cadc43556742f-300449537';
     config.headers.Authorization = `Bearer ${token}`;
 
     return config;
