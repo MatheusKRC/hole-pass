@@ -177,6 +177,7 @@ function PaymentComponent({ planGames }:any) {
         {planGames.map(({ src }:any, index:any) => {
           if (index < 4) {
             return (<img
+              className="someGames"
               data-testid="some-games-imgs"
               width="100px"
               key={ index }

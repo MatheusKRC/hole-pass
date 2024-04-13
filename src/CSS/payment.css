@@ -188,3 +188,44 @@
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .paymentPage {
+    overflow-x: hidden;
+    height: 800px;
+  }
+
+  .paymentTitle {
+    width: 200px;
+    font-size: 25px;
+  }
+
+  .payment {
+    margin: 0px;
+
+    height: 600px;
+  }
+
+  .paymentCard {
+    opacity: 0%;
+  }
+
+  .paymentMethod {
+    font-size: 12px;
+  }
+
+  .someGames {
+    width: 50px;
+  }
+
+  .pixInput {
+    width: 150px;
+  }
+
+  .pix {
+    width: 150px;
+  }
+
+  .cardDiv {
+    width: 200px;
+  }
+}
