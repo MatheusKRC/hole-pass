@@ -4,16 +4,16 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import blackHole from '../Images/BuracoNegro.png';
+import blackHole from '../Images/BuracoNegro.webp';
 import { estelar, intermediário, supermassivo } from '../Utils/planBenefits';
 import PlanCards from './07-PlanCards';
-import Estelar from '../Assets/Estelar.png';
-import Intermediario from '../Assets/Intermediario.png';
-import Supermassivo from '../Assets/Supermassivo.png';
-import Supermassive from '../Assets/BlackHole.png';
-import estelarPlan from '../Images/Estelar.png';
-import intermPlan from '../Images/Intermediario.png';
-import superPlan from '../Images/Supermassivo.png';
+import Estelar from '../Assets/Estelar.webp';
+import Intermediario from '../Assets/Intermediario.webp';
+import Supermassivo from '../Assets/Supermassivo.webp';
+import Supermassive from '../Assets/BlackHole.webp';
+import estelarPlan from '../Images/Estelar.webp';
+import intermPlan from '../Images/Intermediario.webp';
+import superPlan from '../Images/Supermassivo.webp';
 
 function FourthPage() {
   const carousel = useRef(null);

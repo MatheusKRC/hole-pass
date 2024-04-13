@@ -6,7 +6,7 @@ import Payment from '../../Pages/Payment';
 describe('Testes da página de Pagamento', () => {
   beforeEach(() => {
     const mockId = 'blackHoleUser';
-    const mockJson = { firstName: 'Matheus', lastName: 'Santos Leão', email: 'usuário@gmail.com', password: 'usuario123', cpf: '00000000000', username: 'MatheusKRC', planImage: '/src/Images/Estelar.png', planName: 'estelar', plan: '/src/Assets/Estelar.png', planValue: 'R$39,99', benefits: [['Jogos Mensais'], ['Descontos exclusivos'], ['Conteúdo exclusivo'], ['Armazenamento em nuvem'], ['Biblioteca de 2013 à 2017']] };
+    const mockJson = { firstName: 'Matheus', lastName: 'Santos Leão', email: 'usuário@gmail.com', password: 'usuario123', cpf: '00000000000', username: 'MatheusKRC', planImage: '/src/Images/Estelar.webp', planName: 'estelar', plan: '/src/Assets/Estelar.webp', planValue: 'R$39,99', benefits: [['Jogos Mensais'], ['Descontos exclusivos'], ['Conteúdo exclusivo'], ['Armazenamento em nuvem'], ['Biblioteca de 2013 à 2017']] };
     localStorage.setItem(mockId, JSON.stringify(mockJson));
     render(<Payment />, { wrapper: BrowserRouter });
   });

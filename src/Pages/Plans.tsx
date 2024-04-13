@@ -1,15 +1,15 @@
 /* eslint-disable react/jsx-max-depth */
-import logo2 from '../Assets/Logo2.png';
-import estelar from '../Assets/plan1.png';
-import intermediario from '../Assets/plan2.png';
-import supermassivo from '../Assets/plan3.png';
+import logo2 from '../Assets/Logo2.webp';
+import estelar from '../Assets/plan1.webp';
+import intermediario from '../Assets/plan2.webp';
+import supermassivo from '../Assets/plan3.webp';
 import Footer from '../Components/08-Footer';
 import NavBar from '../Components/01-Navbar';
 import PlansComponent from '../Components/11-PlansComponent';
 import { objGames } from '../Utils/importGames';
-import plan2 from '../Images/Supermassivo.png';
-import plan1 from '../Images/Estelar.png';
-import plan3 from '../Images/Intermediario.png';
+import plan2 from '../Images/Supermassivo.webp';
+import plan1 from '../Images/Estelar.webp';
+import plan3 from '../Images/Intermediario.webp';
 import { PlanI } from '../Interfaces/planPage';
 
 function Plans() {

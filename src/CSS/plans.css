@@ -1,6 +1,6 @@
 .plansMain {
   display: flex;
-  background-image: url("../Images/plansBackground.png");
+  background-image: url("../Images/plansBackground.webp");
   flex-direction: column;
 
   flex-wrap: wrap;
@@ -65,7 +65,7 @@
 
 @media only screen and (max-width: 1550px) {
   .plansMain {
-    background-image: url(../Images/laptopPlansBackground.png);
+    background-image: url(../Images/laptopPlansBackground.webp);
   }
 
   .plansBackground {
@@ -75,7 +75,7 @@
 
 @media only screen and (max-width: 1250px) {
   .plansMain {
-    background-image: url(../Images/ipadPlans.png);
+    background-image: url(../Images/ipadPlans.webp);
   }
 
   .PLANS {
@@ -106,7 +106,7 @@
 
 @media only screen and (max-width: 1024px) {
   .plansMain {
-    background-image: url(../Images/IpadPlans.png);
+    background-image: url(../Images/IpadPlans.webp);
   }
 }
 

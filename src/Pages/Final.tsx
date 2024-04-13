@@ -1,6 +1,6 @@
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import logo2 from '../Assets/Logo2.png';
+import logo2 from '../Assets/Logo2.webp';
 import { BlackHoleUser } from '../Interfaces/user';
 
 function Final() {

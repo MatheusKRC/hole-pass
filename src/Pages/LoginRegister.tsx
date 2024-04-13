@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
-import logoPass from '../Assets/Logo2.png';
-import logo from '../Assets/Logo.png';
+import logoPass from '../Assets/Logo2.webp';
+import logo from '../Assets/Logo.webp';
 import { validarCPF, validateEmail } from '../Utils/validate';
 import { HandleChangeFunction } from '../Interfaces/gamePage';
 

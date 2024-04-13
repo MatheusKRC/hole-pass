@@ -1,9 +1,9 @@
-import logo from '../Assets/Logo.png';
-import logo2 from '../Assets/Logo2Glow.png';
-import github from '../Assets/GitHub.png';
-import linkedin from '../Assets/Linkedin.png';
-import ps from '../Assets/ps.png';
-import xbox from '../Assets/Xbox_Logo 1.png';
+import logo from '../Assets/Logo.webp';
+import logo2 from '../Assets/Logo2Glow.webp';
+import github from '../Assets/GitHub.webp';
+import linkedin from '../Assets/Linkedin.webp';
+import ps from '../Assets/ps.webp';
+import xbox from '../Assets/Xbox_Logo 1.webp';
 
 function Footer() {
   return (

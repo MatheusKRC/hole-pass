@@ -1,15 +1,15 @@
 /* eslint-disable max-len */
 import { useState } from 'react';
 import ClassicGames from './05-ClassicGames';
-import Leon from '../Images/Leon.png';
-import village from '../Images/village.png';
-import re4 from '../Images/residentName.png';
-import Alucard from '../Images/Alucard.png';
-import castle from '../Images/Castle.png';
-import castleName from '../Images/CastlevaniaName.png';
-import knight from '../Images/DarkSoul.png';
-import dark from '../Images/dark.png';
-import ds from '../Images/DS.png';
+import Leon from '../Images/Leon.webp';
+import village from '../Images/village.webp';
+import re4 from '../Images/residentName.webp';
+import Alucard from '../Images/Alucard.webp';
+import castle from '../Images/Castle.webp';
+import castleName from '../Images/CastlevaniaName.webp';
+import knight from '../Images/DarkSoul.webp';
+import dark from '../Images/dark.webp';
+import ds from '../Images/DS.webp';
 
 function ThirdPage() {
   const [Game, setGame] = useState({

@@ -6,9 +6,9 @@ import Footer from '../Components/08-Footer';
 import NewGames from '../Components/09-NewGames';
 import GamesComponent from '../Components/10-GamesComponent';
 import { objGames } from '../Utils/importGames';
-import Cyberpunk from '../Images/cyberpunk.png';
-import Ragnarok from '../Images/ragnarok.png';
-import spiderman from '../Images/spiderman.png';
+import Cyberpunk from '../Images/cyberpunk.webp';
+import Ragnarok from '../Images/ragnarok.webp';
+import spiderman from '../Images/spiderman.webp';
 import { HandleChangeFunction } from '../Interfaces/gamePage';
 
 function Games() {

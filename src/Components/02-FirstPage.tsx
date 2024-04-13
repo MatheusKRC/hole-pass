@@ -1,13 +1,13 @@
-import logo2 from '../Assets/Logo2.png';
-import spiderMan from '../Images/SpiderMan.png';
-import spiderMan2 from '../Images/SpiderMan2.png';
-import spiderManMiles from '../Images/SpiderManMiles.png';
-import GodOfWar from '../Images/GodRagnar2.png';
-import baldursGate from '../Images/BaldursGate2.png';
-import horizon from '../Images/Horizon2.png';
-import ori from '../Images/Ori.jpg';
-import itTakesTwo from '../Images/ItTakesTwo.png';
-import dmc from '../Images/DMC.png';
+import logo2 from '../Assets/Logo2.webp';
+import spiderMan from '../Images/SpiderMan.webp';
+import spiderMan2 from '../Images/SpiderMan2.webp';
+import spiderManMiles from '../Images/SpiderManMiles.webp';
+import GodOfWar from '../Images/GodRagnar2.webp';
+import baldursGate from '../Images/BaldursGate2.webp';
+import horizon from '../Images/Horizon2.webp';
+import ori from '../Images/Ori.webp';
+import itTakesTwo from '../Images/ItTakesTwo.webp';
+import dmc from '../Images/DMC.webp';
 
 function FirstPage() {
   return (

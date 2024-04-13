@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
-import logo from '../Assets/Logo.png';
+import logo from '../Assets/Logo.webp';
 import NavBar from '../Components/01-Navbar';
 import PlansComponent from '../Components/11-PlansComponent';
 import holePass from '../Games/holePass.webp';
-import emptyPlan from '../Images/emptyPlan.png';
+import emptyPlan from '../Images/emptyPlan.webp';
 import { objGames } from '../Utils/importGames';
 import { ActualPlan, BlackHoleUserFinal } from '../Interfaces/user';
 import { HandleChangeFunction } from '../Interfaces/gamePage';

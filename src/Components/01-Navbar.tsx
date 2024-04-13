@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { Link, NavigateFunction, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import logo from '../Assets/Logo.png';
-import perfil from '../Assets/Perfil.png';
-import perfilLogin from '../Assets/Perfil2.png';
+import logo from '../Assets/Logo.webp';
+import perfil from '../Assets/Perfil.webp';
+import perfilLogin from '../Assets/Perfil2.webp';
 
 function NavBar() {
   const [login, setLogin] = useState(perfil);

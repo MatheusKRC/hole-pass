@@ -103,7 +103,7 @@
 
 .secondPage {
   box-shadow: 0px 40px 30px 0px #000 inset;
-  background-image: url(../Images/starWars.png);
+  background-image: url(../Images/starWars.webp);
 
   display: flex;
   justify-content: space-between;
@@ -368,7 +368,7 @@
 /* FourthPage */
 
 .comparePlans {
-  background-image: url(../Images/starBackground.png);
+  background-image: url(../Images/starBackground.webp);
   display: flex;
 
   /* justify-content: center; */
@@ -541,7 +541,7 @@
   .secondPage {
     margin-top: -100px;
 
-    background-image: url(../Images/laptopStarWars.png);
+    background-image: url(../Images/laptopStarWars.webp);
 
     width: 1550px;
     height: 900px;
@@ -689,8 +689,8 @@
   .secondPage {
     width: 120%;
     height: 780px;
-    background-image: url(../Images/TabletBackground.png);
-    /* background-image: url(../Images/tabletBackground.png); */
+    background-image: url(../Images/TabletBackground.webp);
+    /* background-image: url(../Images/tabletBackground.webp); */
   }
 
   .benefitsIcon {
@@ -784,7 +784,7 @@
   .secondPage {
     width: 120%;
     height: 780px;
-    background-image: url(../Images/tabletBackground.png);
+    background-image: url(../Images/tabletBackground.webp);
   }
 }
 
@@ -873,7 +873,7 @@
   .secondPage {
     width: 120%;
     height: 700px;
-    background-image: url(../Images/mobile.png);
+    background-image: url(../Images/mobile.webp);
   }
 
   .portal {

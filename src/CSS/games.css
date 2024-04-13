@@ -151,7 +151,7 @@
   align-items: center;
   flex-direction: column;
 
-  background-image: url(../Images/starBackground.png);
+  background-image: url(../Images/starBackground.webp);
   transition: 1s;
 }
 

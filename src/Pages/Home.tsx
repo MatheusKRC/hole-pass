@@ -4,7 +4,7 @@ import NavBar from '../Components/01-Navbar';
 import SecondPage from '../Components/03-SecondPage';
 import ThirdPage from '../Components/04-ThirdPage';
 import Footer from '../Components/08-Footer';
-import blackHole from '../Assets/BlackHole.png';
+import blackHole from '../Assets/BlackHole.webp';
 
 function Home() {
   return (

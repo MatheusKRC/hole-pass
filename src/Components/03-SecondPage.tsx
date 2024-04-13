@@ -1,7 +1,7 @@
-import cloud from '../Assets/cloud.png';
-import calendar from '../Assets/calendar-minus.png';
-import logo from '../Assets/hole pass 4.png';
-import future from '../Assets/Future.png';
+import cloud from '../Assets/cloud.webp';
+import calendar from '../Assets/calendar-minus.webp';
+import logo from '../Assets/hole pass 4.webp';
+import future from '../Assets/Future.webp';
 
 function SecondPage() {
   return (
