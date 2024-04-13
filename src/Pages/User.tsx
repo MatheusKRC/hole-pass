@@ -62,7 +62,7 @@ function User() {
     navigate('/');
   };
   return (
-    <div data-testid="user-main">
+    <div data-testid="user-main" id="userMain" className="userMain">
       <NavBar />
       <div data-testid="user-page" className="userPage">
         <div data-testid="user" className="user">

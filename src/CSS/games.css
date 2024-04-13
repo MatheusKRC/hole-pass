@@ -375,7 +375,7 @@
   .gamesPageTitle {
     position: absolute;
     font-size: 30px;
-    right: 280px;
+    right: 250px;
     top: 100px;
   }
 
@@ -393,6 +393,7 @@
 
   .games {
     margin: 0px;
+    width: 500px;
   }
 
   .gameBox {

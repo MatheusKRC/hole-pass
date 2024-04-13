@@ -281,6 +281,10 @@
     margin-bottom: 150px;
   }
 
+  .userMain {
+    overflow-x: hidden;
+  }
+
   .userPage {
     flex-direction: column;
     align-items: center;
