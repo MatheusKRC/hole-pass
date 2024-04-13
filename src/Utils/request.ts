@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const request = axios.create({
-  baseURL: 'https://holepass.netlify.app',
+  baseURL: 'https://hole-pass.onrender.com/',
 });
 
 export const getData = async (endpoint:string) => {
