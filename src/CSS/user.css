@@ -276,6 +276,10 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .atropos {
+    margin-left: 20px;
+  }
+
   .plansBackground {
     margin-top: -70px;
     margin-bottom: 150px;
