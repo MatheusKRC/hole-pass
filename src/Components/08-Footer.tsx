@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../Assets/Logo.webp';
 import logo2 from '../Assets/Logo2Glow.webp';
 import github from '../Assets/GitHub.webp';
@@ -61,37 +62,45 @@ function Footer() {
 
         </p>
         <div>
-          <img
-            data-testid="social-icon"
-            className="socialIcon"
-            src={ github }
-            alt="logo do github"
-          />
-          <img
-            data-testid="social-icon"
-            className="socialIcon"
-            src={ linkedin }
-            alt="logo do Linkedin"
-          />
+          <Link to="https://github.com/MatheusKRC/hole-pass">
+            <img
+              data-testid="social-icon"
+              className="socialIcon"
+              src={ github }
+              alt="logo do github"
+            />
+          </Link>
+          <Link to="https://www.linkedin.com/in/matheuskrc/">
+            <img
+              data-testid="social-icon"
+              className="socialIcon"
+              src={ linkedin }
+              alt="logo do Linkedin"
+            />
+          </Link>
 
         </div>
 
         <p data-testid="social-title" className="socialTitle">Serviços de GamePass</p>
         <div>
           {' '}
-          <img
-            data-testid="social-icon"
-            className="socialIcon"
-            src={ ps }
-            alt="logo do Playstation"
-          />
-          <img
-            data-testid="social-icon"
-            className="socialIcon"
-            src={ xbox }
-            alt="logo do xbox"
-          />
+          <Link to="https://www.playstation.com/pt-br/ps-plus/?emcid=pa-co-473291">
+            <img
+              data-testid="social-icon"
+              className="socialIcon"
+              src={ ps }
+              alt="logo do Playstation"
+            />
+          </Link>
 
+          <Link to="https://www.xbox.com/pt-BR/xbox-game-pass">
+            <img
+              data-testid="social-icon"
+              className="socialIcon"
+              src={ xbox }
+              alt="logo do xbox"
+            />
+          </Link>
         </div>
 
       </div>
